@@ -5,14 +5,16 @@
         <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="hero-cap pt-100">
-                        <h2>Our Members</h2>
-                        <nav aria-label="breadcrumb ">
-                            <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Member</a></li> 
-                            </ol>
-                        </nav>
+                    <div class="col-xl-12">
+                        <div class="hero-cap pt-100">
+                            <h2>Our Members</h2>
+                            <nav aria-label="breadcrumb ">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Member</a></li> 
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,7 +27,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <!-- Section Tittle -->
-                    <div class="section-tittle section-tittle5 mb-50">
+                    <div class="section-tittle section-tittle5">
                         <div class="front-text">
                             <h2 class="">Our team</h2>
                         </div>
@@ -117,7 +119,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-team mb-30 text-center">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/fitria.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Fitria</a></h3>
                                 <p>Bendahara 2</p>
@@ -137,7 +139,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-team mb-30 text-center">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/juminah.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Juminah</a></h3>
                                 <p>Humas</p>
@@ -157,7 +159,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-team mb-30 text-center">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/yatini.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Yatini</a></h3>
                                 <p>Humas</p>
@@ -177,7 +179,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-team mb-30 text-center">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/maryanti.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Maryanti</a></h3>
                                 <p>Humas</p>
@@ -197,7 +199,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-team mb-30 text-center">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/nani.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Nani</a></h3>
                                 <p>Humas</p>
@@ -220,7 +222,7 @@
     <!-- Team Area End -->
     
     <!-- Team Tables Start -->
-    <div class="member-table-wrapper mb-5">
+    <div class="member-table-wrapper mb-5 mt-30">
         <h3 class="table-title mb-3">KEANGGOTAAN BMI</h3>
         <div class="table-responsive">
             <table id="bmiTable" class="table table-bmi display responsive nowrap">

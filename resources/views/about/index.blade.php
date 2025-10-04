@@ -95,7 +95,7 @@
     </section>
 
     <!-- Goals -->
-    <section class="about-section about-goals mb-50">
+    <section class="about-section about-goals">
         <div class="container">
             <div class="card-goals">
                 <h3 class="section-title">Our Goals</h3>
@@ -104,6 +104,151 @@
                     <li>Memberikan dampak positif bagi anggota, masyarakat, dan lingkungan.</li>
                     <li>Mengutamakan inovasi, kolaborasi, dan pemberdayaan berkelanjutan.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Latar Belakang Koperasi BMI - Interaktif -->
+    <section class="about-section background-bmi py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <div style="position:relative;display:inline-block;">
+                        <h2 class="section-title" style="font-size:2.4rem;color:#ff0000;font-weight:900;letter-spacing:1px;line-height:1.2;">
+                            <span style="background:linear-gradient(90deg,#ff0000 60%,#f27420 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+                                Latar Belakang
+                            </span>
+                            <br>
+                            <span style="color:#00235b;font-size:2rem;font-weight:700;">
+                                Koperasi Bogor Manufaktur Indonesia
+                            </span>
+                        </h2>
+                        <div style="height:4px;width:80px;background:linear-gradient(90deg,#ff0000 60%,#f27420 100%);border-radius:2px;margin:18px auto 0;"></div>
+                    </div>
+                    <p style="font-size:1.15rem;color:#222;margin-top:18px;max-width:650px;margin-left:auto;margin-right:auto;">
+                        <span style="background:rgba(255,0,0,0.07);padding:4px 12px;border-radius:8px;font-weight:500;">
+                            Mengapa KBMI hadir dan menjadi motor penggerak UMKM di Bogor?
+                        </span>
+                        <br>
+                        <span style="color:#00235b;font-weight:600;">
+                            Temukan kekuatan, sinergi, dan dampaknya untuk UMKM, masyarakat, dan ekonomi lokal!
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <!-- Card 1: Visi & Misi YDBA -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#eaf6ff 100%);border-radius:18px;">
+                        <div class="card-body text-center">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fsearch-book-unscreen.gif?alt=media&token=72708d0c-ac38-4eea-98e3-94d05d263010" alt="YDBA" style="width:48px;height:48px;margin-bottom:12px;">
+                            <h5 class="card-title" style="color:#00235b;font-weight:700;">Visi & Misi YDBA</h5>
+                            <p class="card-text" style="font-size:15px;">
+                                <span style="color:#ff0000;font-weight:600;">"Berikan Kail Bukan Ikan"</span> – Filosofi Yayasan Astra membina UMKM agar mandiri dan berdaya saing, bukan sekadar bantuan sesaat. KBMI adalah hasil pembinaan intensif, berstandar tinggi, dan terkurasi.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center">
+                            <span class="badge badge-pill badge-danger px-3 py-2" style="background:#ff0000;color:#fff;">Pembinaan Astra</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Potensi Bogor -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#ffeaea 100%);border-radius:18px;">
+                        <div class="card-body text-center">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2F360-feedback.gif?alt=media&token=63220144-e26a-4e26-a32d-49434ed8380d" alt="Bogor" style="width:48px;height:48px;margin-bottom:12px;">
+                            <h5 class="card-title" style="color:#00235b;font-weight:700;">Potensi & Karakteristik Bogor</h5>
+                            <ul class="list-unstyled" style="font-size:15px;">
+                                <li><b>Manufaktur:</b> Komponen & sparepart industri.</li>
+                                <li><b>Kuliner:</b> Olahan talas, asinan, makanan khas.</li>
+                                <li><b>Kerajinan:</b> Eco-print, kayu, batik Bogor.</li>
+                            </ul>
+                            <p style="font-size:14px;color:#888;">Bogor: Pusat pertumbuhan ekonomi Jawa Barat, dekat Jakarta, kaya sumber daya & budaya.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center">
+                            <span class="badge badge-pill badge-primary px-3 py-2" style="background:#00235b;color:#fff;">Kekayaan Lokal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Sinergi Tiga Sektor -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#eafbe7 100%);border-radius:18px;">
+                        <div class="card-body text-center">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fmanagement-consulting.gif?alt=media&token=db2d8a1b-46ff-4e95-b8ff-478beddbfeba" alt="Sinergi" style="width:48px;height:48px;margin-bottom:12px;">
+                            <h5 class="card-title" style="color:#009e3c;font-weight:700;">Sinergi Tiga Sektor</h5>
+                            <p class="card-text" style="font-size:15px;">
+                                <b>Koperasi Multisektor:</b> Manufaktur, Kuliner, Kerajinan saling mendukung. Sinergi produk, kolaborasi pemasaran, efisiensi operasional, dan skala ekonomi tercipta untuk seluruh anggota.
+                            </p>
+                            <div class="d-flex justify-content-center gap-2 mt-2">
+                                <span class="badge badge-success" style="background:#009e3c;">Kolaborasi</span>
+                                <span class="badge badge-warning" style="background:#f27420;">Diversifikasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: Tujuan & Dampak -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#ffeaea 100%);border-radius:18px;">
+                        <div class="card-body text-center">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Ftrophy-unscreen.gif?alt=media&token=006d9110-a018-4cc1-a730-785acfa81bc7" alt="Dampak" style="width:48px;height:48px;margin-bottom:12px;">
+                            <h5 class="card-title" style="color:#ff0000;font-weight:700;">Tujuan & Dampak</h5>
+                            <ul class="list-unstyled" style="font-size:15px;">
+                                <li>UMKM <b>naik kelas</b> & mandiri.</li>
+                                <li>Motor ekonomi lokal.</li>
+                                <li>Penyerapan tenaga kerja & nilai tambah produk Bogor.</li>
+                            </ul>
+                            <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#ff0000;color:#fff;">Dampak Nyata</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Interaktif: Timeline/Highlight -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="bmi-timeline px-2 py-4" style="background:#f7f7fd;border-radius:18px;">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center gap-4">
+                            <div class="timeline-step text-center">
+                                <div class="timeline-icon" style="background:#ff0000;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:auto;">
+                                    <i class="fas fa-lightbulb" style="color:#fff;font-size:22px;"></i>
+                                </div>
+                                <div class="timeline-label mt-2" style="font-weight:600;color:#ff0000;">Inspirasi YDBA</div>
+                                <div style="font-size:13px;color:#222;">Pembinaan UMKM berstandar tinggi</div>
+                            </div>
+                            <div class="timeline-arrow" style="font-size:32px;color:#ff0000;">→</div>
+                            <div class="timeline-step text-center">
+                                <div class="timeline-icon" style="background:#00235b;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:auto;">
+                                    <i class="fas fa-map-marker-alt" style="color:#fff;font-size:22px;"></i>
+                                </div>
+                                <div class="timeline-label mt-2" style="font-weight:600;color:#00235b;">Potensi Bogor</div>
+                                <div style="font-size:13px;color:#222;">Manufaktur, Kuliner, Kerajinan</div>
+                            </div>
+                            <div class="timeline-arrow" style="font-size:32px;color:#ff0000;">→</div>
+                            <div class="timeline-step text-center">
+                                <div class="timeline-icon" style="background:#009e3c;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:auto;">
+                                    <i class="fas fa-users" style="color:#fff;font-size:22px;"></i>
+                                </div>
+                                <div class="timeline-label mt-2" style="font-weight:600;color:#009e3c;">Sinergi Sektor</div>
+                                <div style="font-size:13px;color:#222;">Kolaborasi & Efisiensi</div>
+                            </div>
+                            <div class="timeline-arrow" style="font-size:32px;color:#ff0000;">→</div>
+                            <div class="timeline-step text-center">
+                                <div class="timeline-icon" style="background:#f27420;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:auto;">
+                                    <i class="fas fa-rocket" style="color:#fff;font-size:22px;"></i>
+                                </div>
+                                <div class="timeline-label mt-2" style="font-weight:600;color:#f27420;">Dampak & Tujuan</div>
+                                <div style="font-size:13px;color:#222;">UMKM Mandiri & Motor Ekonomi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CTA Interaktif -->
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center">
+                    <a href="/members" class="btn btn-lg btn-primary" style="background:#ff0000;border-radius:8px;font-weight:700;letter-spacing:1px;">
+                        Lihat Anggota Koperasi & Produk Unggulan Bogor
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

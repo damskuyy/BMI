@@ -79,7 +79,7 @@
                                                             <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
                                                         </a>
                                                     </div>
-                                                    <h4><a>Set meja bar kotak panjang (outdoor) dsfsdfdsf</a></h4>
+                                                    <h4><a>Set meja bar kotak panjang (outdoor)</a></h4>
                                                 </div>
                                             </div>
                                         </div>

@@ -244,6 +244,7 @@
         <!--latest News Area End -->
 
     </main>
+    
     <footer>
         <!-- Footer Start-->
         <div class="footer-main">
@@ -395,7 +396,7 @@
         // Adjust ukuran text otomatis di card product
         document.querySelectorAll('.project-cap h4').forEach(function(el) {
             // Mulai dari ukuran besar
-            let maxFont = 30;
+            let maxFont = 25;
             let minFont = 18;
             el.style.fontSize = maxFont + 'px';
             el.style.whiteSpace = 'nowrap';
@@ -477,28 +478,29 @@
         setTimeout(forceLeftAlign, 500);
 
         // HERO Images
-        $('.slider-active').owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 3500,
-            autoplayHoverPause: false,
-            nav: true, // tombol prev/next
-            dots: false,
-            smartSpeed: 800,
-            mouseDrag: true,
-            touchDrag: true,    
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn'
-        });
+        // $(document).ready(function(){
+        //     $('.slider-active').owlCarousel({
+        //         items: 1,
+        //         loop: true,
+        //         autoplay: true,
+        //         autoplayTimeout: 3500,
+        //         autoplayHoverPause: false,
+        //         nav: true,
+        //         dots: false,
+        //         smartSpeed: 800,
+        //         mouseDrag: true,
+        //         touchDrag: true,
+        //         animateOut: 'fadeOut',
+        //         animateIn: 'fadeIn'
+        //     });
 
-        // Set background image dari data-background
-        $('.single-slider').each(function(){
-            var bg = $(this).attr('data-background');
-            if(bg){
-                $(this).css('background-image', 'url(' + bg + ')');
-            }
-        });
+        //     $('.single-slider').each(function(){
+        //         var bg = $(this).attr('data-background');
+        //         if(bg){
+        //             $(this).css('background-image', 'url(' + bg + ')');
+        //         }
+        //     });
+        // });
         // var swiper = new Swiper(".mySwiper", {
         //     loop: true,
         //     autoplay: {
