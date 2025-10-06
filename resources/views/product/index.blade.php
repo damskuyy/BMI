@@ -21,7 +21,7 @@
         </div>
     </div>
     <!-- slider Area End-->
-    <!-- Product Area Start -->
+<!-- Product Area Start -->
     <section class="project-area section-padding-30">
         <div class="container">
             <div class="project-heading mb-35">
@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Nav Card -->
-                    <div class="product-img-bg">
+                    <div class="product-img-bg mb-30">
                         <div class="tab-content active" id="nav-tabContent">
                             <!-- card ALL -->
                             <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
@@ -198,6 +198,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="/product" class="btn red-btn2 mt-20" style="align-items: center">read more</a>
                         </div>
                     </div>
                 <!-- End Nav Card -->

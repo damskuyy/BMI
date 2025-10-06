@@ -21,6 +21,7 @@
         </div>
     </div>
     <!-- slider Area End-->
+    
     <!--Team Area Start -->
     <div class="team-area section-padding30">
         <div class="container">
@@ -35,9 +36,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+            <div class="row justify-content-center">
+                <!-- Card dikecilkan: col-lg-4 -> col-lg-3, col-md-4 -> col-md-4, col-sm-6 -> col-sm-6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/ety.jpeg" alt="">
                             <div class="team-caption">
@@ -56,14 +58,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/juhana.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Juhana</a></h3>
                                 <p>Pengawas</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -76,14 +77,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/ety.jpeg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Ety Rustyah</a></h3>
                                 <p>Sekretaris</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -96,14 +96,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/yati.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Karyati</a></h3>
                                 <p>Bendahara 1</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -116,14 +115,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/fitria.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Fitria</a></h3>
                                 <p>Bendahara 2</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -136,14 +134,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/juminah.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Juminah</a></h3>
                                 <p>Humas</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -156,14 +153,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/yatini.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Yatini</a></h3>
                                 <p>Humas</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -176,14 +172,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/maryanti.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Maryanti</a></h3>
                                 <p>Humas</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -196,14 +191,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-team mb-30 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/nani.jpg" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Nani</a></h3>
                                 <p>Humas</p>
-                                <!-- Blog Social -->
                                 <div class="team-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

@@ -1,8 +1,8 @@
 <!-- CountDown Area Start -->
 <div class="count-area" style="position: relative; overflow: visible;">
-    <svg class="countdown-bg-svg" width="100%" height="250px" viewBox="0 0 1920 250" preserveAspectRatio="none" style="position: absolute; left: 0; top: 0; z-index: 0;">
+    {{-- <svg class="countdown-bg-svg" width="100%" height="250px" viewBox="0 0 1920 250" preserveAspectRatio="none" style="position: absolute; left: 0; top: 0; z-index: 0;">
         <ellipse cx="960" cy="125" rx="960" ry="125" fill="#ff2d2d"/>
-    </svg>
+    </svg> --}}
     <div class="container">
         <div class="count-wrapper count-bg">
             <div class="row justify-content-center" >

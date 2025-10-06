@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/hero/about.jpg">
+        {{-- <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/hero/about.jpg">
             <div class="container" style="margin-top: -370px !important;">
                 <div class="row">
                     <div class="col-lg-12">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 <!-- slider Area End-->

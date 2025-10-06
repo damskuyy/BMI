@@ -2241,6 +2241,19 @@ hr {
 .header-sticky.sticky-bar.sticky .main-menu ul > li > a {
   padding: 26px 20px;
 }
+/* Ubah warna teks tombol Contact Now menjadi putih saat hover */
+.header-right-btn .btn:hover,
+.header-right-btn .btn:focus {
+    color: #fff !important;
+}
+.product-img-bg .btn.red-btn2:hover,
+.product-img-bg .btn.red-btn2:focus {
+    color: #fff !important;
+}
+.support-company-area .btn.red-btn2:hover,
+.support-company-area .btn.red-btn2:focus {
+    color: #fff !important;
+}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .header-sticky.sticky-bar.sticky .main-menu ul > li > a {
     padding: 39px 14px;
@@ -3177,7 +3190,7 @@ hr {
   margin-right: 0px;
 }
 .count-area .count-clients .single-counter .count-number span {
-  color: #fff;
+  color: #ff0000;
   font-size: 55px;
   font-weight: 700;
   margin-bottom: 0;
@@ -3194,14 +3207,14 @@ hr {
   padding-left: 20px;
 }
 .count-area .count-clients .single-counter .count-text p {
-  color: #fff;
+  color: #ff0000;
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
 }
 .count-area .count-clients .single-counter .count-text h5 {
-  color: #fff;
+  color: #ff0000;
   font-size: 36px;
   text-transform: capitalize;
   margin-bottom: 0px;
@@ -3211,16 +3224,62 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 }
+/* Kotak blur abu-abu untuk setiap countdown */
+/* .count-area .count-clients .single-counter {
+    background: rgba(200, 200, 200, 0.35);
+    backdrop-filter: blur(4px);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(44,62,80,0.08);
+    padding: 20px 0 20px 0;
+    margin: 0 12px;
+    min-width: 400px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+} */
+/* Membuat background kotak count lebih panjang (lebar) */
+.count-area .count-clients .single-counter {
+    background: rgba(200, 200, 200, 0.35);
+    backdrop-filter: blur(4px);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(44,62,80,0.08);
+    min-width: 340px;   /* tambah lebar minimal */
+    padding-left: 32px;  /* tambah padding kiri */
+    padding-right: 32px; /* tambah padding kanan */
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    /* padding atas/bawah tetap mengikuti desain sebelumnya */
+}
+@media (max-width: 991px) {
+    .count-area .count-clients .single-counter {
+        min-width: 220px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
 
 /*--------------------------------------------------------------
 # Team Carousel Only
 --------------------------------------------------------------*/
+
 .team-area .single-team .team-img {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px; /* tambah tinggi gambar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .team-area .single-team .team-img img {
-  width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* gambar selalu penuh dan proporsional */
 }
 .team-area .single-team .team-caption {
   position: absolute;
@@ -3270,6 +3329,45 @@ hr {
 }
 .team-area .single-team:hover .team-caption p {
   color: #fff;
+}
+@media (min-width: 992px) {
+    .team-area .row.justify-content-center > [class*="col-lg-3"] {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+/* Tambahkan di paling bawah file untuk mengatur jarak antar card team agar rata */
+.team-area .row.justify-content-center {
+    gap: 32px 32px; /* jarak antar card horizontal dan vertikal */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-area .row.justify-content-center > [class*="col-lg-3"] {
+    margin: 0 !important; /* hilangkan margin default bootstrap */
+    padding: 0 !important;
+    flex: 0 0 calc(33.3333% - 21.33px); /* 3 kolom, dikurangi gap */
+    max-width: calc(33.3333% - 21.33px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+    .team-area .row.justify-content-center {
+        gap: 24px 24px;
+    }
+    .team-area .row.justify-content-center > [class*="col-md-4"] {
+        flex: 0 0 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+@media (max-width: 575.98px) {
+    .team-area .row.justify-content-center {
+        gap: 16px 0;
+    }
+    .team-area .row.justify-content-center > [class*="col-sm-6"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 .team-social {
   bottom: 22px;
@@ -3460,16 +3558,17 @@ hr {
 /*--------------------------------------------------------------
 # Product Carousel Only
 --------------------------------------------------------------*/
+/* ...existing code... */
 .product-img-bg {
-    background: #00235b; /* biru tua */
+    background: #00235b;
     border-radius: 18px;
-    padding: 40px 50px;
+    padding: 30px 20px; /* lebih kecil */
     margin-bottom: 30px;
     box-sizing: border-box;
-    width: calc(100% + 60px); /* lebar kotak lebih besar dari parent */
-    margin-left: -30px; /* geser ke kiri agar tetap center */
-    margin-right: -30px; /* geser ke kanan agar tetap center */
-    max-width: none;
+    width: 100%; /* tidak perlu lebih lebar dari parent */
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
 }
 .product-img-bg .single-project .project-img img {
     background: transparent;
@@ -3903,6 +4002,17 @@ hr {
 }
 
 /*--------------------------------------------------------------
+# Gallery Area Only
+--------------------------------------------------------------*/
+.single-gallery-image {
+  margin-top: 30px;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  height: 200px;
+}
+
+/*--------------------------------------------------------------
 # Footer Area Only
 --------------------------------------------------------------*/
 .footer-area {
@@ -3939,7 +4049,7 @@ hr {
 .footer-area .footer-logo {
   margin-bottom: -15px;
   position: relative;
-  left: -45px;
+  left: -80px;
   top: -45px;
 }
 .footer-area .footer-pera .info1 {

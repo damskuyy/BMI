@@ -141,7 +141,7 @@
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#eaf6ff 100%);border-radius:18px;">
                         <div class="card-body text-center">
                             <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fsearch-book-unscreen.gif?alt=media&token=72708d0c-ac38-4eea-98e3-94d05d263010" alt="YDBA" style="width:48px;height:48px;margin-bottom:12px;">
-                            <h5 class="card-title" style="color:#00235b;font-weight:700;">Visi & Misi YDBA</h5>
+                            <h5 class="card-title" style="color:#ff0000;font-weight:700;">Visi & Misi YDBA</h5>
                             <p class="card-text" style="font-size:15px;">
                                 <span style="color:#ff0000;font-weight:600;">"Berikan Kail Bukan Ikan"</span> – Filosofi Yayasan Astra membina UMKM agar mandiri dan berdaya saing, bukan sekadar bantuan sesaat. KBMI adalah hasil pembinaan intensif, berstandar tinggi, dan terkurasi.
                             </p>
@@ -179,8 +179,8 @@
                                 <b>Koperasi Multisektor:</b> Manufaktur, Kuliner, Kerajinan saling mendukung. Sinergi produk, kolaborasi pemasaran, efisiensi operasional, dan skala ekonomi tercipta untuk seluruh anggota.
                             </p>
                             <div class="d-flex justify-content-center gap-2 mt-2">
-                                <span class="badge badge-success" style="background:#009e3c;">Kolaborasi</span>
-                                <span class="badge badge-warning" style="background:#f27420;">Diversifikasi</span>
+                                <span class="badge badge-success mr-10" style="background:#009e3c;">Kolaborasi</span>
+                                <span class="badge badge-success" style="background:#009e3c;">Diversifikasi</span>
                             </div>
                         </div>
                     </div>
@@ -190,13 +190,13 @@
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#ffeaea 100%);border-radius:18px;">
                         <div class="card-body text-center">
                             <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Ftrophy-unscreen.gif?alt=media&token=006d9110-a018-4cc1-a730-785acfa81bc7" alt="Dampak" style="width:48px;height:48px;margin-bottom:12px;">
-                            <h5 class="card-title" style="color:#ff0000;font-weight:700;">Tujuan & Dampak</h5>
+                            <h5 class="card-title" style="color:#f27420;font-weight:700;">Tujuan & Dampak</h5>
                             <ul class="list-unstyled" style="font-size:15px;">
                                 <li>UMKM <b>naik kelas</b> & mandiri.</li>
                                 <li>Motor ekonomi lokal.</li>
                                 <li>Penyerapan tenaga kerja & nilai tambah produk Bogor.</li>
                             </ul>
-                            <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#ff0000;color:#fff;">Dampak Nyata</span>
+                            <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#f27420;color:#fff;">Dampak Nyata</span>
                         </div>
                     </div>
                 </div>
