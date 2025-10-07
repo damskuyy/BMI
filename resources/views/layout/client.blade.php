@@ -8,7 +8,7 @@
                         <div class="front-text">
                             <h2 class="">Our Client</h2>
                         </div>
-                        <span class="back-text">Gellary</span>
+                        <span class="back-text">Partners</span>
                     </div>
                 </div>
             </div>

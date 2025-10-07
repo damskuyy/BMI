@@ -2,24 +2,24 @@
 @section('slider')
     @include('layout.slider')
 @endsection
-@section('about')
-@include('layout.about')
-@endsection
-@section('service')
-@include('layout.service')
-@endsection
-@section('product')
-@include('layout.product')
-@endsection
-{{-- @section('team')
-@include('layout.team')
-@endsection --}}
-@section('client')
-@include('layout.client')
-@endsection
-@section('testimonial')
-@include('layout.testimonial')
-@endsection
 @section('countdown')
     @include('layout.countdown')
+@endsection
+@section('about')
+    @include('layout.about')
+@endsection
+@section('service')
+    @include('layout.service')
+@endsection
+@section('product')
+    @include('layout.product')
+@endsection
+@section('join')
+    @include('layout.join')
+@endsection
+@section('client')
+    @include('layout.client')
+@endsection
+@section('testimonial')
+    @include('layout.testimonial')
 @endsection

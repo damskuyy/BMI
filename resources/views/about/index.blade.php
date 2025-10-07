@@ -58,17 +58,16 @@
                 <div class="col-lg-6 mb-4">
                     <div class="card-visi">
                         <h3 class="section-title">Visi</h3>
-                        <p>Mewujudkan UMKM yang mandiri, inovatif, dan berdaya saing global melalui kolaborasi dan pemberdayaan komunitas.</p>
+                        <p>Maju bersama sesama anggota untuk meningkatkan usaha berkelanjutan.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card-misi">
                         <h3 class="section-title">Misi</h3>
                         <ul>
-                            <li>Meningkatkan kualitas produk dan layanan UMKM.</li>
-                            <li>Memperluas jaringan pemasaran dan kemitraan.</li>
-                            <li>Mendorong inovasi dan digitalisasi bisnis anggota.</li>
-                            <li>Memberikan pelatihan dan pendampingan berkelanjutan.</li>
+                            <li>Menjalankan dan membantu UMKM naik kelas dan berkelanjutan.</li>
+                            <li>Membuat pelanggan percaya dan memberikan pelayanan terbaik.</li>
+                            <li>Membangun kolaborasi dan saling mendukung antar anggota.</li>
                         </ul>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                         <h3 class="section-title">Tujuan & Fungsi</h3>
                         <ul>
                             <li>
-                                Meningkatkan kesejahteraan anggota UMKM, menjadi wadah pengembangan bisnis yang profesional, mendukung pertumbuhan ekonomi lokal dan nasional, serta berfungsi sebagai fasilitator kolaborasi, pusat informasi dan edukasi UMKM, dan pendorong inovasi serta adaptasi teknologi.
+                                Akan menjadi koperasi terbaik se-Indonesia, & akan membangun perekonomian yang baik di Kabupaten Bogor.
                             </li>
                         </ul>
                     </div>
@@ -100,10 +99,133 @@
             <div class="card-goals">
                 <h3 class="section-title">Our Goals</h3>
                 <ul>
-                    <li>Menjadi koperasi UMKM terbaik di Indonesia.</li>
-                    <li>Memberikan dampak positif bagi anggota, masyarakat, dan lingkungan.</li>
-                    <li>Mengutamakan inovasi, kolaborasi, dan pemberdayaan berkelanjutan.</li>
+                    <li>Mempunyai gedung atau gallery tahun 2028.</li>
+                    <li>Omzet Rp. 1 Milyar tahun 2026 atau tumbuh 100% per tahun.</li>
+                    <li>Mempunyai 1.000 anggota UMKM tahun 2030.</li>
+                    <li>Mempunyai komunitas yang solid untuk mencapai kesejahteraan anggota BMI.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Canvas Section -->
+    <section class="about-section about-bmc mb-5">
+        <div class="container">
+            <h3 class="section-title text-center" style="color:#00235b;font-weight:700;margin-bottom:24px;">
+                Business Model Canvas
+            </h3>
+            <div class="bmc-grid" style="display:grid;grid-template-columns:2fr 2fr 2fr 2fr 2fr;gap:12px;">
+                <div class="bmc-cell" style="grid-column:1;grid-row:1/3;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Key Partners</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Jaringan antar anggota (UMKM) & Komunitas</li>
+                        <li>YDBA</li>
+                        <li>Ayah Angkat</li>
+                        <li>Pemerintah (KEMENPERIN, DPMPTSP, DISDAGIN, DISKOP)</li>
+                        <li>Notaris</li>
+                        <li>Supplier material</li>
+                        <li>Anggota Produsen</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:2;grid-row:1;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Key Activities</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Pelatihan & Pendampingan</li>
+                        <li>Benchmarking</li>
+                        <li>Temu rutin komunitas bisnis</li>
+                        <li>Pelatihan & Pendampingan terkait QCD</li>
+                        <li>Mengelola hubungan dengan supplier/ayah angkat</li>
+                        <li>Mengelola harga competitor</li>
+                        <li>Penjualan B2B, B2C</li>
+                        <li>Mengelola Digital Platform</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:2;grid-row:2;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Key Resources</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Ekosistem YDBA</li>
+                        <li>Legalitas komunitas bisnis korporasi</li>
+                        <li>Management system</li>
+                        <li>Sosial Media Marketing</li>
+                        <li>Website</li>
+                        <li>Gedung Korporasi</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:3;grid-row:1/3;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Value Propositions</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Produk anggota komunitas MFG, KUL & KRJN yang mempunyai nilai kualitas dan pelayanan terbaik</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:4;grid-row:1;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Customer Relationships</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Self service by komunitas/community organizer</li>
+                        <li>Special price-special moment</li>
+                        <li>Garansi Produk/Jasa</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:4;grid-row:2;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Channels</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li>Sosial Media Marketing</li>
+                        <li>Website</li>
+                        <li><i>Government</i></li>
+                        <li>Networking ekosistem YDBA</li>
+                        <li>Jaringan antar anggota & Komunitas</li>
+                    </ul>
+                </div>
+                <div class="bmc-cell" style="grid-column:5;grid-row:1/3;background:#f7f7fd;border-radius:8px;padding:16px;">
+                    <b>Customer Segments</b>
+                    <ul style="font-size:14px;margin-top:8px;">
+                        <li><b>B2B</b>
+                            <ul>
+                                <li>Perusahaan swasta</li>
+                                <li>Grup Astra/Non Grup Astra</li>
+                                <li>Jaringan market existing UKM</li>
+                                <li>Pemerintahan</li>
+                                <li>BUMN/BUMD</li>
+                            </ul>
+                        </li>
+                        <li><b>B2C</b>
+                            <ul>
+                                <li>Market place</li>
+                                <li>Pasar tradisional</li>
+                                <li>Anggota Komunitas</li>
+                                <li>Pameran</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="bmc-cell" style="background:#eaf6ff;border-radius:8px;padding:16px;">
+                        <b>Cost Structure</b>
+                        <ul style="font-size:14px;margin-top:8px;">
+                            <li>Biaya Legalitas Koperasi</li>
+                            <li>Biaya Pembuatan Platform Digital</li>
+                            <li>Biaya Operasional (BBM, Listrik, Internet, dll)</li>
+                            <li>Biaya Marketing</li>
+                            <li>Biaya R & D</li>
+                            <li>Biaya Gaji Pegawai</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bmc-cell" style="background:#eaf6ff;border-radius:8px;padding:16px;">
+                        <b>Revenue Streams</b>
+                        <ul style="font-size:14px;margin-top:8px;">
+                            <li>Penjualan produk alat rumah</li>
+                            <li>Penjualan produk alat kebersihan</li>
+                            <li>Penjualan produk alat kesehatan</li>
+                            <li>Penjualan produk Aksesoris R2 & AC</li>
+                            <li>Jasa Pabrikasi & Custom</li>
+                            <li>Penjualan produk KUL & KRJN</li>
+                            <li>Next: Penyedia material, equipment, tools, dll untuk anggota</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

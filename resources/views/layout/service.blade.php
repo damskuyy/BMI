@@ -8,7 +8,7 @@
                     <div class="front-text">
                         <h2 class="">Our Services</h2>
                     </div>
-                    <span class="back-text">Services</span>
+                    <span class="back-text">Features</span>
                 </div>
             </div>
         </div>

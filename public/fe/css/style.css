@@ -2123,6 +2123,45 @@ hr {
 .header-area .header-top .header-info-right .header-social li a:hover {
   color: #ff0000;
 }
+.header-area .header-top .header-info-right .header-social li svg:hover {
+  color: #ff0000;
+}
+/* --- Header Social & Marketplace Icon Alignment --- */
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-social li {
+  display: flex;
+  align-items: center;
+}
+.header-social .icon-market {
+  height: 22px;
+  width: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.header-social .icon-market svg {
+  height: 22px;
+  width: 22px;
+  display: block;
+}
+.header-social i.fab {
+  font-size: 18px;
+  line-height: 1;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .main-header {
   position: relative;
   z-index: 3;
@@ -2232,6 +2271,76 @@ hr {
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 }
+.header-area .header-top .header-info-right .header-social a svg {
+  transition: transform 0.4s;
+  transform: rotateY(0deg);
+}
+.header-area .header-top .header-info-right .header-social a:hover svg {
+  transform: rotateY(180deg);
+  fill: #ff0000 !important;
+  color: #ff0000 !important;
+}
+.header-area .header-top .header-info-right .header-social a img {
+  transition: transform 0.4s, filter 0.3s;
+  transform: rotateY(0deg);
+  filter: none;
+}
+
+.header-area .header-top .header-info-right .header-social a:hover img {
+  transform: rotateY(180deg);
+  /* Efek merah: filter invert + sepia + saturate + hue-rotate */
+  filter: invert(18%) sepia(98%) saturate(7499%) hue-rotate(-7deg) brightness(1.1) contrast(1.1);
+}
+/* Kontak kiri header: putih, hover merah, underline animasi */
+.header-area .header-top .header-info-left ul li a {
+  color: #fff !important;
+  position: relative;
+  transition: 
+    color 0.3s,
+    transform 0.3s cubic-bezier(.4,2,.6,1),
+    text-shadow 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.header-area .header-top .header-info-left ul li a:hover {
+  color: #ff0000 !important;
+  transform: translateY(-4px) scale(1.04);
+  text-shadow: 0 0 8px #ff000099, 0 2px 12px #ff000066;
+  letter-spacing: 1.5px;
+}
+.header-area .header-top .header-info-left ul li a:hover::after {
+  width: 100%;
+}
+/* Efek active navbar lebih menarik: gradient, glow, dan animasi bounce underline */
+.main-header .main-menu ul li a.active {
+  color: #ff0000 !important;
+  font-weight: 700;
+  position: relative;
+  background: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.main-header .main-menu ul li a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  width: 0;
+  height: 3px;
+  background: #ff0000;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  animation: simpleNavUnderline 0.4s cubic-bezier(.4,2,.6,1) forwards;
+}
+
+@keyframes simpleNavUnderline {
+  from { width: 0; opacity: 0; }
+  to   { width: 36px; opacity: 1; }
+}
 .header-sticky.sticky-bar.sticky {
   background: #00235b;
 }
@@ -2282,8 +2391,6 @@ hr {
   width: 100%;
   z-index: 99;
 }
-
-
 .slider-height {
   min-height: 900px;
   background-repeat: no-repeat;
@@ -3069,7 +3176,7 @@ hr {
     border-radius: 18px;
     box-shadow: 0 2px 16px rgba(44,62,80,0.08);
     padding: 32px 28px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     border: 2px dashed #ff0000;
     transition: box-shadow 0.3s;
 }
@@ -3117,6 +3224,52 @@ hr {
         font-size: 22px;
     }
 }
+/* Business Model Canvas Interaktif - Animasi sederhana */
+.bmc-cell {
+    background: #f7f7fd;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+    padding: 18px 16px 14px 16px;
+    font-size: 15px;
+    transition: 
+        box-shadow 0.3s,
+        transform 0.3s cubic-bezier(.4,2,.6,1),
+        border-color 0.3s,
+        background 0.3s;
+    position: relative;
+    min-height: 120px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.7s;
+}
+.bmc-cell:hover {
+    box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    border-color: #ff0000;
+    background: #fff;
+    transform: translateY(-8px) scale(1.03) rotate(-1.5deg);
+    z-index: 2;
+}
+.bmc-label {
+    font-family: "Teko", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: #00235b;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #eaf6ff;
+    transition: background 0.3s;
+}
+.bmc-cell:hover .bmc-label {
+    background: #ff0000;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
 
 /*--------------------------------------------------------------
 # Count Area Only
@@ -3146,9 +3299,14 @@ hr {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center -15px;
-    overflow: hidden;
-    height: 250px;
+    overflow: visible;      /* pastikan overflow visible */
+    height: 270px;          /* tambah tinggi agar kotak tidak terpotong saat animasi */
     width: 100%;
+    padding-top: 30px;      /* tambahkan padding atas */
+    box-sizing: border-box;
+}
+.count-area .count-wrapper {
+    overflow: visible;      /* pastikan overflow visible */
 }
 .count-area .container,
 .count-area .count-wrapper {
@@ -3224,23 +3382,6 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* Kotak blur abu-abu untuk setiap countdown */
-/* .count-area .count-clients .single-counter {
-    background: rgba(200, 200, 200, 0.35);
-    backdrop-filter: blur(4px);
-    border-radius: 18px;
-    box-shadow: 0 2px 16px rgba(44,62,80,0.08);
-    padding: 20px 0 20px 0;
-    margin: 0 12px;
-    min-width: 400px;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: box-shadow 0.3s;
-    position: relative;
-    z-index: 1;
-} */
 /* Membuat background kotak count lebih panjang (lebar) */
 .count-area .count-clients .single-counter {
     background: rgba(200, 200, 200, 0.35);
@@ -3252,8 +3393,25 @@ hr {
     padding-right: 32px; /* tambah padding kanan */
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
+    transition: 
+      box-shadow 0.3s cubic-bezier(.4,2,.6,1),
+      transform 0.3s cubic-bezier(.4,2,.6,1),
+      background 0.3s;
+    cursor: pointer;
     /* padding atas/bawah tetap mengikuti desain sebelumnya */
+}
+.count-area .count-clients .single-counter:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+  background: rgba(255,255,255,0.45);
+  animation: floatY 0.8s cubic-bezier(.4,2,.6,1) infinite alternate;
+  /* Tidak ada scale/zoom */
+  transform: translateY(-12px) rotate(-2deg);
+}
+@keyframes floatY {
+    0% { transform: translateY(-12px) rotate(-2deg);}
+    50% { transform: translateY(-18px) rotate(2deg);}
+    100% { transform: translateY(-12px) rotate(-2deg);}
 }
 @media (max-width: 991px) {
     .count-area .count-clients .single-counter {
@@ -3889,6 +4047,41 @@ hr {
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.project-area .pagination {
+    justify-content: center;
+}
+.project-area .pagination .page-link {
+    color: #00235b;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0 3px;
+    border: 1px solid #00235b1a;
+    min-width: 44px;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+.project-area .pagination .page-item.active .page-link,
+.project-area .pagination .page-link:hover {
+    background: #00235b;
+    color: #fff;
+    border-color: #00235b;
+}
+.project-area .pagination .page-item.disabled .page-link {
+    color: #aaa;
+    background: #eee;
+    border-color: #eee;
+}
+
+/*--------------------------------------------------------------
+# Join Us Section Only
+--------------------------------------------------------------*/
+.join-us-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+.join-us-section .contact-us-caption p {
+    color: #fff !important;
 }
 
 /*--------------------------------------------------------------

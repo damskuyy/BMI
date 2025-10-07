@@ -12,11 +12,12 @@
 
     <!-- CSS here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="fe/css/owl.carousel.min.css">
     <link rel="stylesheet" href="fe/css/slicknav.css">
     <link rel="stylesheet" href="fe/css/animate.min.css">
     <link rel="stylesheet" href="fe/css/magnific-popup.css">
-    <link rel="stylesheet" href="fe/css/fontawesome-all.min.css">
+    {{-- <link rel="stylesheet" href="fe/css/fontawesome-all.min.css"> --}}
     <link rel="stylesheet" href="fe/css/themify-icons.css">
     <link rel="stylesheet" href="fe/css/slick.css">
     <link rel="stylesheet" href="fe/css/nice-select.css">
@@ -48,25 +49,43 @@
         <div class="header-area header-transparent">
             <div class="main-header ">
                 <div class="header-top d-none d-lg-block">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li>+62-821-8932-7077</li>
-                                        <li>bogormanufakturindonesia@gmail.com</li>
+                                        <li><a href="https://wa.me/6282189327077">+62-821-8932-7077</a></li>
+                                        <li><a href="mailto:bogormanufakturindonesia@gmail.com" target="_blank">bogormanufakturindonesia@gmail.com</a></li>
                                         {{-- <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li> --}}
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
                                     <ul class="header-social">
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.facebook.com/share/1775GVAmjM/" target="_blank"><i
-                                                    class="fab fa-facebook-f"></i></a></li>
-                                        <li> <a href=" https://www.instagram.com/bogor_manufaktur_indonesia?igsh=YTdmM3d5dThmMmFp"
-                                                target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                        <li> <a href=" https://www.instagram.com/bogor_manufaktur_indonesia?igsh=YTdmM3d5dThmMmFp"
-                                                target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                        <li>
+                                            <a href="https://id.shp.ee/THsScMy" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M15.941 17.963c.23-1.879-.98-3.077-4.175-4.097c-1.548-.528-2.277-1.22-2.26-2.171c.065-1.056 1.048-1.825 2.352-1.85a5.3 5.3 0 0 1 2.883.89c.116.072.197.06.263-.04c.09-.144.315-.493.39-.62c.051-.08.061-.186-.068-.28c-.185-.137-.704-.415-.983-.532a6.5 6.5 0 0 0-2.511-.514c-1.91.008-3.413 1.215-3.54 2.826q-.122 1.746 1.73 2.827c.263.152 1.68.716 2.244.892c1.774.552 2.695 1.542 2.478 2.697c-.197 1.047-1.299 1.724-2.818 1.744c-1.203-.046-2.287-.537-3.127-1.19l-.141-.11c-.104-.08-.218-.075-.287.03c-.05.077-.376.547-.458.67c-.077.108-.035.168.045.234c.35.293.817.613 1.134.775a6.7 6.7 0 0 0 2.829.727a4.9 4.9 0 0 0 2.075-.354c1.095-.465 1.803-1.394 1.945-2.554M12 1.401c-2.068 0-3.754 1.95-3.833 4.39h7.665C15.751 3.35 14.066 1.4 12 1.4m7.851 22.598l-.08.001l-15.784-.002c-1.074-.04-1.863-.91-1.971-1.991l-.01-.195l-.707-15.526a.46.46 0 0 1 .45-.494h4.975C6.845 2.568 9.16 0 12 0s5.153 2.569 5.275 5.79h4.968a.46.46 0 0 1 .458.483l-.773 15.588l-.007.131c-.094 1.094-.979 1.977-2.07 2.006"/></svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://tk.tokopedia.com/ZSSQYCVWX/" target="_blank">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M27.043 12.942c-3.43-2.897-16.85-2.247-16.85-2.247l-.473 32.65s17.855.134 23.353 0s9.341-4.508 9.4-7.878s0-24.18 0-24.18c-6.858-.829-11.942-.178-15.43 1.655" stroke-width="2"/><circle cx="19.531" cy="24.172" r="6.976" fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M32.043 29.33a6.272 6.272 0 1 0-2.3-1.786m-19.55-16.849l-4.494 3.252L5.5 39.369l4.22 3.977m23.975-32.251a7.796 7.796 0 0 0-15.318-.299" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M34.396 19.662a2.36 2.36 0 0 1-3.878 2.59a4.194 4.194 0 1 0 3.878-2.59m-13.872.345a2.424 2.424 0 0 1-4.251 2.211a4.31 4.31 0 1 0 4.25-2.21m3.838 11.41c0-2.817 2.031-3.962 4.721-3.962c2.395 0 3.755 3.252 3.755 3.252a18.2 18.2 0 0 1-7.45 1.449a9.9 9.9 0 0 0 5.321 2.542s-.827.62-3.665.62c-2.306.001-2.682-2.453-2.682-3.902" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M30.317 31.569a10.4 10.4 0 0 1-.258 3.008" stroke-width="2"/></svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/share/1775GVAmjM/" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li> 
+                                            <a href="https://www.instagram.com/bogor_manufaktur_indonesia?igsh=YTdmM3d5dThmMmFp" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li> 
+                                            <a href="https://www.tiktok.com/@bogormanufakturindonesia?_t=ZS-8ye4QERTz6O&_r=1" target="_blank">
+                                                <i class="fab fa-tiktok"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -74,7 +93,7 @@
                     </div>
                 </div>
                 <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row align-items-center">
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
@@ -91,38 +110,32 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="/home" {{ Request::is('home') ? 'active' : '' }}>Home</a></li>
-                                            {{-- <li><a href="/about">About</a></li> --}}
-                                            <li><a href="/about"
-                                                    class="{{ Request::is('about') ? 'active' : '' }}">About</a>
+                                            <li>
+                                                <a href="/home" class="{{ Request::is('home') ? 'active' : '' }}">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">About</a>
                                                 <ul class="submenu">
-                                                    <li><a href="/manufaktur-about"
-                                                            class="{{ Request::is('manufaktur-about') ? 'active' : '' }}">Manufacture</a>
+                                                    <li>
+                                                        <a href="/manufaktur-about" class="{{ Request::is('manufaktur-about') ? 'active' : '' }}">Manufaktur</a>
                                                     </li>
-                                                    <li><a href="/umkm-about"
-                                                            class="{{ Request::is('umkm-about') ? 'active' : '' }}">Kuliner</a>
+                                                    <li>
+                                                        <a href="/umkm-about" class="{{ Request::is('umkm-about') ? 'active' : '' }}">Kuliner</a>
                                                     </li>
-                                                    <li><a href="/kerajinan-about"
-                                                            class="{{ Request::is('kerajinan-about') ? 'active' : '' }}">Kerajinan</a>
+                                                    <li>
+                                                        <a href="/kerajinan-about" class="{{ Request::is('kerajinan-about') ? 'active' : '' }}">Kerajinan</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/members"
-                                                    class="{{ Request::is('members') ? 'active' : '' }}">Members</a>
+                                            <li>
+                                                <a href="/members" class="{{ Request::is('members') ? 'active' : '' }}">Members</a>
                                             </li>
-                                            <li><a href="/product"
-                                                    class="{{ Request::is('product') ? 'active' : '' }}">Product</a>
+                                            <li>
+                                                <a href="/product" class="{{ Request::is('product') ? 'active' : '' }}">Product</a>
                                             </li>
-                                            <li><a href="/gallery"
-                                                    class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
+                                            <li>
+                                                <a href="/gallery" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
                                             </li>
-                                            {{-- <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="project_details.html">Projects Details</a></li>
-                                                    <li><a href="services_details.html">Services Details</a></li>
-                                                </ul>
-                                            </li> --}}
                                             {{-- <li><a href="/contact"
                                                     class="{{ Request::is('contact') ? 'active' : '' }}">Contact</a>
                                             </li> --}}
@@ -155,94 +168,9 @@
         @yield('service')
         @yield('product')
         @yield('team')
+        @yield('join')
         @yield('client')
         @yield('testimonial')
-        <!-- contact with us Start -->
-        {{-- <section class="contact-with-area" data-background="fe/img/gallery/section-bg2.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-9 offset-xl-1 offset-lg-1">
-                        <div class="contact-us-caption">
-                            <div class="team-info mb-30 pt-45">
-                                <!-- Section Tittle -->
-                                <div class="section-tittle section-tittle4">
-                                    <div class="front-text">
-                                        <h2 class="">Lats talk with us</h2>
-                                    </div>
-                                    <span class="back-text">Lat`s chat</span>
-                                </div>
-                                <p>Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore
-                                    eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
-                                    dhjinulpadeserunt mollitemnth incididbnt ut;o5tu layjobore mofllit anim.</p>
-                                <a href="#" class="white-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-        <!-- contact with us End-->
-
-        <!--latest Nnews Area start -->
-        {{-- <div class="latest-news-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle7 mb-50">
-                            <div class="front-text">
-                                <h2 class="">latest news</h2>
-                            </div>
-                            <span class="back-text">Our Blog</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <!-- single-news -->
-                        <div class="single-news mb-30">
-                            <div class="news-img">
-                                <img src="fe/img/david/david_1.png" alt="">
-                                <div class="news-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="news-caption">
-                                <ul class="david-info">
-                                    <li> | &nbsp; &nbsp; Porperties</li>
-                                </ul>
-                                <h2><a href="single-blog.html">Footprints in Time is perfect
-                                        House in Kurashiki</a></h2>
-                                <a href="single-blog.html" class="d-btn">Read more »</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <!-- single-news -->
-                        <div class="single-news mb-30">
-                            <div class="news-img">
-                                <img src="fe/img/david/david_2.png" alt="">
-                                <div class="news-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="news-caption">
-                                <ul class="david-info">
-                                    <li> | &nbsp; &nbsp; Porperties</li>
-                                </ul>
-                                <h2><a href="single-blog.html">Footprints in Time is perfect
-                                        House in Kurashiki</a></h2>
-                                <a href="single-blog.html" class="d-btn">Read more » </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!--latest News Area End -->
-
     </main>
     
     <footer>
@@ -427,7 +355,7 @@
                 var desc = $(this).data('desc');
                 $('#productPreviewImg').attr('src', img);
                 $('#productPreviewLabel').text(title);
-                $('#productPreviewDesc').text(desc);
+                // $('#productPreviewDesc').text(desc);
                 $('#productPreviewModal').modal('show');
             });
         });

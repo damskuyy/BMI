@@ -246,7 +246,7 @@
                         <td>4</td><td>Abdul Manap</td><td>Anggota</td><td>MFG</td><td>UD. Kanunia Mandiri</td><td>Aksesoris R2</td><td>Tarikolot-Citeureup</td><td>081210283340</td>
                     </tr>
                     <tr>
-                        <td>5</td><td>H. Maman</td><td>Anggota</td><td>MFG</td><td>UD. Aneka Joyang</td><td>Aneka Loyang</td><td>Tarikolot-Citeureup</td><td>081210215142</td>
+                        <td>5</td><td>H. Maman</td><td>Anggota</td><td>MFG</td><td>UD. Aneka Loyang</td><td>Aneka Loyang</td><td>Tarikolot-Citeureup</td><td>081210215142</td>
                     </tr>
                     <tr>
                         <td>6</td><td>Acep</td><td>Anggota</td><td>MFG</td><td>Metal Jaya Rubber</td><td>Rubber</td><td>Singkup - Citeureup</td><td>085894627124</td>

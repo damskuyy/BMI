@@ -28,7 +28,7 @@
                     <div class="front-text">
                         <h2 class="">Our Gallery</h2>
                     </div>
-                    <span class="back-text">Gellary</span>
+                    <span class="back-text">Portfolio</span>
                 </div>
 				<div class="row gallery-item">
 					<div class="col-md-4">

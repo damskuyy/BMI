@@ -8,7 +8,7 @@
                     <div class="front-text">
                         <h2 class="">Our team</h2>
                     </div>
-                    <span class="back-text">exparts</span>
+                    <span class="back-text">Members</span>
                 </div>
             </div>
         </div>
