@@ -102,7 +102,7 @@
                                     <a href="/home" class="big-logo"><img src="fe/img/logo/logo-bmi.png"
                                             style="width: auto; height: 90px;" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="/home" class="small-logo"><img src="fe/img/logo/loder-logo.png" alt=""></a>
+                                    <a href="/home" class="small-logo"><img src="fe/img/logo/logo-bmi.png" style="width: auto; height: 48px;" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -151,6 +151,9 @@
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>
+                                <a href="/contact" class="contact-mobile-icon d-block d-lg-none" aria-label="Contact">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

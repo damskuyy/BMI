@@ -106,8 +106,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
                                             <div class="single-project mb-30">
-                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/set-meja-kursi.jpeg" data-title="Set meja bar kotak panjang" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                    <img src="fe/img/gallery/set-meja-kursi.jpeg" alt="">
+                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/manufaktur/set-meja-kursi.jpeg" data-title="Set meja bar kotak panjang" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                    <img src="fe/img/gallery/manufaktur/set-meja-kursi.jpeg" alt="">
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
@@ -131,8 +131,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
                                             <div class="single-project mb-30">
-                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/set-meja-kursiyogurtpanjang" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                    <img src="fe/img/gallery/yogurt.jpeg" alt="">
+                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/kuliner/yogurt.jpeg" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                    <img src="fe/img/gallery/kuliner/yogurt.jpeg" alt="">
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
@@ -156,8 +156,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
                                             <div class="single-project mb-30">
-                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/konveksi-jaket.jpeg" data-title="Set meja bar kotak panjang" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                    <img src="fe/img/gallery/konveksi-jaket.jpeg" alt="">
+                                                <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/kerajinan/konveksi-jaket.jpeg" data-title="Set meja bar kotak panjang" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                    <img src="fe/img/gallery/kerajinan/konveksi-jaket.jpeg" alt="">
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
@@ -175,7 +175,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="/product" class="btn red-btn2 mt-20" style="align-items: center">read more</a>
+                            <a href="/product" class="btn red-btn2 mt-20" style="align-items: center">view more</a>
                         </div>
                     </div>
                 <!-- End Nav Card -->
