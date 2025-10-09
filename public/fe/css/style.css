@@ -2445,6 +2445,42 @@ hr {
     padding: 25px 0;
   }
 }
+/* Tampilan Mobile */
+/* Tombol Contact icon di samping hamburger pada mobile */
+@media (max-width: 991.98px) {
+  .header-area .contact-mobile-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 18px;
+    right: 60px; /* geser ke kiri dari hamburger */
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background: #ff0000;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .header-area .contact-mobile-icon:hover {
+    background: #b30000;
+  }
+  .header-area .contact-mobile-icon i {
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+    display: block;
+  }
+}
+
+/* Sembunyikan di desktop */
+@media (min-width: 992px) {
+  .header-area .contact-mobile-icon {
+    display: none !important;
+  }
+}
 
 /*-----------------------
   Slider Carousel
@@ -3279,11 +3315,84 @@ hr {
         font-size: 22px;
     }
 }
+/* --- BMI Timeline Interaktif: tanpa fade up, hanya efek hover dan shadow --- */
+.bmi-timeline {
+  background: #f7f7fd;
+  border-radius: 18px;
+  padding: 32px 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+  position: relative;
+}
+.bmi-timeline .timeline-step {
+  position: relative;
+  min-width: 140px;
+  transition: box-shadow 0.3s, transform 0.3s cubic-bezier(.4,2,.6,1), z-index 0.3s;
+  z-index: 1;
+}
+.bmi-timeline .timeline-step:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+  transform: scale(1.07) rotate(-2deg); /* hanya scale dan rotate, tidak translateY */
+  z-index: 2;
+}
+.bmi-timeline .timeline-step {
+  /* Hapus animasi fade up/fade in jika ada */
+  animation: none !important;
+}
+.bmi-timeline .timeline-icon {
+  animation: popIcon 1.2s cubic-bezier(.4,2,.6,1) infinite alternate;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: box-shadow 0.3s;
+}
+.bmi-timeline .timeline-step:hover .timeline-icon {
+  box-shadow: 0 8px 24px rgba(255,0,0,0.12);
+  animation: popIconHover 0.6s cubic-bezier(.4,2,.6,1) infinite alternate;
+}
+@keyframes popIcon {
+  0% { transform: scale(1) translateY(0);}
+  100% { transform: scale(1.12) translateY(-8px);}
+}
+@keyframes popIconHover {
+  0% { transform: scale(1.12) translateY(-8px);}
+  100% { transform: scale(1.18) translateY(-16px);}
+}
+.bmi-timeline .timeline-label {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  transition: color 0.3s;
+}
+.bmi-timeline .timeline-step:hover .timeline-label {
+  color: #ff0000 !important;
+  text-shadow: 0 2px 8px #ffeaea;
+}
+.bmi-timeline .timeline-arrow {
+  font-size: 32px;
+  color: #ff0000;
+  margin: 0 8px;
+  animation: arrowBounce 1.2s infinite alternate;
+  transition: color 0.3s;
+}
+@keyframes arrowBounce {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-8px);}
+}
+.bmi-timeline .timeline-step .timeline-icon i {
+  animation: iconGlow 1.2s infinite alternate;
+}
+@keyframes iconGlow {
+  0% { text-shadow: 0 0 0 #fff;}
+  100% { text-shadow: 0 0 12px #fff;}
+}
+
+/* Tampilan Mobile */
 /* Business Model Canvas Interaktif - Animasi sederhana */
 .bmc-cell {
     background: #f7f7fd;
     border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.06);
+    box-shadow: 0 2px 12px rgba(255,0,0,0.08);
     padding: 18px 16px 14px 16px;
     font-size: 15px;
     transition: 
@@ -3298,7 +3407,7 @@ hr {
     animation: fadeInUp 0.7s;
 }
 .bmc-cell:hover {
-    box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    box-shadow: 0 8px 32px rgba(255,0,0,0.15);
     border-color: #ff0000;
     background: #fff;
     transform: translateY(-8px) scale(1.03) rotate(-1.5deg);
@@ -3306,7 +3415,7 @@ hr {
 }
 .bmc-label {
     font-family: "Teko", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
     background: #00235b;
@@ -3316,21 +3425,94 @@ hr {
     display: inline-block;
     letter-spacing: 1px;
     box-shadow: 0 2px 8px #eaf6ff;
-    transition: background 0.3s;
-}
-.bmc-cell:hover .bmc-label {
-    background: #ff0000;
 }
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(40px);}
     to { opacity: 1; transform: translateY(0);}
 }
-/* Tampilan Mobile */
 @media (max-width: 575px) {
-  .support-company-area {
-    margin-top: 10px !important; /* dari sebelumnya 120px, jadi lebih ke atas */
+  .bmc-grid {
+    display: block !important;
+    grid-template-columns: unset !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .bmc-cell {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
+    min-height: 80px !important;
+    font-size: 12px !important;
+    padding: 12px 8px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box;
+    background: #f7f7fd !important;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    overflow: visible !important;
+  }
+  .bmc-cell:last-child {
+    margin-bottom: 0 !important;
+  }
+  .bmc-cell b {
+    font-size: 13px !important;
+    margin-bottom: 6px !important;
+    display: block;
+  }
+  .bmc-cell ul {
+    font-size: 12px !important;
+    margin-top: 8px !important;
+    padding-left: 12px !important;
   }
 }
+@media (max-width: 575px) {
+  .bmi-timeline {
+    padding: 24px 8px;
+  }
+  .bmi-timeline .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: center !important;
+  }
+  .bmi-timeline .timeline-step {
+    min-width: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .bmi-timeline .timeline-label,
+  .bmi-timeline .timeline-desc {
+    text-align: center !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bmi-timeline .timeline-arrow {
+    font-size: 32px;
+    color: #ff0000;
+    margin: 8px 0 !important;
+    min-width: 0 !important;
+    transform: rotate(90deg); /* panah ke bawah */
+    display: block !important;
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .bmi-timeline .timeline-arrow {
+    transform: rotate(90deg) !important; /* arahkan panah ke bawah */
+    margin: 15px 0 !important;
+    display: block !important;
+    text-align: center;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Count Area Only
@@ -3630,7 +3812,7 @@ hr {
     box-sizing: border-box;
 }
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
     .team-area .row.justify-content-center {
         gap: 24px 24px;
     }
@@ -3647,7 +3829,7 @@ hr {
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
+} */
 .team-social {
   bottom: 22px;
   left: 0;
@@ -3832,6 +4014,100 @@ hr {
         padding: 7px 6px;
         font-size: 13px;
     }
+}
+/* Tampilan Mobile */
+@media (max-width: 575px) {
+  .team-area .row.justify-content-center {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+  .team-area .row.justify-content-center > [class*="col-sm-6"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+  }
+  .single-team {
+    background: #00235b !important;
+    border-radius: 10px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 220px !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    overflow: hidden;
+  }
+  .single-team .team-img {
+    width: 100% !important;
+    height: 140px !important;
+    min-height: 140px !important;
+    border-radius: 10px 10px 0 0 !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  .single-team .team-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px 10px 0 0 !important;
+    display: block;
+  }
+  .single-team .team-caption {
+    position: static !important;
+    background: transparent !important;
+    padding: 10px 6px !important;
+    font-size: 13px !important;
+    color: #fff !important;
+    border-radius: 0 0 10px 10px !important;
+    text-align: center !important;
+    width: 100%;
+    min-height: 56px !important;
+    margin: 0 !important;
+    display: block;
+  }
+  .single-team .team-caption h3 {
+    margin-bottom: 2px !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+  }
+  .single-team .team-caption h3 a {
+    font-size: 15px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+  }
+  .single-team .team-caption p {
+    font-size: 12px !important;
+    color: #fff !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+  .team-social ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+  }
+  .team-social li a {
+    font-size: 12px !important;
+    margin: 0 2px !important;
+    color: #fff !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -4677,41 +4953,18 @@ hr {
   width: 100%;
 }
 /* Tampilan Mobile */
-/* Tombol Contact icon di samping hamburger pada mobile */
-@media (max-width: 991.98px) {
-  .header-area .contact-mobile-icon {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 18px;
-    right: 60px; /* geser ke kiri dari hamburger */
-    z-index: 100;
-    width: 44px;
-    height: 44px;
-    background: #ff0000;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .header-area .contact-mobile-icon:hover {
-    background: #b30000;
-  }
-  .header-area .contact-mobile-icon i {
-    color: #fff;
-    font-size: 22px;
-    margin: 0;
-    display: block;
+@media (max-width: 575px) {
+  .footer-area .footer-logo {
+    margin-top: 32px !important;    /* geser logo ke bawah */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    left: 0 !important;
+    top: 0 !important;
+    position: static !important;
   }
 }
 
-/* Sembunyikan di desktop */
-@media (min-width: 992px) {
-  .header-area .contact-mobile-icon {
-    display: none !important;
-  }
-}
 
 /*--------------------------------------------------------------
 # Hero Area Only
@@ -5525,3 +5778,4 @@ hr {
     margin-bottom: 18px !important;
   }
 }
+

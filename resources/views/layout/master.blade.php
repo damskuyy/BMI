@@ -117,6 +117,9 @@
                                                 <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">About</a>
                                                 <ul class="submenu">
                                                     <li>
+                                                        <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">BMI</a>
+                                                    </li>
+                                                    <li>
                                                         <a href="/manufaktur-about" class="{{ Request::is('manufaktur-about') ? 'active' : '' }}">Manufaktur</a>
                                                     </li>
                                                     <li>

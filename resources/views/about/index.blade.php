@@ -367,7 +367,7 @@
             <div class="row mt-4">
                 <div class="col-lg-12 text-center">
                     <a href="/members" class="btn btn-lg btn-primary" style="background:#ff0000;border-radius:8px;font-weight:700;letter-spacing:1px;">
-                        Lihat Anggota Koperasi & Produk Unggulan Bogor
+                        Lihat Anggota Koperasi
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
