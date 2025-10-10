@@ -16,7 +16,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-team mb-30 text-center">
                     <div class="team-img">
-                        <img src="fe/img/team/ety.jpeg" alt="">
+                        <img src="fe/img/team/team2.png" alt="">
                         <div class="team-caption">
                             <h3><a href="#">Bayu Agusworo</a></h3>
                             <p>Ketua BMI</p>

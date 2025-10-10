@@ -258,9 +258,9 @@
                                     </div>
                                 </div>
                                 <!-- Map -->
-                                <div class="map-footer">
+                                {{-- <div class="map-footer">
                                     <img src="fe/img/gallery/map-footer.png" alt="">
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

@@ -87,38 +87,108 @@
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/manufaktur/pan-mixer.png',
+                                            'title' => 'Pan Mixer',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/kuliner/basreng-ikan-original.png',
+                                            'title' => 'Basreng Ikan Original',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/kuliner/es-dawet-IRENG.jpeg',
+                                            'title' => 'Es dawet ireng',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/manufaktur/rak-plastik.png',
+                                            'title' => 'Rak Plastik',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/kuliner/kacang.jpeg',
+                                            'title' => 'Camilan Kacang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/kuliner/keju-kriwil.jpeg',
+                                            'title' => 'Camilan keju kriwil',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
+                                            'img' => 'fe/img/gallery/manufaktur/lemari-apron.png',
+                                            'title' => 'Lemari apron',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/kentang-mustofa.jpeg',
+                                            'title' => 'Camilan kentang mustofa',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/gerobak-sampah.png',
+                                            'title' => 'Gerobak sampah',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/keripik-pangsit.jpeg',
+                                            'title' => 'Camilan keripik pangsit',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/proofer.png',
+                                            'title' => 'Proofer',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/keripik-pisang-coklat.png',
+                                            'title' => 'Camilan keripik pisang',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/mixer.png',
+                                            'title' => 'Mixer',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/keripik-tempe-tigasaudara.jpeg',
+                                            'title' => 'Camilan keripik tempe',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/loyang-brownies.png',
+                                            'title' => 'Loyang brownies',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/kerupuk-rambak.jpg',
+                                            'title' => 'Camilan kerupuk rambak',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/bracket-plat.png',
+                                            'title' => 'Bracket plat nomor',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/onde-onde.jpg',
+                                            'title' => 'Camilan onde-onde',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/bak-penampung.png',
+                                            'title' => 'Bak penampung',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/sus-buah.jpeg',
+                                            'title' => 'Camilan kue sus buah',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/trolley-makan.png',
+                                            'title' => 'Troli Makan',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                         ],
                                     ];
@@ -453,36 +523,22 @@
 
     <!-- Modal Preview Product -->
     <div class="modal fade" id="productPreviewModal" tabindex="-1" role="dialog" aria-labelledby="productPreviewLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content" style="background:#00235bae;">
-            <div class="modal-header border-0">
-                <h5 class="modal-title text-white" id="productPreviewLabel"></h5>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="font-size:2rem;">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <!-- Carousel Start -->
-                <div id="productPreviewCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" id="productPreviewCarouselInner">
-                        <!-- Images will be injected here -->
-                    </div>
-                    <a class="carousel-control-prev" href="#productPreviewCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#productPreviewCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <!-- Carousel End -->
-                <div id="productPreviewDesc" class="mt-3 text-white"></div>
-            </div>
-            </div>
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" style="background:#00235b;">
+        <div class="modal-header border-0">
+            <h5 class="modal-title text-white" id="productPreviewLabel"></h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="font-size:2rem;">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <img id="productPreviewImg" src="" alt="Preview" style="max-width:100%; max-height:400px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+            <div id="productPreviewDesc" class="mt-3 text-white"></div>
+        </div>
         </div>
     </div>
-@endsection
+    </div>
+    @endsection
 @section('client')
     @include('layout.client')
 @endsection

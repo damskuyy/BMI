@@ -41,7 +41,7 @@
             <div class="right-content">
                 <!-- img -->
                 <div class="right-img">
-                    <img src="fe/img/gallery/safe_in.png" alt="">
+                    <img src="fe/img/elements/gallery11.jpg" alt="">
                 </div>
                 <div class="support-img-cap text-center">
                     <span>2021</span>

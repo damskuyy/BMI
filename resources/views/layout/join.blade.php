@@ -13,7 +13,7 @@
                             <span class="back-text">Join Us</span>
                         </div>
                         <p>Jadi bagian dari jaringan manufaktur Bogor yang solid dan progresif. Bersama, kita wujudkan pertumbuhan industri berkelanjutan.</p>
-                        <a href="#" class="btn">click here</a>
+                        <a href="https://forms.gle/ucsGLPz6P7BPnis97" target="_blank" class="btn">click here</a>
                     </div>
                 </div>
             </div>

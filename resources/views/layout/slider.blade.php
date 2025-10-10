@@ -1,7 +1,7 @@
 <!-- slider Area Start-->
 <div class="slider-area ">
     <div class="slider-active owl-carousel">
-        <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/hero/h1_hero.jpg">
+        <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/elements/gallery1.jpg">
             <div class="container" style="margin-top: -370px !important;">
                 <div class="row">
                     <div class="col-lg-12">
