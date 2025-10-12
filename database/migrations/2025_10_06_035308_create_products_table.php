@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('desc')->nullable();
             $table->string('img')->nullable();
+            $table->string('tokopedia_url')->nullable();
+            $table->string('shopee_url')->nullable();
+            $table->string('whatsapp_url')->nullable();
             $table->timestamps();
         });
     }

@@ -73,123 +73,641 @@
                                     $products = [
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/set-meja-kursi.jpeg',
-                                            'title' => 'Set meja bar kotak panjang (outdoor)',
+                                            'title' => 'Set meja bar kotak panjang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/yogurt.jpeg',
                                             'title' => 'Yogurt drink with jelly',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
-                                            'title' => 'Jas hujan anti badai',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/manufaktur/pan-mixer.png',
-                                            'title' => 'Pan Mixer',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/basreng-ikan-original.png',
-                                            'title' => 'Basreng Ikan Original',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'desc' => 'Minuman sehat dengan jelly.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077?text=Halo%20saya%20mau%20pesan%20Yogurt%20drink%20with%20jelly'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/es-dawet-IRENG.jpeg',
                                             'title' => 'Es dawet ireng',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/pan-mixer.png',
+                                            'title' => 'Pan Mixer',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/basreng-ikan-original.png',
+                                            'title' => 'Basreng Ikan Original',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
+                                            'title' => 'Kerajinan jas hujan',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/rak-plastik.png',
                                             'title' => 'Rak Plastik',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/kacang.jpeg',
                                             'title' => 'Camilan Kacang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/keju-kriwil.jpeg',
-                                            'title' => 'Camilan keju kriwil',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/manufaktur/lemari-apron.png',
-                                            'title' => 'Lemari apron',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/kentang-mustofa.jpeg',
-                                            'title' => 'Camilan kentang mustofa',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/manufaktur/gerobak-sampah.png',
-                                            'title' => 'Gerobak sampah',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/keripik-pangsit.jpeg',
-                                            'title' => 'Camilan keripik pangsit',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/proofer.png',
                                             'title' => 'Proofer',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/lemari-apron.png',
+                                            'title' => 'Lemari apron',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/keripik-pisang-coklat.png',
                                             'title' => 'Camilan keripik pisang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/gerobak-sampah.png',
+                                            'title' => 'Gerobak sampah',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/keripik-pangsit.jpeg',
+                                            'title' => 'Camilan keripik pangsit',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/keju-kriwil.jpeg',
+                                            'title' => 'Camilan keju kriwil',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/kentang-mustofa.jpeg',
+                                            'title' => 'Camilan kentang mustofa',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/mixer.png',
                                             'title' => 'Mixer',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/keripik-tempe-tigasaudara.jpeg',
                                             'title' => 'Camilan keripik tempe',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/loyang-brownies.png',
                                             'title' => 'Loyang brownies',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/kuliner/kerupuk-rambak.jpg',
                                             'title' => 'Camilan kerupuk rambak',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/bracket-plat.png',
                                             'title' => 'Bracket plat nomor',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/onde-onde.jpg',
-                                            'title' => 'Camilan onde-onde',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/manufaktur/bak-penampung.png',
-                                            'title' => 'Bak penampung',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
-                                        ],
-                                        [
-                                            'img' => 'fe/img/gallery/kuliner/sus-buah.jpeg',
-                                            'title' => 'Camilan kue sus buah',
-                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
                                         ],
                                         [
                                             'img' => 'fe/img/gallery/manufaktur/trolley-makan.png',
                                             'title' => 'Troli Makan',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/bak-penampung.png',
+                                            'title' => 'Bak penampung',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'tokopedia',
+                                                    'url' => 'https://www.tokopedia.com/produk1'
+                                                ],
+                                                [
+                                                    'type' => 'shopee',
+                                                    'url' => 'https://shopee.co.id/produk1'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/sus-buah.jpeg',
+                                            'title' => 'Camilan kue sus buah',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/kuliner/onde-onde.jpeg',
+                                            'title' => 'Camilan onde-onde',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
+                                            'title' => 'Ajuster baud',
+                                            'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
+                                            'marketplaces' => [
+                                                [
+                                                    'type' => 'whatsapp',
+                                                    'url' => 'https://wa.me/6282189327077'
+                                                ]
+                                            ]
                                         ],
                                     ];
                                     if ($search) {
@@ -199,7 +717,8 @@
                                         });
                                         $products = array_values($products); // reset index array
                                     }
-                                    $perPage = 9;
+                                    $isMobile = isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+                                    $perPage = $isMobile ? 8 : 9;
                                     $page = request()->get('page', 1);
                                     $total = count($products);
                                     $totalPages = ceil($total / $perPage);
@@ -216,28 +735,40 @@
                                             </div>
                                         @endif
                                         @foreach($productsToShow as $product)
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="single-project mb-30">
-                                                <a class="project-img product-preview"
-                                                    href="javascript:void(0);"
-                                                    data-img="{{ $product['img'] }}"
-                                                    data-title="{{ $product['title'] }}"
-                                                    data-desc="{{ $product['desc'] }}">
-                                                    <img src="{{ $product['img'] }}" alt="">
-                                                </a>
-                                                <div class="project-cap">
-                                                    <div class="marketplace-row">
-                                                        <a href="https://www.tokopedia.com" class="plus-btn tokopedia-btn">
-                                                            <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="38" height="38">
-                                                        </a>
-                                                        <a href="https://www.shopee.com" class="plus-btn shopee-btn">
-                                                            <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
-                                                        </a>
+                                            @php
+                                                $marketplaces = $product['marketplaces'] ?? [];
+                                            @endphp
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="single-project mb-30">
+                                                    <a class="project-img product-preview"
+                                                        href="javascript:void(0);"
+                                                        data-img="{{ $product['img'] }}"
+                                                        data-title="{{ $product['title'] }}"
+                                                        data-desc="{{ $product['desc'] }}">
+                                                        <img src="{{ $product['img'] }}" alt="">
+                                                    </a>
+                                                    <div class="project-cap">
+                                                        <div class="marketplace-row">
+                                                            @foreach($marketplaces as $market)
+                                                                @if($market['type'] == 'tokopedia')
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn" target="_blank">
+                                                                        <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="32" height="32">
+                                                                    </a>
+                                                                @elseif($market['type'] == 'shopee')
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn shopee-btn" target="_blank">
+                                                                        <img src="fe/img/icon/shopee.png" alt="Shopee" width="32" height="32">
+                                                                    </a>
+                                                                @elseif($market['type'] == 'whatsapp')
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn" target="_blank">
+                                                                        <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="38" height="38">
+                                                                    </a>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+                                                        <h4><a>{{ $product['title'] }}</a></h4>
                                                     </div>
-                                                    <h4><a>{{ $product['title'] }}</a></h4>
                                                 </div>
                                             </div>
-                                        </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -245,9 +776,14 @@
                                     <nav aria-label="Product pagination">
                                         <ul class="pagination">
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page - 1 }}" tabindex="-1">Previous</a>
+                                                <a class="page-link" href="?page={{ $page - 1 }}">Previous</a>
                                             </li>
-                                            @for($i = 1; $i <= $totalPages; $i++)
+                                            @php
+                                                $maxShow = 4;
+                                                $start = max(1, min($page - 1, $totalPages - $maxShow + 1));
+                                                $end = min($totalPages, $start + $maxShow - 1);
+                                            @endphp
+                                            @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
                                                     <a class="page-link" href="?page={{ $i }}">{{ $i }}</a>
                                                 </li>
@@ -278,7 +814,8 @@
                                         });
                                         $products = array_values($products); // reset index array
                                     }
-                                    $perPage = 9;
+                                    $isMobile = isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+                                    $perPage = $isMobile ? 8 : 9;
                                     $page = request()->get('page', 1);
                                     $total = count($products);
                                     $totalPages = ceil($total / $perPage);
@@ -306,12 +843,21 @@
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
-                                                        <a href="https://www.tokopedia.com" class="plus-btn tokopedia-btn">
-                                                            <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="38" height="38">
-                                                        </a>
-                                                        <a href="https://www.shopee.com" class="plus-btn shopee-btn">
-                                                            <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
-                                                        </a>
+                                                        @foreach($marketplaces as $market)
+                                                            @if($market['type'] == 'tokopedia')
+                                                                <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn" target="_blank">
+                                                                    <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="32" height="32">
+                                                                </a>
+                                                            @elseif($market['type'] == 'shopee')
+                                                                <a href="{{ $market['url'] }}" class="plus-btn shopee-btn" target="_blank">
+                                                                    <img src="fe/img/icon/shopee.png" alt="Shopee" width="32" height="32">
+                                                                </a>
+                                                            @elseif($market['type'] == 'whatsapp')
+                                                                <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn" target="_blank">
+                                                                    <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="38" height="38">
+                                                                </a>
+                                                            @endif
+                                                        @endforeach
                                                     </div>
                                                     <h4><a>{{ $product['title'] }}</a></h4>
                                                 </div>
@@ -324,9 +870,14 @@
                                     <nav aria-label="Product pagination">
                                         <ul class="pagination">
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page - 1 }}" tabindex="-1">Previous</a>
+                                                <a class="page-link" href="?page={{ $page - 1 }}">Previous</a>
                                             </li>
-                                            @for($i = 1; $i <= $totalPages; $i++)
+                                            @php
+                                                $maxShow = 4;
+                                                $start = max(1, min($page - 1, $totalPages - $maxShow + 1));
+                                                $end = min($totalPages, $start + $maxShow - 1);
+                                            @endphp
+                                            @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
                                                     <a class="page-link" href="?page={{ $i }}">{{ $i }}</a>
                                                 </li>
@@ -357,7 +908,8 @@
                                         });
                                         $products = array_values($products); // reset index array
                                     }
-                                    $perPage = 9;
+                                    $isMobile = isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+                                    $perPage = $isMobile ? 8 : 9;
                                     $page = request()->get('page', 1);
                                     $total = count($products);
                                     $totalPages = ceil($total / $perPage);
@@ -385,11 +937,8 @@
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
-                                                        <a href="https://www.tokopedia.com" class="plus-btn tokopedia-btn">
-                                                            <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="38" height="38">
-                                                        </a>
-                                                        <a href="https://www.shopee.com" class="plus-btn shopee-btn">
-                                                            <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
+                                                        <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn" target="_blank">
+                                                            <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="28" height="28">
                                                         </a>
                                                     </div>
                                                     <h4><a>{{ $product['title'] }}</a></h4>
@@ -403,9 +952,14 @@
                                     <nav aria-label="Product pagination">
                                         <ul class="pagination">
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page - 1 }}" tabindex="-1">Previous</a>
+                                                <a class="page-link" href="?page={{ $page - 1 }}">Previous</a>
                                             </li>
-                                            @for($i = 1; $i <= $totalPages; $i++)
+                                            @php
+                                                $maxShow = 4;
+                                                $start = max(1, min($page - 1, $totalPages - $maxShow + 1));
+                                                $end = min($totalPages, $start + $maxShow - 1);
+                                            @endphp
+                                            @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
                                                     <a class="page-link" href="?page={{ $i }}">{{ $i }}</a>
                                                 </li>
@@ -436,7 +990,8 @@
                                         });
                                         $products = array_values($products); // reset index array
                                     }
-                                    $perPage = 9;
+                                    $isMobile = isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+                                    $perPage = $isMobile ? 8 : 9;
                                     $page = request()->get('page', 1);
                                     $total = count($products);
                                     $totalPages = ceil($total / $perPage);
@@ -464,11 +1019,8 @@
                                                 </a>
                                                 <div class="project-cap">
                                                     <div class="marketplace-row">
-                                                        <a href="https://www.tokopedia.com" class="plus-btn tokopedia-btn">
-                                                            <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="38" height="38">
-                                                        </a>
-                                                        <a href="https://www.shopee.com" class="plus-btn shopee-btn">
-                                                            <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
+                                                        <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn" target="_blank">
+                                                            <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="28" height="28">
                                                         </a>
                                                     </div>
                                                     <h4><a>{{ $product['title'] }}</a></h4>
@@ -482,9 +1034,14 @@
                                     <nav aria-label="Product pagination">
                                         <ul class="pagination">
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page - 1 }}" tabindex="-1">Previous</a>
+                                                <a class="page-link" href="?page={{ $page - 1 }}">Previous</a>
                                             </li>
-                                            @for($i = 1; $i <= $totalPages; $i++)
+                                            @php
+                                                $maxShow = 4;
+                                                $start = max(1, min($page - 1, $totalPages - $maxShow + 1));
+                                                $end = min($totalPages, $start + $maxShow - 1);
+                                            @endphp
+                                            @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
                                                     <a class="page-link" href="?page={{ $i }}">{{ $i }}</a>
                                                 </li>

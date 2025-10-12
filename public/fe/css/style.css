@@ -2127,6 +2127,25 @@ hr {
 .header-area .header-top .header-info-right .header-social li svg:hover {
   color: #ff0000;
 }
+@media (max-width: 575px) {
+  .header-area .col-12 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-direction: row-reverse !important;
+    gap: 12px;
+    position: relative;
+  }
+  .header-area .mobile_menu {
+    order: 2;
+  }
+  .header-area .contact-mobile-icon {
+    order: 1;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    position: static !important;
+  }
+}
 /* --- Header Social & Marketplace Icon Alignment --- */
 .header-social {
   display: flex;
@@ -3792,26 +3811,26 @@ hr {
 .team-area .single-team:hover .team-caption p {
   color: #fff;
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .team-area .row.justify-content-center > [class*="col-lg-3"] {
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
     }
-}
+} */
 /* Tambahkan di paling bawah file untuk mengatur jarak antar card team agar rata */
-.team-area .row.justify-content-center {
-    gap: 32px 32px; /* jarak antar card horizontal dan vertikal */
+/* .team-area .row.justify-content-center {
+    gap: 32px 32px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .team-area .row.justify-content-center > [class*="col-lg-3"] {
-    margin: 0 !important; /* hilangkan margin default bootstrap */
+    margin: 0 !important;
     padding: 0 !important;
-    flex: 0 0 calc(33.3333% - 21.33px); /* 3 kolom, dikurangi gap */
+    flex: 0 0 calc(33.3333% - 21.33px);
     max-width: calc(33.3333% - 21.33px);
     box-sizing: border-box;
-}
+} */
 
 /* @media (max-width: 991.98px) {
     .team-area .row.justify-content-center {
@@ -4017,122 +4036,100 @@ hr {
     }
 }
 /* Tampilan Mobile */
-@media (max-width: 575px) {
-  .team-area .row.justify-content-center {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 16px !important;
-  }
-  .team-area .row.justify-content-center > [class*="col-sm-6"] {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    margin-bottom: 0 !important;
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
-  }
-  .single-team {
-    background: #00235b !important;
-    border-radius: 10px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    min-height: 220px !important;
-    max-width: 100% !important;
-    height: 100% !important;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
-    overflow: hidden;
-  }
-  .single-team .team-img {
-    width: 100% !important;
-    height: 140px !important;
-    min-height: 140px !important;
-    border-radius: 10px 10px 0 0 !important;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-  }
-  .single-team .team-img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 10px 10px 0 0 !important;
-    display: block;
-  }
-  .single-team .team-caption {
-    position: static !important;
-    background: transparent !important;
-    padding: 10px 6px !important;
-    font-size: 13px !important;
-    color: #fff !important;
-    border-radius: 0 0 10px 10px !important;
-    text-align: center !important;
-    width: 100%;
-    min-height: 56px !important;
-    margin: 0 !important;
-    display: block;
-  }
-  .single-team .team-caption h3 {
-    margin-bottom: 2px !important;
-    font-size: 15px !important;
-    line-height: 1.2 !important;
-    font-weight: 700 !important;
-  }
-  .single-team .team-caption h3 a {
-    font-size: 15px !important;
-    color: #fff !important;
-    font-weight: 700 !important;
-  }
-  .single-team .team-caption p {
-    font-size: 12px !important;
-    color: #fff !important;
-    margin-bottom: 2px !important;
-    line-height: 1.2 !important;
-  }
-  .team-social ul {
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: center !important;
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-  }
-  .team-social li a {
-    font-size: 12px !important;
-    margin: 0 2px !important;
-    color: #fff !important;
-  }
+/* === DESKTOP & TABLET: 3 CARD PER BARIS === */
+@media (min-width: 768px) {
+    .team-area .row.justify-content-center > [class*="col-lg-3"] {
+        flex: 0 0 calc(33.3333% - 21.33px);
+        max-width: calc(33.3333% - 21.33px);
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+    }
 }
+
+/* === MOBILE: 2 CARD PER BARIS === */
+@media (max-width: 767px) {
+    .team-area .row.justify-content-center > [class*="col-lg-3"] {
+        flex: 0 0 calc(50% - 16px); /* 2 card per baris, dikurangi gap */
+        max-width: calc(50% - 16px);
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+    }
+}
+
+/* Atur gap antar card untuk semua device */
+.team-area .row.justify-content-center {
+    gap: 32px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* pastikan tetap center */
+}
+
+/* Pastikan card memiliki lebar maksimum yang wajar di mobile */
+.team-area .single-team {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Tambahkan padding pada container untuk mobile agar tidak terlalu rapat */
+@media (max-width: 767px) {
+    .team-area .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+/* --- TAMBAHAN UNTUK MEMPERBAIKI TAMPILAN CARD DI MOBILE --- */
+@media (max-width: 767px) {
+    .team-area .single-team .team-img {
+        height: 200px; /* kurangi tinggi gambar di mobile agar tidak terlalu panjang */
+    }
+    .team-area .single-team .team-caption {
+        bottom: -30px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .team-area .single-team .team-caption h3 a {
+        font-size: 16px;
+    }
+    .team-area .single-team .team-caption p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+    .team-social li a {
+      padding-top: -10px;
+        font-size: 12px; /* dari 14px → 12px */
+        margin: 0 8px;   /* dari 12px → 8px agar lebih rapat */
+    }
+    .team-social li a i {
+        font-size: 12px; /* pastikan ikon juga ikut kecil */
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Product Carousel Only
 --------------------------------------------------------------*/
+/* === PRODUCT AREA === */
 .product-img-bg {
     background: #00235b;
     border-radius: 18px;
-    padding: 30px 20px; /* lebih kecil */
+    padding: 30px 20px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    width: 100%; /* tidak perlu lebih lebar dari parent */
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
 }
 .product-img-bg .single-project .project-img img {
     background: transparent;
-    /* border-radius: 12px; */
     box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     width: 100%;
     height: auto;
     object-fit: contain;
-    /* border-bottom: #000 2px solid; */
 }
 .marketplace-links {
     display: flex;
@@ -4191,180 +4188,174 @@ hr {
 .project-area .project-caption .single-project,
 .about-area .project-caption .single-project,
 .contact-section .project-caption .single-project {
-  position: relative;
+    position: relative;
 }
 .project-area .project-caption .single-project .project-img img,
 .about-area .project-caption .single-project .project-img img,
 .contact-section .project-caption .single-project .project-img img {
-  width: 100%;
+    width: 100%;
 }
 .project-area .project-caption .single-project .project-cap,
 .about-area .project-caption .single-project .project-cap,
 .contact-section .project-caption .single-project .project-cap {
-  padding: 20px 20px;
-  background: #fafafa;
-  -webkit-transition: all 0.4s ease-out 0s;
-  -moz-transition: all 0.4s ease-out 0s;
-  -ms-transition: all 0.4s ease-out 0s;
-  -o-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
-  position: relative;
+    padding: 20px 20px;
+    background: #fafafa;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    position: relative;
 }
 .project-cap h4 {
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-  display: block;
-  align-items: center;
-  height: 48px;
-  white-space: nowrap;
-  overflow: visible;
-  text-overflow: unset;
-  transition: font-size 0.2s;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    display: block;
+    align-items: center;
+    height: 48px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    transition: font-size 0.2s;
 }
-/* Class untuk judul yang lebih dari 1 baris */
 .project-cap h4.small-font {
-  font-size: 18px; /* cukup untuk 2 baris kecil */
+    font-size: 18px;
 }
-
-/* Jika judul lebih dari 2 baris, kecilkan font otomatis */
-/* .project-cap h4:has(a) {
-  font-size: clamp(16px, 2vw, 25px);
-} */
 .project-area .project-caption .single-project .project-cap h4,
 .about-area .project-caption .single-project .project-cap h4,
 .contact-section .project-caption .single-project .project-cap h4 {
-  margin: 0;
-  line-height: 1.2;
-  font-size: 25px;
-  font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    font-size: 25px;
+    font-weight: 700;
 }
 .project-area .project-caption .single-project .project-cap h4 a,
 .about-area .project-caption .single-project .project-cap h4 a,
 .contact-section .project-caption .single-project .project-cap h4 a {
-  color: #0e132a;
+    color: #0e132a;
 }
 .project-area .project-caption .single-project .project-cap h4 a:hover,
 .about-area .project-caption .single-project .project-cap h4 a:hover,
 .contact-section .project-caption .single-project .project-cap h4 a:hover {
-  color: #ff0000;
+    color: #ff0000;
 }
 .project-area .project-caption .single-project .plus-btn,
 .about-area .project-caption .single-project .plus-btn,
 .contact-section .project-caption .single-project .plus-btn {
-  position: absolute;
-  right: 16px;
-  top: -22px;
-  display: inline-block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+    position: absolute;
+    right: 16px;
+    top: -22px;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
 }
 .project-area .project-caption .single-project .plus-btn img,
 .about-area .project-caption .single-project .plus-btn img,
 .contact-section .project-caption .single-project .plus-btn img {
-  color: #161e46;
-  background: transparent;
-  width: 38px;
-  height: 38px;
-  display: inline-block;
-  line-height: 38px;
-  text-align: center;
-  font-size: 15px;
-  margin-left: 10px;
-  -webkit-transition: all 0.4s ease-out 0s;
-  -moz-transition: all 0.4s ease-out 0s;
-  -ms-transition: all 0.4s ease-out 0s;
-  -o-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
+    color: #161e46;
+    background: transparent;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    line-height: 38px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 10px;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
 }
 .project-area .project-caption .single-project:hover .project-cap,
 .about-area .project-caption .single-project:hover .project-cap,
 .contact-section .project-caption .single-project:hover .project-cap {
-  background: #00235b;
+    background: #00235b;
 }
 .project-area .project-caption .single-project:hover .project-cap h4 a,
 .about-area .project-caption .single-project:hover .project-cap h4 a,
 .contact-section .project-caption .single-project:hover .project-cap h4 a {
-  color: #fff;
+    color: #fff;
 }
 .project-area .project-caption .single-project:hover .plus-btn,
 .about-area .project-caption .single-project:hover .plus-btn,
 .contact-section .project-caption .single-project:hover .plus-btn {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 .project-area .project-caption .single-project:hover .plus-btn img,
 .about-area .project-caption .single-project:hover .plus-btn img,
 .contact-section .project-caption .single-project:hover .plus-btn img {
-  color: #fff;
-  background: #ff0000;
+    color: #fff;
+    background: #ff0000;
 }
 .project-area .properties__button,
 .about-area .properties__button,
 .contact-section .properties__button {
-  float: right;
+    float: right;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .project-area .properties__button,
-  .about-area .properties__button,
-  .contact-section .properties__button {
-    float: left;
-  }
+    .project-area .properties__button,
+    .about-area .properties__button,
+    .contact-section .properties__button {
+        float: left;
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .project-area .properties__button,
-  .about-area .properties__button,
-  .contact-section .properties__button {
-    float: left;
-  }
+    .project-area .properties__button,
+    .about-area .properties__button,
+    .contact-section .properties__button {
+        float: left;
+    }
 }
 @media (max-width: 575px) {
-  .project-area .properties__button,
-  .about-area .properties__button,
-  .contact-section .properties__button {
-    float: left;
-  }
+    .project-area .properties__button,
+    .about-area .properties__button,
+    .contact-section .properties__button {
+        float: left;
+    }
 }
 .project-area .nav-tabs .nav-link,
 .about-area .nav-tabs .nav-link,
 .contact-section .nav-tabs .nav-link {
-  border: 0;
-  border-bottom: 2px solid transparent;
-  padding: 10px 20px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 10px 20px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .project-area .nav-tabs .nav-link,
-  .about-area .nav-tabs .nav-link,
-  .contact-section .nav-tabs .nav-link {
-    padding: 10px 10px;
-  }
+    .project-area .nav-tabs .nav-link,
+    .about-area .nav-tabs .nav-link,
+    .contact-section .nav-tabs .nav-link {
+        padding: 10px 10px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .project-area .nav-tabs .nav-link,
-  .about-area .nav-tabs .nav-link,
-  .contact-section .nav-tabs .nav-link {
-    padding: 10px 15px;
-  }
+    .project-area .nav-tabs .nav-link,
+    .about-area .nav-tabs .nav-link,
+    .contact-section .nav-tabs .nav-link {
+        padding: 10px 15px;
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .project-area .nav-tabs .nav-link,
-  .about-area .nav-tabs .nav-link,
-  .contact-section .nav-tabs .nav-link {
-    padding: 10px 15px;
-  }
+    .project-area .nav-tabs .nav-link,
+    .about-area .nav-tabs .nav-link,
+    .contact-section .nav-tabs .nav-link {
+        padding: 10px 15px;
+    }
 }
 @media (max-width: 575px) {
-  .project-area .nav-tabs .nav-link,
-  .about-area .nav-tabs .nav-link,
-  .contact-section .nav-tabs .nav-link {
-    padding: 10px 15px;
-  }
+    .project-area .nav-tabs .nav-link,
+    .about-area .nav-tabs .nav-link,
+    .contact-section .nav-tabs .nav-link {
+        padding: 10px 15px;
+    }
 }
 .project-area .nav-tabs .nav-item.show .nav-link,
 .project-area .nav-tabs .nav-link.active,
@@ -4372,48 +4363,257 @@ hr {
 .about-area .nav-tabs .nav-link.active,
 .contact-section .nav-tabs .nav-item.show .nav-link,
 .contact-section .nav-tabs .nav-link.active {
-  color: #ff0000;
-  background: none;
+    color: #ff0000;
+    background: none;
 }
 .project-area .nav-tabs .nav-item,
 .about-area .nav-tabs .nav-item,
 .contact-section .nav-tabs .nav-item {
-  display: block;
-  color: #161e46;
-  font-weight: 500;
-  text-transform: capitalize;
-  font-size: 16px;
+    display: block;
+    color: #161e46;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 16px;
 }
 .project-area .nav-tabs,
 .about-area .nav-tabs,
 .contact-section .nav-tabs {
-  margin-bottom: 9px;
-  padding-bottom: 0px;
-  position: relative;
-  border: 0;
-  display: flex;
-  justify-content: center;
+    margin-bottom: 9px;
+    padding-bottom: 0px;
+    position: relative;
+    border: 0;
+    display: flex;
+    justify-content: center;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .project-area .nav-tabs,
-  .about-area .nav-tabs,
-  .contact-section .nav-tabs {
-    justify-content: start;
-  }
+    .project-area .nav-tabs,
+    .about-area .nav-tabs,
+    .contact-section .nav-tabs {
+        justify-content: start;
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .project-area .nav-tabs,
-  .about-area .nav-tabs,
-  .contact-section .nav-tabs {
-    justify-content: start;
+    .project-area .nav-tabs,
+    .about-area .nav-tabs,
+    .contact-section .nav-tabs {
+        justify-content: start;
+    }
+}
+@media (max-width: 575px) {
+    .project-area .nav-tabs,
+    .about-area .nav-tabs,
+    .contact-section .nav-tabs {
+        justify-content: start;
+    }
+}
+.project-area .pagination {
+    justify-content: center;
+}
+.project-area .pagination .page-link {
+    color: #00235b;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0 3px;
+    border: 1px solid #00235b1a;
+    min-width: 44px;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+.project-area .pagination .page-item.active .page-link,
+.project-area .pagination .page-link:hover {
+    background: #00235b;
+    color: #fff;
+    border-color: #00235b;
+}
+.project-area .pagination .page-item.disabled .page-link {
+    color: #aaa;
+    background: #eee;
+    border-color: #eee;
+}
+/* Tampilan Mobile */
+/* === MOBILE: 3 CARD PER BARIS — SOLUSI PASTI === */
+@media (max-width: 767px) {
+    /* Sembunyikan row default Bootstrap */
+    .project-area .product-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 0 -6px;
+        padding: 0;
+    }
+
+    /* Reset semua col-* */
+    .project-area .product-row > [class*="col-"] {
+        flex: 0 0 calc(33.3333% - 8px) !important;
+        max-width: calc(33.3333% - 8px) !important;
+        width: calc(33.3333% - 8px) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Atur card */
+    .project-area .single-project {
+        width: 100% !important;
+        min-height: auto;
+        margin: 0 !important;
+    }
+
+    /* Gambar */
+    .product-img-bg .single-project .project-img img {
+        height: 160px;
+        object-fit: cover;
+        width: 100%;
+    }
+    /* Ikon */
+    .marketplace-row {
+        top: -12px;
+        right: 6px;
+    }
+    .plus-btn img {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Container */
+    .project-area .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Tab */
+    .project-area .nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .project-area .nav-tabs .nav-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+/* === PERBAIKAN AKHIR: OVERRIDE ATURAN SPESIFIK UNTUK MOBILE === */
+@media (max-width: 767px) {
+    .project-area .project-caption .single-project .project-cap h4,
+    .about-area .project-caption .single-project .project-cap h4,
+    .contact-section .project-caption .single-project .project-cap h4 {
+        font-size: 14px !important;
+        height: auto !important;
+        white-space: normal !important;
+        display: -webkit-box !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.3;
+        margin: 0;
+    }
+} 
+@media (max-width: 767px) {
+  /* Atur row agar flex dan wrap */
+  .project-area .project-caption .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Set col-lg-4 dan col-md-6 jadi 2 per baris */
+  .project-area .project-caption .row > .col-lg-4,
+  .project-area .project-caption .row > .col-md-6 {
+    flex: 0 0 calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+    width: calc(50% - 8px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  /* Card style */
+  .project-area .single-project {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    min-height: 0 !important;
+  }
+  /* Gambar proporsional */
+  .product-img-bg .single-project .project-img img {
+    height: 120px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+  /* Container padding */
+  .project-area .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  /* Judul produk kecil */
+  .project-cap h4 {
+    font-size: 13px !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+    height: auto !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 }
 @media (max-width: 575px) {
-  .project-area .nav-tabs,
-  .about-area .nav-tabs,
-  .contact-section .nav-tabs {
-    justify-content: start;
+  .project-area .form-inline {
+    flex-direction: column !important;
+    align-items: stretch !important;
   }
+  .project-area .form-inline .form-control {
+    margin-bottom: 12px !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .marketplace-row {
+    top: -8px !important;
+    right: 6px !important;
+    gap: 4px !important;
+  }
+  .plus-btn img {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .plus-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 6px !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 575px) {
+  .project-area .pagination {
+    font-size: 12px !important;
+    gap: 2px !important;
+    flex-wrap: wrap !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+  }
+  .project-area .pagination .page-link {
+    min-width: 30px !important;
+    padding: 4px 0 !important;
+    font-size: 12px !important;
+    border-radius: 6px !important;
+    margin: 0 1px !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Join Us Section Only
+--------------------------------------------------------------*/
+.join-us-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+.join-us-section .contact-us-caption p {
+    color: #fff !important;
 }
 .tab-pane {
   -webkit-transition: all 0.6s ease-out 0s;
@@ -4444,206 +4644,6 @@ hr {
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.project-area .pagination {
-    justify-content: center;
-}
-.project-area .pagination .page-link {
-    color: #00235b;
-    font-weight: 600;
-    border-radius: 8px;
-    margin: 0 3px;
-    border: 1px solid #00235b1a;
-    min-width: 44px;
-    text-align: center;
-    transition: background 0.2s, color 0.2s;
-}
-.project-area .pagination .page-item.active .page-link,
-.project-area .pagination .page-link:hover {
-    background: #00235b;
-    color: #fff;
-    border-color: #00235b;
-}
-.project-area .pagination .page-item.disabled .page-link {
-    color: #aaa;
-    background: #eee;
-    border-color: #eee;
-}
-/* Tampilan Mobile */
-/* --- PRODUCT CARD: 3 kolom per baris, ukuran kecil di mobile --- */
-@media (max-width: 575px) {
-  .project-area .project-caption .row > .col-lg-4,
-  .project-area .project-caption .row > .col-md-6 {
-    flex: 0 0 33.3333% !important;
-    max-width: 33.3333% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-bottom: 10px !important;
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
-  }
-  .project-area .single-project {
-    height: 170px !important;
-    min-height: 170px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: #fafafa;
-    border-radius: 12px;
-    box-sizing: border-box;
-    padding: 8px 4px !important;
-  }
-  .project-area .single-project .project-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 140px;
-    height: 150px;
-    background: #fff;
-    border-radius: 12px;
-    margin: 0 !important;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  .project-area .single-project .project-img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    margin: 0 !important;
-    display: block !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-  /* Turunkan dan pendekkan area caption biru pada card produk */
-  .product-img-bg .project-caption {
-    padding-top: 18px !important;   /* turunkan sedikit dari atas */
-    padding-bottom: 0 !important;   /* hilangkan padding bawah */
-    min-height: unset !important;
-  }
-  .product-img-bg .project-cap {
-    margin-top: 25px !important; /* Atur sesuai kebutuhan */
-  }
-  .project-area .project-caption .single-project .project-cap {
-    padding-top: 8px !important;    /* pendekkan jarak atas caption */
-    padding-bottom: 8px !important; /* pendekkan jarak bawah caption */
-    min-height: 0 !important;
-  }
-  @media (max-width: 575px) {
-    .project-area .project-caption .row > .col-lg-4,
-    .project-area .project-caption .row > .col-md-6 {
-      flex: 0 0 33.3333% !important;
-      max-width: 33.3333% !important;
-      padding-left: 4px !important;
-      padding-right: 4px !important;
-      margin-bottom: 10px !important;
-      box-sizing: border-box;
-      display: flex;
-      align-items: stretch;
-    }
-    .project-area .single-project {
-      height: 170px !important;
-      min-height: 170px !important;
-      border-radius: 12px !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      width: 100% !important;
-      background: #fafafa !important;
-    }
-    .project-area .single-project .project-img {
-      min-height: 90px !important;
-      height: 90px !important;
-      border-radius: 8px !important;
-      margin: 0 !important;
-      width: 100% !important;
-    }
-    .project-area .single-project .project-img img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-      border-radius: 0 !important;
-    }
-  }
-  .project-area .single-project .project-cap {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 4px 2px !important;
-    border-radius: 0 0 12px 12px;
-    min-height: 0;
-  }
-  .project-area .single-project .project-cap h4 {
-    font-size: 11px !important;
-    margin: 0 0 2px 0 !important;
-    text-align: center !important;
-    line-height: 1.2 !important;
-    font-weight: 700 !important;
-    height: auto !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-  }
-  .project-area .single-project .marketplace-row {
-    gap: 4px !important;
-    margin-bottom: 2px !important;
-  }
-  .project-area .single-project .plus-btn img {
-    width: 18px !important;
-    height: 18px !important;
-  }
-  .project-area .btn.red-btn2,
-  .project-area .btn.red-btn2.mt-20 {
-    width: 100%;
-    max-width: 180px;
-    font-size: 13px;
-    padding: 12px 0 !important;
-    border-radius: 8px;
-    margin: 18px auto 0 auto !important;
-    display: block;
-    text-align: center;
-  }
-  /* Tinggikan gambar agar sama tinggi dengan area biru card produk */
-  @media (max-width: 575px) {
-    .product-img-bg .single-project .project-img {
-      min-height: 100px !important;
-      height: 100px !important;
-      background: #fff;
-      border-radius: 12px;
-      margin: 0 !important;
-      box-sizing: border-box;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .product-img-bg .single-project .project-img img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-      margin: 0 !important;
-      display: block !important;
-      background: transparent !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-# Join Us Section Only
---------------------------------------------------------------*/
-.join-us-section {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
-}
-.join-us-section .contact-us-caption p {
-    color: #fff !important;
 }
 
 /*--------------------------------------------------------------
@@ -5700,6 +5700,16 @@ hr {
     transform: translateY(-10px) scale(1.04);
     box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
     z-index: 2;
+}
+/* Tampilan Mobile */
+@media (max-width: 575px) {
+  .scrolling-content img {
+    width: 120px !important;
+    height: 70px !important;
+    padding: 2px !important;
+    margin-right: 6px !important;
+    border-radius: 10px !important;
+  }
 }
 
 /* OVERRIDE: Slider Area Mobile agar proporsional, tidak terlalu besar */

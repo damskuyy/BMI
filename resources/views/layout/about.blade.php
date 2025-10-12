@@ -1,5 +1,5 @@
 <!-- About Area Start -->
-<section class="support-company-area fix pt-10" style="margin-top:120px;">
+<section class="support-company-area fix pt-10">
     <div class="support-wrapper align-items-end">
         <div class="left-content">
             <!-- section tittle -->
