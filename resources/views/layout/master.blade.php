@@ -139,9 +139,9 @@
                                             <li>
                                                 <a href="/gallery" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
                                             </li>
-                                            {{-- <li><a href="/contact"
-                                                    class="{{ Request::is('contact') ? 'active' : '' }}">Contact</a>
-                                            </li> --}}
+                                            <li class="d-block d-lg-none">
+                                                <a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Contact</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -154,9 +154,6 @@
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>
-                                <a href="/contact" class="contact-mobile-icon d-block d-lg-none" aria-label="Contact">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
                             </div>
                         </div>
                     </div>

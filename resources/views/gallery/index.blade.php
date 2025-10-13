@@ -32,43 +32,95 @@
                 </div>
 				<div class="row gallery-item">
 					<div class="col-md-4">
-						<a href="fe/img/elements/g1.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g1.jpg);"></div>
+						<a href="fe/img/elements/gallery2.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery2.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="fe/img/elements/g2.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g2.jpg);"></div>
+						<a href="fe/img/elements/gallery3.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery3.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="fe/img/elements/g3.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g3.jpg);"></div>
+						<a href="fe/img/elements/gallery4.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery4.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="fe/img/elements/g4.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g4.jpg);"></div>
+						<a href="fe/img/elements/gallery5.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery5.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-6">
-						<a href="fe/img/elements/g5.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g5.jpg);"></div>
+						<a href="fe/img/elements/gallery6.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery6.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="fe/img/elements/g6.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g6.jpg);"></div>
+						<a href="fe/img/elements/gallery7.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery7.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="fe/img/elements/g7.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g7.jpg);"></div>
+						<a href="fe/img/elements/gallery8.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery8.jpg);"></div>
 						</a>
 					</div>
 					<div class="col-md-4">
-						<a href="fe/img/elements/g8.jpg" class="img-pop-up">
-							<div class="single-gallery-image" style="background: url(fe/img/elements/g8.jpg);"></div>
+						<a href="fe/img/elements/gallery9.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery9.jpg);"></div>
+						</a>
+					</div>
+				</div>
+				<div class="row gallery-item">
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery10.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery10.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery11.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery11.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery12.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery12.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="fe/img/elements/gallery13.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery13.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="fe/img/elements/gallery14.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery14.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery15.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery15.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery16.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery16.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="fe/img/elements/gallery17.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery17.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="fe/img/elements/gallery18.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery18.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="fe/img/elements/gallery19.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(fe/img/elements/gallery19.jpg);"></div>
 						</a>
 					</div>
 				</div>

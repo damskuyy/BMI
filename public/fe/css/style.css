@@ -2127,25 +2127,7 @@ hr {
 .header-area .header-top .header-info-right .header-social li svg:hover {
   color: #ff0000;
 }
-@media (max-width: 575px) {
-  .header-area .col-12 {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    flex-direction: row-reverse !important;
-    gap: 12px;
-    position: relative;
-  }
-  .header-area .mobile_menu {
-    order: 2;
-  }
-  .header-area .contact-mobile-icon {
-    order: 1;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    position: static !important;
-  }
-}
+
 /* --- Header Social & Marketplace Icon Alignment --- */
 .header-social {
   display: flex;
