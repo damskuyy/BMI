@@ -72,7 +72,7 @@
                                     $search = strtolower(request()->get('search', ''));
                                     $products = [
                                         [
-                                            'img' => 'fe/img/gallery/manufaktur/set-meja-kursi.jpeg',
+                                            'img' => 'fe/img/gallery/manufaktur/set-meja-kotak.jpeg',
                                             'title' => 'Set meja bar kotak panjang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -87,7 +87,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/yogurt.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/yogurt.png',
                                             'title' => 'Yogurt drink with jelly',
                                             'desc' => 'Minuman sehat dengan jelly.',
                                             'marketplaces' => [
@@ -98,7 +98,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/es-dawet-IRENG.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/es-dawet-IRENG.png',
                                             'title' => 'Es dawet ireng',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -135,7 +135,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kerajinan/konveksi-jaket.jpeg',
+                                            'img' => 'fe/img/gallery/kerajinan/jas-hujan.png',
                                             'title' => 'Kerajinan jas hujan',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -161,7 +161,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/kacang.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/kacang.png',
                                             'title' => 'Camilan Kacang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -228,7 +228,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/keripik-pangsit.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/keripik-pangsit.png',
                                             'title' => 'Camilan keripik pangsit',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -239,7 +239,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/keju-kriwil.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/keju-kriwil.png',
                                             'title' => 'Camilan keju kriwil',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -250,7 +250,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/kentang-mustofa.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/kentang-mustofa.png',
                                             'title' => 'Camilan kentang mustofa',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -276,7 +276,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/keripik-tempe-tigasaudara.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/keripik-tempe-tigasaudara.png',
                                             'title' => 'Camilan keripik tempe',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -302,7 +302,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/kerupuk-rambak.jpg',
+                                            'img' => 'fe/img/gallery/kuliner/kerupuk-rambak.png',
                                             'title' => 'Camilan kerupuk rambak',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -358,7 +358,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/sus-buah.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/sus-buah.png',
                                             'title' => 'Camilan kue sus buah',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [
@@ -369,7 +369,7 @@
                                             ]
                                         ],
                                         [
-                                            'img' => 'fe/img/gallery/kuliner/onde-onde.jpeg',
+                                            'img' => 'fe/img/gallery/kuliner/onde-onde.png',
                                             'title' => 'Camilan onde-onde',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
                                             'marketplaces' => [

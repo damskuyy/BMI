@@ -41,7 +41,7 @@
             <div class="right-content">
                 <!-- img -->
                 <div class="right-img">
-                    <img src="fe/img/elements/gallery11.jpg" alt="">
+                    <img src="fe/img/elements/gallery19.jpg" alt="">
                 </div>
                 <div class="support-img-cap text-center">
                     <span>2021</span>
@@ -94,7 +94,7 @@
     </section>
 
     <!-- Goals -->
-    <section class="about-section about-goals">
+    {{-- <section class="about-section about-goals">
         <div class="container">
             <div class="card-goals">
                 <h3 class="section-title">Our Goals</h3>
@@ -106,10 +106,10 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Business Model Canvas Section -->
-    <section class="about-section about-bmc mb-5">
+    {{-- <section class="about-section about-bmc mb-5">
         <div class="container">
             <h3 class="section-title text-center" style="color:#00235b;font-weight:700;margin-bottom:24px;">
                 Business Model Canvas
@@ -228,7 +228,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
+
     <!-- Latar Belakang Koperasi BMI - Interaktif -->
     <section class="about-section background-bmi py-5">
         <div class="container">

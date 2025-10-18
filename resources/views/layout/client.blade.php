@@ -19,46 +19,46 @@
                     <div class="scrolling-content">
                         <img src="fe/img/clients/adiwijaya.png" alt="">
                         <img src="fe/img/clients/aneka-loyang.png" alt="">
-                        <img src="fe/img/clients/bsn.jpg" alt="">
-                        <img src="fe/img/clients/camilan-zomed.jpg" alt="">
                         <img src="fe/img/clients/candra-putra.jpg" alt="">
-                        <img src="fe/img/clients/cebina.png" alt="">
+                        <img src="fe/img/clients/hidayah-alkes.png" alt="">
+                        <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
                         <img src="fe/img/clients/dewoz-art.jpg" alt="">
-                        <img src="fe/img/clients/edw-konveksi.jpg" alt="">
-                        <img src="fe/img/clients/hanara-bakery.jpg" alt="">
+                        <img src="fe/img/clients/metal-jaya.png" alt="">
                         <!-- Duplicate for seamless scroll -->
                         <img src="fe/img/clients/adiwijaya.png" alt="">
                         <img src="fe/img/clients/aneka-loyang.png" alt="">
-                        <img src="fe/img/clients/bsn.jpg" alt="">
-                        <img src="fe/img/clients/camilan-zomed.jpg" alt="">
                         <img src="fe/img/clients/candra-putra.jpg" alt="">
-                        <img src="fe/img/clients/cebina.png" alt="">
-                        <img src="fe/img/clients/dewox-art.jpg" alt="">
-                        <img src="fe/img/clients/edw-konveksi.jpg" alt="">
-                        <img src="fe/img/clients/hanara-bakery.jpg" alt="">
+                        <img src="fe/img/clients/hidayah-alkes.png" alt="">
+                        <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
+                        <img src="fe/img/clients/dewoz-art.jpg" alt="">
+                        <img src="fe/img/clients/metal-jaya.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="client-carousel-bottom">
                 <div class="scrolling-wrapper">
                     <div class="scrolling-content">
-                        <img src="fe/img/clients/hidayah-alkes.png" alt="">
-                        <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
                         <img src="fe/img/clients/king-kiripik.jpg" alt="">
-                        <img src="fe/img/clients/metal-jaya.png" alt="">
                         <img src="fe/img/clients/naninu-kitchen.jpg" alt="">
                         <img src="fe/img/clients/pangan-barokah.jpg" alt="">
                         <img src="fe/img/clients/pawon-jiwandono.jpg" alt="">
                         <img src="fe/img/clients/tiga-saudara.jpeg" alt="">
+                        <img src="fe/img/clients/bsn.jpg" alt="">
+                        <img src="fe/img/clients/camilan-zomed.jpg" alt="">
+                        <img src="fe/img/clients/cebina.png" alt="">
+                        <img src="fe/img/clients/hanara-bakery.jpg" alt="">
+                        <img src="fe/img/clients/edw-konveksi.jpg" alt="">
                         <!-- Duplicate for seamless scroll -->
-                        <img src="fe/img/clients/hidayah-alkes.png" alt="">
-                        <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
                         <img src="fe/img/clients/king-kiripik.jpg" alt="">
-                        <img src="fe/img/clients/metal-jaya.png" alt="">
                         <img src="fe/img/clients/naninu-kitchen.jpg" alt="">
                         <img src="fe/img/clients/pangan-barokah.jpg" alt="">
                         <img src="fe/img/clients/pawon-jiwandono.jpg" alt="">
                         <img src="fe/img/clients/tiga-saudara.jpeg" alt="">
+                        <img src="fe/img/clients/bsn.jpg" alt="">
+                        <img src="fe/img/clients/camilan-zomed.jpg" alt="">
+                        <img src="fe/img/clients/cebina.png" alt="">
+                        <img src="fe/img/clients/hanara-bakery.jpg" alt="">
+                        <img src="fe/img/clients/edw-konveksi.jpg" alt="">
                     </div>
                 </div>
             </div>

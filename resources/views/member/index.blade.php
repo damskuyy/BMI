@@ -2,7 +2,7 @@
 @section('content')
     <!-- slider Area Start-->
     <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.jpg">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -41,7 +41,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/team2.png" alt="">
+                            <img src="fe/img/team/bayu.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Bayu Agusworo</a></h3>
                                 <p>Ketua BMI</p>
@@ -61,7 +61,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/juhana.jpg" alt="">
+                            <img src="fe/img/team/juhana.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Juhana</a></h3>
                                 <p>Pengawas</p>
@@ -80,7 +80,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/ety.jpeg" alt="">
+                            <img src="fe/img/team/ety.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Ety Rustyah</a></h3>
                                 <p>Sekretaris</p>
@@ -99,7 +99,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.jpg" alt="">
+                            <img src="fe/img/team/yati.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Karyati</a></h3>
                                 <p>Bendahara 1</p>
@@ -137,7 +137,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/juminah.jpg" alt="">
+                            <img src="fe/img/team/juminah.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Juminah</a></h3>
                                 <p>Humas</p>
@@ -156,7 +156,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/yatini.jpg" alt="">
+                            <img src="fe/img/team/yatini.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Yatini</a></h3>
                                 <p>Humas</p>
@@ -175,7 +175,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/maryanti.jpg" alt="">
+                            <img src="fe/img/team/maryanti.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Maryanti</a></h3>
                                 <p>Humas</p>
@@ -194,7 +194,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/nani.jpg" alt="">
+                            <img src="fe/img/team/nani.png" alt="">
                             <div class="team-caption">
                                 <h3><a href="#">Nani</a></h3>
                                 <p>Humas</p>
@@ -216,7 +216,7 @@
     <!-- Team Area End -->
     
     <!-- Team Tables Start -->
-    <div class="member-table-wrapper mb-5 mt-30">
+    {{-- <div class="member-table-wrapper mb-5 mt-30">
         <h3 class="table-title mb-3">KEANGGOTAAN BMI</h3>
         <div class="table-responsive">
             <table id="bmiTable" class="table table-bmi display responsive nowrap">
@@ -296,7 +296,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> --}}
     <!-- Team Tables End -->
 @endsection
 @section('client')
