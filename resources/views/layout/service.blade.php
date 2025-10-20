@@ -16,7 +16,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973104/trading-unscreen_h320j6.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Trading</a></h5>
@@ -30,7 +30,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760972909/cashier-unscreen_srj3gt.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Consumable</a></h5>
@@ -44,7 +44,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973137/management-consulting-unscreen_tkm3ji.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Consulting</a></h5>
@@ -58,7 +58,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973102/hand-holding-rocks-unscreen_lc5ggk.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Raw Material</a></h5>
@@ -72,7 +72,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973099/truck-unscreen_wgrfmt.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Jasa Logistik</a></h5>
@@ -86,7 +86,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                     <div class="service-img">
-                        <img src="fe/img/service/servicess1.png" alt="">
+                        <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973211/services-unscreen_feh74t.gif" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5><a>Jasa Permesinan</a></h5>

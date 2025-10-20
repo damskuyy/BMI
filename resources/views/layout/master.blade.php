@@ -116,7 +116,7 @@
                                             <li>
                                                 <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">About</a>
                                                 <ul class="submenu">
-                                                    <li>
+                                                    <li class="d-block d-lg-none">
                                                         <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">BMI</a>
                                                     </li>
                                                     <li>
