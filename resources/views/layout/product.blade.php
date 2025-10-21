@@ -31,7 +31,7 @@
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
                                                     <a href="https://wa.me/6282189327077" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="38" height="38">
+                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Yogurt drink with jelly</a></h4>
@@ -49,11 +49,11 @@
                                             </a>
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
-                                                    <a href="https://www.tokopedia.com" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/tokopedia.png" alt="Tokopedia" width="38" height="38">
+                                                    <a href="https://www.tokopedia.com/bogormanufakturindonesia/1-set-meja-bar-kotak-panjang-outdoor-1-meja-4-kursi-wallnut-brown-f063f?extParam=src%3Dshop%26whid%3D17953854&aff_unique_id=&channel=others&chain_key=" target="_blank" class="plus-btn tokopedia-btn">
+                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia" width="38" height="38">
                                                     </a>
-                                                    <a href="https://www.shopee.com" class="plus-btn shopee-btn">
-                                                        <img src="fe/img/icon/shopee.png" alt="Shopee" width="38" height="38">
+                                                    <a href="https://shopee.co.id/1-Set-Meja-Bar-Kotak-Panjang-Outdoor-1-Meja-4-Kursi-i.1396487386.26723564178" target="_blank" class="plus-btn shopee-btn">
+                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Set meja bar kotak panjang</a></h4>
@@ -68,7 +68,7 @@
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
                                                     <a href="https://wa.me/6282189327077" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/whatsapp.png" alt="WhatsApp" width="38" height="38">
+                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Produk kerajinan jas hujan</a></h4>
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/product" class="btn red-btn2 mt-20" style="align-items: center">view more</a>
+                        <a href="/product" class="btn red-btn2 mt-20" style="">view more</a>
                     </div>
                 </div>
                 <!-- End Nav Card -->
