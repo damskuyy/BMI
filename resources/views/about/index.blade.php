@@ -2,12 +2,12 @@
 @section('content')
     <!-- slider Area Start-->
     <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.jpg">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap pt-100">
-                            <h2>About us</h2>
+                            <h1>About us</h1>
                             <nav aria-label="breadcrumb ">
                                 <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/home">Home</a></li>
@@ -44,8 +44,9 @@
                     <img src="fe/img/elements/gallery19.jpg" alt="">
                 </div>
                 <div class="support-img-cap text-center">
-                    <span>2021</span>
-                    <p>Since</p>
+                    <span class="since-year">2021</span>
+                    <p class="since-label">Since</p>
+                    <span class="since-ring" aria-hidden="true"></span>
                 </div>
             </div>
         </div>
@@ -266,11 +267,9 @@
                             <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fsearch-book-unscreen.gif?alt=media&token=72708d0c-ac38-4eea-98e3-94d05d263010" alt="YDBA" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#ff0000;font-weight:700;">Visi & Misi YDBA</h5>
                             <p class="card-text" style="font-size:15px;">
-                                <span style="color:#ff0000;font-weight:600;">"Berikan Kail Bukan Ikan"</span> – Filosofi Yayasan Astra membina UMKM agar mandiri dan berdaya saing, bukan sekadar bantuan sesaat. KBMI adalah hasil pembinaan intensif, berstandar tinggi, dan terkurasi.
+                                <span style="color:#ff0000;font-weight:600;">"Berikan Kail Bukan Ikan"</span> &nbsp Filosofi Yayasan Astra membina UMKM agar mandiri dan berdaya saing, bukan sekadar bantuan sesaat. KBMI adalah hasil pembinaan intensif, berstandar tinggi, dan terkurasi.
                             </p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 text-center">
-                            <span class="badge badge-pill badge-danger px-3 py-2" style="background:#ff0000;color:#fff;">Pembinaan Astra</span>
+                            <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#ff0000;color:#fff;">Pembinaan Astra</span>
                         </div>
                     </div>
                 </div>
@@ -286,9 +285,7 @@
                                 <li><b>Kerajinan:</b> Eco-print, kayu, batik Bogor.</li>
                             </ul>
                             <p style="font-size:14px;color:#888;">Bogor: Pusat pertumbuhan ekonomi Jawa Barat, dekat Jakarta, kaya sumber daya & budaya.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 text-center">
-                            <span class="badge badge-pill badge-primary px-3 py-2" style="background:#00235b;color:#fff;">Kekayaan Lokal</span>
+                            <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#00235b;color:#fff;">Kekayaan Lokal</span>
                         </div>
                     </div>
                 </div>
@@ -302,8 +299,8 @@
                                 <b>Koperasi Multisektor:</b> Manufaktur, Kuliner, Kerajinan saling mendukung. Sinergi produk, kolaborasi pemasaran, efisiensi operasional, dan skala ekonomi tercipta untuk seluruh anggota.
                             </p>
                             <div class="d-flex justify-content-center gap-2 mt-2">
-                                <span class="badge badge-success mr-10" style="background:#009e3c;">Kolaborasi</span>
-                                <span class="badge badge-success" style="background:#009e3c;">Diversifikasi</span>
+                                <span class="badge badge-pill badge-success px-3 py-2 mr-7" style="background:##009e3c;color:#fff;">Kolaborasi</span>
+                                <span class="badge badge-pill badge-success px-3 py-2" style="background:##009e3c;color:#fff;">Diversifikasi</span>
                             </div>
                         </div>
                     </div>

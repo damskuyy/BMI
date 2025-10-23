@@ -1,9 +1,9 @@
 <!-- About Area Start -->
-<section class="support-company-area fix pt-10">
+<section class="support-company-area fix">
     <div class="support-wrapper align-items-end">
         <div class="left-content">
             <!-- section tittle -->
-            <div class="section-tittle section-tittle2 mb-55">
+            <div class="section-tittle section-tittle2 mb-55 mt-160">
                 <div class="front-text">
                     <h3 class="">Who we are</h3>
                 </div>
@@ -21,8 +21,9 @@
                 <img src="fe/img/elements/gallery19.jpg" alt="">
             </div>
             <div class="support-img-cap text-center">
-                <span>2021</span>
-                <p>Since</p>
+                <span class="since-year">2021</span>
+                <p class="since-label">Since</p>
+                <span class="since-ring" aria-hidden="true"></span>
             </div>
         </div>
     </div>

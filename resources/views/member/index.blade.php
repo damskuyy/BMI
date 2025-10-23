@@ -2,7 +2,7 @@
 @section('content')
     <!-- slider Area Start-->
     <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.jpg">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/member.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -43,16 +43,10 @@
                         <div class="team-img">
                             <img src="fe/img/team/bayu.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Bayu Agusworo</a></h3>
-                                <p>Ketua BMI</p>
+                                <h3><a>Bayu Agusworo</a></h3>
                                 <!-- Blog Social -->
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <div class="team-social mt-10">
+                                    <p>Ketua BMI</p>
                                 </div>
                             </div>
                         </div>
@@ -63,15 +57,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/juhana.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Juhana</a></h3>
-                                <p>Pengawas</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Juhana</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Pengawas</p>
                                 </div>
                             </div>
                         </div>
@@ -82,15 +70,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/ety.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Ety Rustyah</a></h3>
-                                <p>Sekretaris</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Ety Rustyah</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Sekretaris</p>
                                 </div>
                             </div>
                         </div>
@@ -101,15 +83,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/yati.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Karyati</a></h3>
-                                <p>Bendahara 1</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Karyati</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Bendahara 1</p>
                                 </div>
                             </div>
                         </div>
@@ -120,15 +96,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/fitria.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Fitria</a></h3>
-                                <p>Bendahara 2</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Fitria</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Bendahara 2</p>
                                 </div>
                             </div>
                         </div>
@@ -139,15 +109,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/juminah.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Juminah</a></h3>
-                                <p>Humas</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Juminah</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Humas</p>
                                 </div>
                             </div>
                         </div>
@@ -158,15 +122,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/yatini.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Yatini</a></h3>
-                                <p>Humas</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Yatini</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Humas</p>
                                 </div>
                             </div>
                         </div>
@@ -177,15 +135,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/maryanti.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Maryanti</a></h3>
-                                <p>Humas</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Maryanti</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Humas</p>
                                 </div>
                             </div>
                         </div>
@@ -196,15 +148,9 @@
                         <div class="team-img">
                             <img src="fe/img/team/nani.png" alt="">
                             <div class="team-caption">
-                                <h3><a href="#">Nani</a></h3>
-                                <p>Humas</p>
-                                <div class="team-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
+                                <h3><a>Nani</a></h3>
+                                <div class="team-social mt-10">
+                                    <p>Humas</p>
                                 </div>
                             </div>
                         </div>

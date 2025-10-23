@@ -2,7 +2,8 @@
 @section('content')
     <!-- slider Area Start-->
     <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center mb-200" data-background="fe/img/hero/about.jpg">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center mb-200"
+            data-background="fe/img/hero/about.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -10,8 +11,8 @@
                             <h2>My Product</h2>
                             <nav aria-label="breadcrumb ">
                                 <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Product</a></li> 
+                                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Product</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -21,7 +22,7 @@
         </div>
     </div>
     <!-- slider Area End-->
-<!-- Product Area Start -->
+    <!-- Product Area Start -->
     <section class="project-area section-padding-30">
         <div class="container">
             <div class="project-heading mb-35">
@@ -37,23 +38,32 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="properties__button">
-                            <!--Nav Button  -->                                            
-                            <nav> 
+                            <!--Nav Button  -->
+                            <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                     @php
                                         $activeTab = request()->get('tab', 'home');
                                     @endphp
-                                    <a class="nav-item nav-link {{ $activeTab == 'home' ? 'active' : '' }}" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">Show all</a>
-                                    <a class="nav-item nav-link {{ $activeTab == 'profile' ? 'active' : '' }}" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Manufaktur</a>
-                                    <a class="nav-item nav-link {{ $activeTab == 'contact' ? 'active' : '' }}" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Kuliner</a>
-                                    
-                                    <a class="nav-item nav-link {{ $activeTab == 'last' ? 'active' : '' }}" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Kerajinan</a>
+                                    <a class="nav-item nav-link {{ $activeTab == 'home' ? 'active' : '' }}"
+                                        id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                                        aria-controls="nav-home" aria-selected="false">Show all</a>
+                                    <a class="nav-item nav-link {{ $activeTab == 'profile' ? 'active' : '' }}"
+                                        id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                                        aria-controls="nav-profile" aria-selected="false">Manufaktur</a>
+                                    <a class="nav-item nav-link {{ $activeTab == 'contact' ? 'active' : '' }}"
+                                        id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                                        aria-controls="nav-contact" aria-selected="false">Kuliner</a>
+
+                                    <a class="nav-item nav-link {{ $activeTab == 'last' ? 'active' : '' }}"
+                                        id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab"
+                                        aria-controls="nav-contact" aria-selected="false">Kerajinan</a>
                                 </div>
                             </nav>
                             <!-- Search Box Start -->
                             <form method="GET" action="{{ url()->current() }}" class="form-inline mb-2 mt-3">
                                 <input type="hidden" name="tab" value="{{ request('tab', 'home') }}">
-                                <input type="text" name="search" class="form-control mr-2" placeholder="Cari produk..." value="{{ request('search') }}" style="min-width:180px;">
+                                <input type="text" name="search" class="form-control mr-2" placeholder="Cari produk..."
+                                    value="{{ request('search') }}" style="min-width:180px;">
                                 <button type="submit" class="btn btn-primary">Search</button>
                             </form>
                             <!-- Search Box End -->
@@ -67,7 +77,8 @@
                     <div class="product-img-bg mb-30">
                         <div class="tab-content active" id="nav-tabContent">
                             <!-- card ALL -->
-                            <div class="tab-pane fade {{ $activeTab == 'home' ? 'show active' : '' }}" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
+                            <div class="tab-pane fade {{ $activeTab == 'home' ? 'show active' : '' }}" id="nav-home"
+                                role="tabpanel" aria-labelledby="nav-home-tab">
                                 @php
                                     $search = strtolower(request()->get('search', ''));
                                     $products = [
@@ -728,7 +739,7 @@
                                         ],
                                     ];
                                     if ($search) {
-                                        $products = array_filter($products, function($p) use ($search) {
+                                        $products = array_filter($products, function ($p) use ($search) {
                                             return strpos(strtolower($p['title']), $search) !== false
                                                 || strpos(strtolower($p['desc']), $search) !== false;
                                         });
@@ -746,7 +757,8 @@
                                     <div class="row">
                                         @if(count($productsToShow) == 0)
                                             <div class="col-12">
-                                                <div class="alert alert-primary text-center" style="background:#00235b; color:#fff; border:none;">
+                                                <div class="alert alert-primary text-center"
+                                                    style="background:#00235b; color:#fff; border:none;">
                                                     Tidak ada produk yang Anda cari.
                                                 </div>
                                             </div>
@@ -757,10 +769,8 @@
                                             @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
-                                                    <a class="project-img product-preview"
-                                                        href="javascript:void(0);"
-                                                        data-img="{{ $product['img'] }}"
-                                                        data-title="{{ $product['title'] }}"
+                                                    <a class="project-img product-preview" href="javascript:void(0);"
+                                                        data-img="{{ $product['img'] }}" data-title="{{ $product['title'] }}"
                                                         data-desc="{{ $product['desc'] }}">
                                                         <img src="{{ $product['img'] }}" alt="">
                                                     </a>
@@ -768,16 +778,22 @@
                                                         <div class="marketplace-row">
                                                             @foreach($marketplaces as $market)
                                                                 @if($market['type'] == 'tokopedia')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn" target="_blank">
-                                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia" width="32" height="32">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia"
+                                                                            width="32" height="32">
                                                                     </a>
                                                                 @elseif($market['type'] == 'shopee')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn shopee-btn" target="_blank">
-                                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="32" height="32">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn shopee-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="32"
+                                                                            height="32">
                                                                     </a>
                                                                 @elseif($market['type'] == 'whatsapp')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn" target="_blank">
-                                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp"
+                                                                            width="38" height="38">
                                                                     </a>
                                                                 @endif
                                                             @endforeach
@@ -812,9 +828,10 @@
                                     </nav>
                                 </div>
                             </div>
-                            
+
                             <!-- Card Manufaktur -->
-                            <div class="tab-pane fade {{ $activeTab == 'profile' ? 'show active' : '' }}" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="tab-pane fade {{ $activeTab == 'profile' ? 'show active' : '' }}" id="nav-profile"
+                                role="tabpanel" aria-labelledby="nav-profile-tab">
                                 @php
                                     $search = strtolower(request()->get('search', ''));
                                     $products = [
@@ -848,7 +865,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/rak-plastik.png',
                                             'title' => 'Rak Plastik',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -859,7 +876,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/proofer.png',
                                             'title' => 'Proofer',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -870,7 +887,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/lemari-apron.png',
                                             'title' => 'Lemari apron',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -885,7 +902,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/gerobak-sampah.png',
                                             'title' => 'Gerobak sampah',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -896,7 +913,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/mixer.png',
                                             'title' => 'Mixer',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -907,7 +924,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/loyang-brownies.png',
                                             'title' => 'Loyang brownies',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -922,7 +939,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/bracket-plat.png',
                                             'title' => 'Bracket plat nomor',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -963,7 +980,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/manufaktur/ajuster-baud.png',
                                             'title' => 'Ajuster baud',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1255,7 +1272,7 @@
                                         ],
                                     ];
                                     if ($search) {
-                                        $products = array_filter($products, function($p) use ($search) {
+                                        $products = array_filter($products, function ($p) use ($search) {
                                             return strpos(strtolower($p['title']), $search) !== false
                                                 || strpos(strtolower($p['desc']), $search) !== false;
                                         });
@@ -1273,7 +1290,8 @@
                                     <div class="row">
                                         @if(count($productsToShow) == 0)
                                             <div class="col-12">
-                                                <div class="alert alert-primary text-center" style="background:#00235b; color:#fff; border:none;">
+                                                <div class="alert alert-primary text-center"
+                                                    style="background:#00235b; color:#fff; border:none;">
                                                     Tidak ada produk yang Anda cari.
                                                 </div>
                                             </div>
@@ -1284,10 +1302,8 @@
                                             @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
-                                                    <a class="project-img product-preview"
-                                                        href="javascript:void(0);"
-                                                        data-img="{{ $product['img'] }}"
-                                                        data-title="{{ $product['title'] }}"
+                                                    <a class="project-img product-preview" href="javascript:void(0);"
+                                                        data-img="{{ $product['img'] }}" data-title="{{ $product['title'] }}"
                                                         data-desc="{{ $product['desc'] }}">
                                                         <img src="{{ $product['img'] }}" alt="">
                                                     </a>
@@ -1295,16 +1311,22 @@
                                                         <div class="marketplace-row">
                                                             @foreach($marketplaces as $market)
                                                                 @if($market['type'] == 'tokopedia')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn" target="_blank">
-                                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia" width="32" height="32">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn tokopedia-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia"
+                                                                            width="32" height="32">
                                                                     </a>
                                                                 @elseif($market['type'] == 'shopee')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn shopee-btn" target="_blank">
-                                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="32" height="32">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn shopee-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="32"
+                                                                            height="32">
                                                                     </a>
                                                                 @elseif($market['type'] == 'whatsapp')
-                                                                    <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn" target="_blank">
-                                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
+                                                                    <a href="{{ $market['url'] }}" class="plus-btn whatsapp-btn"
+                                                                        target="_blank">
+                                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp"
+                                                                            width="38" height="38">
                                                                     </a>
                                                                 @endif
                                                             @endforeach
@@ -1326,17 +1348,20 @@
                                             @endphp
 
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
+                                                <a class="page-link"
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
                                             </li>
 
                                             @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
                                                 </li>
                                             @endfor
 
                                             <li class="page-item {{ $page == $totalPages ? 'disabled' : '' }}">
-                                                <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
+                                                <a class="page-link"
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1344,7 +1369,8 @@
                             </div>
 
                             <!-- Card Kuliner -->
-                            <div class="tab-pane fade {{ $activeTab == 'contact' ? 'show active' : '' }}" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="tab-pane fade {{ $activeTab == 'contact' ? 'show active' : '' }}" id="nav-contact"
+                                role="tabpanel" aria-labelledby="nav-contact-tab">
                                 @php
                                     $search = strtolower(request()->get('search', ''));
                                     $products = [
@@ -1359,7 +1385,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/es-dawet-IRENG.png',
                                             'title' => 'Es dawet ireng',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1370,7 +1396,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/basreng-ikan-original.png',
                                             'title' => 'Basreng Ikan Original',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1381,7 +1407,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/kacang.png',
                                             'title' => 'Camilan Kacang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1392,7 +1418,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/keripik-pisang-coklat.png',
                                             'title' => 'Camilan keripik pisang',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1403,7 +1429,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/keripik-pangsit.png',
                                             'title' => 'Camilan keripik pangsit',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1436,7 +1462,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/keripik-tempe-tigasaudara.png',
                                             'title' => 'Camilan keripik tempe',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1447,7 +1473,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/kerupuk-rambak.png',
                                             'title' => 'Camilan kerupuk rambak',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1458,7 +1484,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/sus-buah.png',
                                             'title' => 'Camilan kue sus buah',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1480,7 +1506,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kuliner/jahe-merah-bubuk.jpg',
                                             'title' => 'Jahe merah bubuk',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1493,7 +1519,7 @@
                                         ],
                                     ];
                                     if ($search) {
-                                        $products = array_filter($products, function($p) use ($search) {
+                                        $products = array_filter($products, function ($p) use ($search) {
                                             return strpos(strtolower($p['title']), $search) !== false
                                                 || strpos(strtolower($p['desc']), $search) !== false;
                                         });
@@ -1511,31 +1537,32 @@
                                     <div class="row">
                                         @if(count($productsToShow) == 0)
                                             <div class="col-12">
-                                                <div class="alert alert-primary text-center" style="background:#00235b; color:#fff; border:none;">
+                                                <div class="alert alert-primary text-center"
+                                                    style="background:#00235b; color:#fff; border:none;">
                                                     Tidak ada produk yang Anda cari.
                                                 </div>
                                             </div>
                                         @endif
                                         @foreach($productsToShow as $product)
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="single-project mb-30">
-                                                <a class="project-img product-preview"
-                                                    href="javascript:void(0);"
-                                                    data-img="{{ $product['img'] }}"
-                                                    data-title="{{ $product['title'] }}"
-                                                    data-desc="{{ $product['desc'] }}">
-                                                    <img src="{{ $product['img'] }}" alt="">
-                                                </a>
-                                                <div class="project-cap">
-                                                    <div class="marketplace-row">
-                                                        <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn" target="_blank">
-                                                            <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="28" height="28">
-                                                        </a>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="single-project mb-30">
+                                                    <a class="project-img product-preview" href="javascript:void(0);"
+                                                        data-img="{{ $product['img'] }}" data-title="{{ $product['title'] }}"
+                                                        data-desc="{{ $product['desc'] }}">
+                                                        <img src="{{ $product['img'] }}" alt="">
+                                                    </a>
+                                                    <div class="project-cap">
+                                                        <div class="marketplace-row">
+                                                            <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn"
+                                                                target="_blank">
+                                                                <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp"
+                                                                    width="28" height="28">
+                                                            </a>
+                                                        </div>
+                                                        <h4><a>{{ $product['title'] }}</a></h4>
                                                     </div>
-                                                    <h4><a>{{ $product['title'] }}</a></h4>
                                                 </div>
                                             </div>
-                                        </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -1561,17 +1588,20 @@
                                             @endphp
 
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
+                                                <a class="page-link"
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
                                             </li>
 
                                             @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
                                                 </li>
                                             @endfor
 
                                             <li class="page-item {{ $page == $totalPages ? 'disabled' : '' }}">
-                                                <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
+                                                <a class="page-link"
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1579,7 +1609,8 @@
                             </div>
 
                             <!-- card Kerajinan -->
-                            <div class="tab-pane fade {{ $activeTab == 'last' ? 'show active' : '' }}" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
+                            <div class="tab-pane fade {{ $activeTab == 'last' ? 'show active' : '' }}" id="nav-last"
+                                role="tabpanel" aria-labelledby="nav-last-tab">
                                 @php
                                     $search = strtolower(request()->get('search', ''));
                                     $products = [
@@ -1594,7 +1625,7 @@
                                                 ]
                                             ]
                                         ],
-[
+                                        [
                                             'img' => 'fe/img/gallery/kerajinan/ganci-pesawat.jpg',
                                             'title' => 'Gantungan kunci pesawat',
                                             'desc' => 'Produk furniture berkualitas untuk cafe dan rumah.',
@@ -1662,7 +1693,7 @@
                                         ],
                                     ];
                                     if ($search) {
-                                        $products = array_filter($products, function($p) use ($search) {
+                                        $products = array_filter($products, function ($p) use ($search) {
                                             return strpos(strtolower($p['title']), $search) !== false
                                                 || strpos(strtolower($p['desc']), $search) !== false;
                                         });
@@ -1680,31 +1711,32 @@
                                     <div class="row">
                                         @if(count($productsToShow) == 0)
                                             <div class="col-12">
-                                                <div class="alert alert-primary text-center" style="background:#00235b; color:#fff; border:none;">
+                                                <div class="alert alert-primary text-center"
+                                                    style="background:#00235b; color:#fff; border:none;">
                                                     Tidak ada produk yang Anda cari.
                                                 </div>
                                             </div>
                                         @endif
                                         @foreach($productsToShow as $product)
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="single-project mb-30">
-                                                <a class="project-img product-preview"
-                                                    href="javascript:void(0);"
-                                                    data-img="{{ $product['img'] }}"
-                                                    data-title="{{ $product['title'] }}"
-                                                    data-desc="{{ $product['desc'] }}">
-                                                    <img src="{{ $product['img'] }}" alt="">
-                                                </a>
-                                                <div class="project-cap">
-                                                    <div class="marketplace-row">
-                                                        <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn" target="_blank">
-                                                            <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="28" height="28">
-                                                        </a>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="single-project mb-30">
+                                                    <a class="project-img product-preview" href="javascript:void(0);"
+                                                        data-img="{{ $product['img'] }}" data-title="{{ $product['title'] }}"
+                                                        data-desc="{{ $product['desc'] }}">
+                                                        <img src="{{ $product['img'] }}" alt="">
+                                                    </a>
+                                                    <div class="project-cap">
+                                                        <div class="marketplace-row">
+                                                            <a href="https://wa.me/6282189327077" class="plus-btn whatsapp-btn"
+                                                                target="_blank">
+                                                                <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp"
+                                                                    width="28" height="28">
+                                                            </a>
+                                                        </div>
+                                                        <h4><a>{{ $product['title'] }}</a></h4>
                                                     </div>
-                                                    <h4><a>{{ $product['title'] }}</a></h4>
                                                 </div>
                                             </div>
-                                        </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -1728,13 +1760,16 @@
                                             @if($totalPages <= 1)
                                                 {{-- hanya tampilkan "1" aktif --}}
                                                 <li class="page-item disabled">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
                                                 </li>
                                                 <li class="page-item active">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => 1])) }}">1</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => 1])) }}">1</a>
                                                 </li>
                                                 <li class="page-item disabled">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
                                                 </li>
                                             @else
                                                 {{-- normal pagination window jika > 1 halaman --}}
@@ -1746,17 +1781,20 @@
                                                 @endphp
 
                                                 <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
                                                 </li>
 
                                                 @for($i = $start; $i <= $end; $i++)
                                                     <li class="page-item {{ $page == $i ? 'active' : '' }}">
-                                                        <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
+                                                        <a class="page-link"
+                                                            href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
                                                     </li>
                                                 @endfor
 
                                                 <li class="page-item {{ $page == $totalPages ? 'disabled' : '' }}">
-                                                    <a class="page-link" href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
+                                                    <a class="page-link"
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
                                                 </li>
                                             @endif
                                         </ul>
@@ -1765,16 +1803,78 @@
                             </div>
                         </div>
                     </div>
-                <!-- End Nav Card -->
+                    <!-- End Nav Card -->
                 </div>
             </div>
         </div>
     </section>
+    <div class="container box_1170 mb-100">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card p-4 catalog-card" data-animate="1" style="border-radius:12px; box-shadow:0 8px 30px rgba(2,8,52,0.06);">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <div>
+                            <h3 class="mb-1" style="font-family:'Teko',sans-serif; font-size:28px; color:#0b1c39;">
+                                Lihat Katalog Produk Lengkap
+                            </h3>
+                            <p class="mb-10 text-muted" style="max-width:720px;">
+                                Jelajahi katalog produk lengkap yang berisi beragam pilihan dari berbagai kategori, mulai dari olahan kuliner, produk manufaktur, hingga hasil kerajinan kreatif. Setiap produk disajikan dengan informasi dan tampilan yang menarik untuk memudahkan Anda mengenali karakteristik dan keunggulannya.
+                            </p>
+                        </div>
+                        <div class="mt-3 mt-md-0">
+                            {{-- <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#catalogPdfModal"
+                                data-pdf="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}">
+                                Lihat Katalog (PDF)
+                            </a> --}}
+                            <a href="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}"
+                                class="btn btn-primary"
+                                target="_blank" rel="noopener noreferrer">
+                                Lihat Katalog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF preview modal (katalog lengkap) -->
+    {{-- <div class="modal fade" id="catalogPdfModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document" style="max-width:1100px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Katalog Produk — Lihat (PDF)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:1.6rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0" style="background:#fff;">
+                    <iframe id="catalogPdfFrame" src="" frameborder="0"
+                        style="width:100%; height:80vh; min-height:480px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+    {{-- <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      $('#catalogPdfModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var pdfUrl = button.data('pdf') || '{{ asset("fe/files/Katalog-umkm-ydba-bmi.pdf") }}';
+        // tambahkan param viewer agar toolbar/controls minimal; browser behavior tergantung user-agent
+        $('#catalogPdfFrame').attr('src', pdfUrl + '#toolbar=0&navpanes=0');
+      });
+      $('#catalogPdfModal').on('hidden.bs.modal', function () {
+        $('#catalogPdfFrame').attr('src', '');
+      });
+    });
+    </script> --}}
+
     <script>
         // Reset page ke 1 dan search ke kosong saat pindah tab produk
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.nav-tabs .nav-link').forEach(function(tab) {
-                tab.addEventListener('click', function(e) {
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.nav-tabs .nav-link').forEach(function (tab) {
+                tab.addEventListener('click', function (e) {
                     e.preventDefault();
                     var tabId = this.getAttribute('href').replace('#nav-', '');
                     var url = new URL(window.location.href);
@@ -1789,23 +1889,26 @@
     <!-- Product Area End -->
 
     <!-- Modal Preview Product -->
-    <div class="modal fade" id="productPreviewModal" tabindex="-1" role="dialog" aria-labelledby="productPreviewLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content" style="background:#00235b;">
-        <div class="modal-header border-0">
-            <h5 class="modal-title text-white" id="productPreviewLabel"></h5>
-            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="font-size:2rem;">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body text-center">
-            <img id="productPreviewImg" src="" alt="Preview" style="max-width:100%; max-height:400px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.15);">
-            <div id="productPreviewDesc" class="mt-3 text-white"></div>
-        </div>
+    <div class="modal fade" id="productPreviewModal" tabindex="-1" role="dialog" aria-labelledby="productPreviewLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="background:#00235b;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white" id="productPreviewLabel"></h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"
+                        style="font-size:2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="productPreviewImg" src="" alt="Preview"
+                        style="max-width:100%; max-height:400px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+                    <div id="productPreviewDesc" class="mt-3 text-white"></div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    @endsection
+@endsection
 @section('client')
     @include('layout.client')
 @endsection

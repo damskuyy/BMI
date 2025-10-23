@@ -461,6 +461,17 @@
         // });
 
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const sliders = document.querySelectorAll('.single-slider[data-background]');
+        sliders.forEach(function(slider) {
+            const bgImage = slider.getAttribute('data-background');
+            if(bgImage) {
+                slider.style.backgroundImage = `url(${bgImage})`;
+            }
+        });
+    });
+    </script>
 
 </body>
 </html>
