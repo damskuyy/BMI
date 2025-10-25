@@ -3,7 +3,7 @@
     <!-- slider Area Start-->
     <div class="slider-area ">
         <div class="single-slider hero-overly slider-height2 d-flex align-items-center mb-200"
-            data-background="fe/img/hero/about.jpg">
+            data-background="fe/img/hero/produk.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -1822,15 +1822,15 @@
                             </p>
                         </div>
                         <div class="mt-3 mt-md-0">
-                            {{-- <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#catalogPdfModal"
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#catalogPdfModal"
                                 data-pdf="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}">
                                 Lihat Katalog (PDF)
-                            </a> --}}
-                            <a href="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}"
+                            </a>
+                            {{-- <a href="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}"
                                 class="btn btn-primary"
                                 target="_blank" rel="noopener noreferrer">
                                 Lihat Katalog
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
@@ -1839,7 +1839,7 @@
     </div>
 
     <!-- PDF preview modal (katalog lengkap) -->
-    {{-- <div class="modal fade" id="catalogPdfModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="catalogPdfModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document" style="max-width:1100px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1854,9 +1854,9 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
-    {{-- <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function(){
       $('#catalogPdfModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
@@ -1868,7 +1868,7 @@
         $('#catalogPdfFrame').attr('src', '');
       });
     });
-    </script> --}}
+    </script>
 
     <script>
         // Reset page ke 1 dan search ke kosong saat pindah tab produk

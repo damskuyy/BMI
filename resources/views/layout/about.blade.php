@@ -3,7 +3,7 @@
     <div class="support-wrapper align-items-end">
         <div class="left-content">
             <!-- section tittle -->
-            <div class="section-tittle section-tittle2 mb-55 mt-160">
+            <div class="section-tittle section-tittle2 mb-55">
                 <div class="front-text">
                     <h3 class="">Who we are</h3>
                 </div>

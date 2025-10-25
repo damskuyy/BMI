@@ -3,7 +3,7 @@
     <div class="container">
         <div class="count-wrapper count-bg">
             <!-- Desktop: tetap pakai row -->
-            <div class="row justify-content-center d-none d-sm-flex">
+            <div class="row justify-content-center d-none d-sm-flex mb-100">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="count-clients">
                         <div class="single-counter">    

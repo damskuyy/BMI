@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap pt-100">
-                            <h1>About us</h1>
+                            <h1>About BMI</h1>
                             <nav aria-label="breadcrumb ">
                                 <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/home">Home</a></li>

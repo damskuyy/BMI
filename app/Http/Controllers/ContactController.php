@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+use App\Mail\ContactFormMail; // Tambahkan ini
 
 class ContactController extends Controller
 {
@@ -14,51 +17,62 @@ class ContactController extends Controller
         return view('contact.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function send(Request $request)
     {
-        //
-    }
+        // Validasi input
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        try {
+            // Siapkan data untuk email
+            $data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message
+            ];
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+            // Kirim email
+            Mail::raw("
+                Name: {$data['name']}
+                Email: {$data['email']}
+                Subject: {$data['subject']}
+                
+                Message:
+                {$data['message']}
+            ", function($message) use ($data) {
+                $message->to('damarnugroho199@gmail.com')
+                        ->from($data['email'], $data['name'])
+                        ->subject("Contact Form: {$data['subject']}");
+            });
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+            // Return response untuk AJAX
+            if($request->ajax()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Email berhasil dikirim!'
+                ]);
+            }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+            // Return untuk non-AJAX
+            return back()->with('success', 'Email berhasil dikirim!');
+        } catch (\Exception $e) {
+            Log::error('Mail Error: ' . $e->getMessage());
+            
+            if($request->ajax()) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Gagal mengirim email: ' . $e->getMessage()
+                ], 500);
+            }
+            }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+            return back()
+                ->withInput()
+                ->withErrors(['email' => 'Gagal mengirim email: ' . $e->getMessage()]);
     }
 }
