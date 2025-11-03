@@ -38,7 +38,7 @@
             </div>
             <div class="row justify-content-center">
                 <!-- Card dikecilkan: col-lg-4 -> col-lg-3, col-md-4 -> col-md-4, col-sm-6 -> col-sm-6 -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
                             <img src="fe/img/team/bayu.png" alt="">
@@ -162,7 +162,7 @@
     <!-- Team Area End -->
     
     <!-- Team Tables Start -->
-    {{-- <div class="member-table-wrapper mb-5 mt-30">
+    <div class="member-table-wrapper mb-5 mt-30">
         <h3 class="table-title mb-3">KEANGGOTAAN BMI</h3>
         <div class="table-responsive">
             <table id="bmiTable" class="table table-bmi display responsive nowrap">
@@ -242,7 +242,7 @@
                 </tbody>
             </table>
         </div>
-    </div> --}}
+    </div>
     <!-- Team Tables End -->
 @endsection
 @section('client')

@@ -33,9 +33,9 @@
                 <span class="back-text">Manufaktur</span>
             </div>
 
-            <div class="row align-items-start mb-40">
-                <div class="col-lg-6">
-                    <div class="card reveal-on-scroll">
+            <div class="row mb-40">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card reveal-on-scroll h-100">
                         <div class="card-body">
                             <h4 class="card-title">Pengertian Manufaktur</h4>
                             <p class="card-text">
@@ -48,8 +48,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="card reveal-on-scroll">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card reveal-on-scroll h-100">
                         <div class="card-body">
                             <h4 class="card-title">Fungsi & Peran</h4>
                             <ul class="card-list">
@@ -64,22 +64,22 @@
             </div>
 
             <div class="row mb-40">
-                <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Tujuan</h5>
                         <p>Meningkatkan produktivitas, menurunkan biaya produksi, memenuhi kebutuhan pasar, serta
                             menghasilkan produk berkualitas dan kompetitif.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Contoh</h5>
                         <p>Industri pengolahan makanan, tekstil, mebel, otomotif, pengemasan, dan industri alat industri
                             kecil (bengkel/jasa permesinan).</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Manfaat</h5>
                         <p>Nilai tambah ekonomis, peningkatan skill tenaga kerja, pemenuhan kebutuhan domestik, pertumbuhan
                             UMKM pendukung, serta peluang ekspor.</p>

@@ -1,7 +1,7 @@
 <!-- slider Area Start-->
 <div class="slider-area home-slider">
     <div class="slider-active owl-carousel">
-        <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/hero/bg1.png">
+        <div class="single-slider hero-overly slider-height d-flex align-items-center" data-background="fe/img/hero/kab-bogor-scaled.png">
             <div class="container" style="margin-top: -370px !important;">
                 <div class="row">
                     <div class="col-lg-12">
@@ -13,7 +13,7 @@
                                 <h2 style="text-align: left !important;">Bogor</h2>
                                 <h2 style="text-align: left !important;">Bogor</h2>
                             </div>
-                            <h1 data-animation="fadeInUp" data-delay=".5s" style="margin-top: 120px; text-align: left !important;">Manufaktur</h1>
+                            <h1 data-animation="fadeInUp" data-delay=".5s" style="margin-top: 100px;margin-bottom: 25px; text-align: left !important;">Manufaktur</h1>
                             <div class="stock-text" data-animation="fadeInUp" data-delay=".8s" style="text-align: left !important; position: relative !important; left: 0 !important; top: 0 !important; margin-top: -20px;">
                                 <h2 style="text-align: left !important;">Indonesia</h2>
                                 <h2 style="text-align: left !important;">Indonesia</h2>

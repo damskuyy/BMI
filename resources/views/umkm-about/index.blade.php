@@ -2,7 +2,7 @@
 @section('content')
     <!-- slider Area Start-->
     <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/kuliner-bg.jpg">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/kuliner-bg.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -33,8 +33,8 @@
         </div>
 
         <div class="row align-items-stretch mb-40">
-          <div class="col-lg-6">
-            <div class="card reveal-on-scroll">
+          <div class="col-lg-6 col-md-4">
+            <div class="card reveal-on-scroll h-100">
               <div class="card-body">
                 <h4 class="card-title">Pengertian Kuliner UMKM</h4>
                 <p class="card-text">
@@ -44,8 +44,8 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="card reveal-on-scroll">
+          <div class="col-lg-6 col-md-4">
+            <div class="card reveal-on-scroll h-100">
               <div class="card-body">
                 <h4 class="card-title">Fungsi & Peran</h4>
                 <ul class="card-list">
@@ -61,19 +61,19 @@
 
         <div class="row mb-30">
           <div class="col-md-4">
-            <div class="feature-card reveal-on-scroll">
+            <div class="card reveal-on-scroll">
               <h5>Tujuan</h5>
               <p>Meningkatkan pendapatan pelaku usaha, memperluas akses pasar, menjaga kualitas pangan, dan membangun usaha yang berkelanjutan.</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-card reveal-on-scroll">
+            <div class="card reveal-on-scroll">
               <h5>Contoh</h5>
               <p>Warung makan rumahan, katering skala kecil, pembuat kue tradisional, usaha minuman kemasan lokal, pedagang jajanan pasar.</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-card reveal-on-scroll">
+            <div class="card reveal-on-scroll">
               <h5>Manfaat</h5>
               <p>Mendorong ekonomi lokal, mengembangkan keterampilan produksi, membuka peluang ekspor produk khas, dan memperkaya ragam kuliner daerah.</p>
             </div>

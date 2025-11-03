@@ -23,7 +23,7 @@
     </div>
     <!-- slider Area End-->
     <!-- Product Area Start -->
-    <section class="project-area section-padding-30">
+    <section class="project-area section-padding-30" id="product-section">
         <div class="container">
             <div class="project-heading mb-35">
                 <div class="row align-items-end">
@@ -809,7 +809,7 @@
                                     <nav aria-label="Product pagination">
                                         <ul class="pagination">
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page - 1 }}">Previous</a>
+                                                <a class="page-link" href="?page={{ $page - 1 }}#product-section">Previous</a>
                                             </li>
                                             @php
                                                 $maxShow = 4;
@@ -818,11 +818,11 @@
                                             @endphp
                                             @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
-                                                    <a class="page-link" href="?page={{ $i }}">{{ $i }}</a>
+                                                    <a class="page-link" href="?page={{ $i }}#product-section">{{ $i }}</a>
                                                 </li>
                                             @endfor
                                             <li class="page-item {{ $page == $totalPages ? 'disabled' : '' }}">
-                                                <a class="page-link" href="?page={{ $page + 1 }}">Next</a>
+                                                <a class="page-link" href="?page={{ $page + 1 }}#product-section">Next</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1349,19 +1349,19 @@
 
                                             <li class="page-item {{ $page == 1 ? 'disabled' : '' }}">
                                                 <a class="page-link"
-                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}">Previous</a>
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $prevPage])) }}#product-section">Previous</a>
                                             </li>
 
                                             @for($i = $start; $i <= $end; $i++)
                                                 <li class="page-item {{ $page == $i ? 'active' : '' }}">
                                                     <a class="page-link"
-                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}">{{ $i }}</a>
+                                                        href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $i])) }}#product-section">{{ $i }}</a>
                                                 </li>
                                             @endfor
 
                                             <li class="page-item {{ $page == $totalPages ? 'disabled' : '' }}">
                                                 <a class="page-link"
-                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}">Next</a>
+                                                    href="{{ url()->current() . '?' . http_build_query(array_merge($baseParams, ['page' => $nextPage])) }}#product-section">Next</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -1885,6 +1885,18 @@
                 });
             });
         });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cek apakah ada hash di URL (misalnya #product-section)
+        if (window.location.hash === '#product-section') {
+            const productSection = document.getElementById('product-section');
+            if (productSection) {
+                // Scroll ke elemen dengan smooth behavior
+                productSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
     </script>
     <!-- Product Area End -->
 

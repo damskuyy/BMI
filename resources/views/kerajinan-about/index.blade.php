@@ -33,9 +33,9 @@
                 <span class="back-text">Kerajinan</span>
             </div>
 
-            <div class="row align-items-start mb-40">
-                <div class="col-lg-6">
-                    <div class="card reveal-on-scroll">
+            <div class="row mb-40">
+                <div class="col-lg-6 col-md-4">
+                    <div class="card reveal-on-scroll h-100">
                         <div class="card-body">
                             <h4 class="card-title">Pengertian Kerajinan</h4>
                             <p class="card-text">
@@ -48,8 +48,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="card reveal-on-scroll">
+                <div class="col-lg-6 col-md-4">
+                    <div class="card reveal-on-scroll h-100">
                         <div class="card-body">
                             <h4 class="card-title">Fungsi & Peran Kerajinan</h4>
                             <ul class="card-list">
@@ -65,21 +65,21 @@
 
             <div class="row mb-30">
                 <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Tujuan</h5>
                         <p>Meningkatkan kesejahteraan pengrajin, memperluas akses pasar produk kerajinan, menjamin kualitas
                             dan kontinuitas produksi, serta mendorong nilai tambah kreatif.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Contoh</h5>
                         <p>Anyaman bambu & rotan, kerajinan kulit, tenun & batik lokal, ukiran kayu, keramik, aksesori
                             handmade, dan kemasan kreatif untuk souvenir.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="feature-card reveal-on-scroll">
+                    <div class="card reveal-on-scroll h-100">
                         <h5>Manfaat</h5>
                         <p>Nilai ekonomi bagi komunitas lokal, pelestarian budaya, diversifikasi produk UMKM, dan potensi
                             pariwisata kreatif.</p>

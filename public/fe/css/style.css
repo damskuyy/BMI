@@ -2557,7 +2557,7 @@ hr {
   }
 }
 .slider-area .hero__caption h1 {
-  font-size: 140px;
+  font-size: 100px;
   font-weight: 900;
   color: #ffffff;
   font-family: "Barlow", sans-serif;
@@ -2627,7 +2627,7 @@ hr {
   }
 }
 .slider-area .hero__caption .stock-text h2 {
-  font-size: 140px;
+  font-size: 100px;
   font-weight: 800;
   margin: 0;
   line-height: 1;
@@ -3424,7 +3424,7 @@ hr {
     padding-left: 18px;
 }
 .about-visi-misi ul li:before {
-    content: "→";
+    content: "→ ";
     color: #ff0000;
     position: absolute;
     left: 0;
@@ -3466,7 +3466,7 @@ hr {
     padding-left: 18px;
 }
 .about-tujuan-fungsi ul li:before {
-    content: "✓";
+    content: "•";
     color: #ff0000;
     position: absolute;
     left: 0;
@@ -4644,6 +4644,9 @@ hr {
 }
 .project-area .pagination {
     justify-content: center;
+}
+.pagination-link {
+    cursor: pointer;
 }
 .project-area .pagination .page-link {
     color: #00235b;
@@ -6522,11 +6525,11 @@ Kuliner About Only
   line-height: 1.7;
   margin-bottom: 0;
 }
-.umkm-section .card-list { padding-left: 18px; color:#3b4b63; margin:0; }
+.umkm-section .card-list { padding-left: 18px; color: #3b4b63; margin:0; }
 
 /* small decorative badge */
 .umkm-section .section-tittle .front-text h2::after {
-  content: "";
+  content: none;
   display: inline-block;
   width: 56px;
   height: 6px;

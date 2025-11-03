@@ -66,9 +66,9 @@
                     <div class="card-misi">
                         <h3 class="section-title">Misi</h3>
                         <ul>
-                            <li>Menjalankan dan membantu UMKM naik kelas dan berkelanjutan.</li>
-                            <li>Membuat pelanggan percaya dan memberikan pelayanan terbaik.</li>
-                            <li>Membangun kolaborasi dan saling mendukung antar anggota.</li>
+                            <li>&nbsp;Menjalankan dan membantu UMKM naik kelas dan berkelanjutan.</li>
+                            <li>&nbsp;Membuat pelanggan percaya dan memberikan pelayanan &nbsp;terbaik.</li>
+                            <li>&nbsp;Membangun kolaborasi dan saling mendukung antar anggota.</li>
                         </ul>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                                 <b>Koperasi Multisektor:</b> Manufaktur, Kuliner, Kerajinan saling mendukung. Sinergi produk, kolaborasi pemasaran, efisiensi operasional, dan skala ekonomi tercipta untuk seluruh anggota.
                             </p>
                             <div class="d-flex justify-content-center gap-2 mt-2">
-                                <span class="badge badge-pill badge-success px-3 py-2 mr-7" style="background:##009e3c;color:#fff;">Kolaborasi</span>
+                                <span class="badge badge-pill badge-success px-3 py-2 mr-10" style="background:##009e3c;color:#fff;">Kolaborasi</span>
                                 <span class="badge badge-pill badge-success px-3 py-2" style="background:##009e3c;color:#fff;">Diversifikasi</span>
                             </div>
                         </div>
