@@ -146,6 +146,9 @@
                                             <li>
                                                 <a href="/gallery" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
                                             </li>
+                                            <li>
+                                                <a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Blog</a>
+                                            </li>
                                             <li class="d-block d-lg-none">
                                                 <a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Contact</a>
                                             </li>
@@ -220,6 +223,7 @@
                                         <li><a href="/members">Members</a></li>
                                         <li><a href="/product">Product</a></li>
                                         <li><a href="/gallery">Gallery</a></li>
+                                        <li><a href="/blog">Blog</a></li>
                                         <li><a href="/contact">Contact Us</a></li>
                                     </ul>
                                 </div>

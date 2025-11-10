@@ -24,6 +24,7 @@ Route::resource('/product', App\Http\Controllers\ProductController::class);
 Route::get('/product', [ProductController::class, 'index']);
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/blog', App\Http\Controllers\BlogController::class);
+Route::resource('/blog-details', App\Http\Controllers\BlogDetailController::class);
 Route::resource('/contact', App\Http\Controllers\ContactController::class);
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
