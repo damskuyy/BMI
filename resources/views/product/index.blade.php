@@ -1821,10 +1821,12 @@
                                 Jelajahi katalog produk lengkap yang berisi beragam pilihan dari berbagai kategori, mulai dari olahan kuliner, produk manufaktur, hingga hasil kerajinan kreatif. Setiap produk disajikan dengan informasi dan tampilan yang menarik untuk memudahkan Anda mengenali karakteristik dan keunggulannya.
                             </p>
                         </div>
-                        <div class="mt-3 mt-md-0">
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#catalogPdfModal"
-                                data-pdf="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}">
-                                Lihat Katalog (PDF)
+                        <div class="mt-3 mt-md-0 d-flex gap-2">
+                            <a href="#" class="btn btn-primary mr-2" id="catalogViewBtn" data-toggle="modal" data-target="#catalogPdfModal">
+                                <i class="fas fa-eye"></i> Lihat Katalog
+                            </a>
+                            <a href="" class="btn btn-outline-primary" id="catalogDownloadBtn" download>
+                                <i class="fas fa-download"></i> Download
                             </a>
                             {{-- <a href="{{ asset('fe/files/Katalog-umkm-ydba-bmi.pdf') }}"
                                 class="btn btn-primary"
@@ -1844,9 +1846,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Katalog Produk — Lihat (PDF)</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:1.6rem;">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="modal-actions">
+                        <a id="downloadPdfBtnModal" href="#" class="btn btn-sm btn-outline-primary" download style="margin-right: 12px;">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:1.6rem;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="modal-body p-0" style="background:#fff;">
                     <iframe id="catalogPdfFrame" src="" frameborder="0"
@@ -1857,16 +1864,60 @@
     </div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      $('#catalogPdfModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var pdfUrl = button.data('pdf') || '{{ asset("fe/files/Katalog-umkm-ydba-bmi.pdf") }}';
-        // tambahkan param viewer agar toolbar/controls minimal; browser behavior tergantung user-agent
-        $('#catalogPdfFrame').attr('src', pdfUrl + '#toolbar=0&navpanes=0');
-      });
-      $('#catalogPdfModal').on('hidden.bs.modal', function () {
-        $('#catalogPdfFrame').attr('src', '');
-      });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Katalog untuk setiap kategori
+        const catalogs = {
+            'home': '{{ asset("fe/files/Katalog-UMKM-YDBA-BMI.pdf") }}',
+            'profile': '{{ asset("fe/files/Katalog-Manufaktur-YDBA-BMI.pdf") }}', // Manufaktur
+            'contact': '{{ asset("fe/files/Katalog-Kuliner-YDBA-BMI.pdf") }}',     // Kuliner
+            'last': '{{ asset("fe/files/Katalog-Kerajinan-YDBA-BMI.pdf") }}'       // Kerajinan
+        };
+
+        const tabNames = {
+            'home': 'Semua Produk',
+            'profile': 'Manufaktur',
+            'contact': 'Kuliner',
+            'last': 'Kerajinan'
+        };
+
+        // Fungsi untuk update katalog sesuai tab
+        function updateCatalog(tabId) {
+            const pdfUrl = catalogs[tabId] || catalogs['home'];
+            const tabName = tabNames[tabId] || 'Semua Produk';
+            
+            // Update button dengan PDF URL
+            document.getElementById('catalogViewBtn').setAttribute('data-pdf', pdfUrl);
+            document.getElementById('catalogDownloadBtn').href = pdfUrl;
+            document.getElementById('downloadPdfBtnModal').href = pdfUrl;
+            
+            // Update title modal
+            document.querySelector('.modal-title').textContent = 'Katalog Produk ' + tabName + ' — Lihat (PDF)';
+        }
+
+        // Set katalog awal sesuai tab aktif
+        const activeTab = '{{ request()->get("tab", "home") }}';
+        updateCatalog(activeTab);
+
+        // Event listener saat tab berubah
+        document.querySelectorAll('.nav-tabs .nav-link').forEach(function(tab) {
+            tab.addEventListener('click', function(e) {
+                const tabId = this.getAttribute('href').replace('#nav-', '');
+                // Tunggu tab switch sebelum update katalog
+                setTimeout(() => {
+                    updateCatalog(tabId);
+                }, 100);
+            });
+        });
+
+        // Modal event untuk update iframe saat dibuka
+        $('#catalogPdfModal').on('show.bs.modal', function(event) {
+            const pdfUrl = document.getElementById('catalogViewBtn').getAttribute('data-pdf');
+            document.getElementById('catalogPdfFrame').src = pdfUrl + '#toolbar=0&navpanes=0';
+        });
+
+        $('#catalogPdfModal').on('hidden.bs.modal', function() {
+            document.getElementById('catalogPdfFrame').src = '';
+        });
     });
     </script>
 

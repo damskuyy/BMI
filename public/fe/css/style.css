@@ -1726,6 +1726,30 @@ hr {
   padding-top: 157px;
   padding-bottom: 157px;
 }
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-testimonial:hover .testimonial-avatar {
+    transform: scale(1.08) rotate(6deg);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+    }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .testimonial-padding {
     padding-top: 157px;

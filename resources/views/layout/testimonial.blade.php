@@ -28,6 +28,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Karyati</span>
                                     <p>King Kiripik</p>
@@ -48,6 +49,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Amanie</span>
                                     <p>Pempek</p>
@@ -69,6 +71,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Neneng</span>
                                     <p>Catering</p>
@@ -89,6 +92,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/camilan-zomed.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Juminah</span>
                                     <p>Camilan Zomed</p>
@@ -109,6 +113,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/hanara-bakery.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Fitria</span>
                                     <p>Hanara Cake</p>
@@ -129,6 +134,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/tiga-saudara.jpeg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Maryanti</span>
                                     <p>Tiga Saudara</p>
@@ -149,9 +155,9 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/naninu-kitchen.jpg') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Naninu Kitchen</span>
-                                    {{-- <p>Pempek</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -169,6 +175,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
+                                <img src="{{ asset('fe/img/clients/adiwijaya.png') }}" alt="Karyati" class="testimonial-avatar">
                                 <div class="founder-text">
                                     <span>Ety</span>
                                     <p>Adiwijaya Teknik</p>
