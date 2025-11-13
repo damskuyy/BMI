@@ -10,54 +10,49 @@
 
     <div class="card">
         <div class="card-body">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input name="name" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" required>
-                    @error('name')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input name="email" type="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" required>
-                    @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-
-                <div class="mb-3 row">
-                    <div class="col">
-                        <label class="form-label">Password</label>
-                        <input name="password" type="password" class="form-control @error('password') is-invalid @enderror" required>
-                        @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                    </div>
-                    <div class="col">
-                        <label class="form-label">Confirm Password</label>
-                        <input name="password_confirmation" type="password" class="form-control" required>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Role</label>
-                    <select name="role" class="form-select @error('role') is-invalid @enderror" required>
-                        <option value="user" {{ old('role')=='user' ? 'selected' : '' }}>User</option>
-                        <option value="editor" {{ old('role')=='editor' ? 'selected' : '' }}>Editor</option>
-                        <option value="admin" {{ old('role')=='admin' ? 'selected' : '' }}>Admin</option>
-                    </select>
-                    @error('role')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Avatar (optional)</label>
-                    <input name="avatar" id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" accept="image/*">
-                    @error('avatar')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                    <label for="foto" class="form-label">Avatar (Opsional)</label>
+                    <input type="file" name="foto" class="form-control" id="foto">
                 </div>
 
                 <div class="mb-3">
                     <img id="avatarPreview" src="#" style="max-width:140px;display:none;" class="rounded">
                 </div>
 
-                <button class="btn btn-primary"><i class="fas fa-save"></i> Create</button>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input type="password" name="password_confirmation" class="form-control" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Create</button>
             </form>
         </div>
     </div>
@@ -65,7 +60,7 @@
 
 @push('scripts')
 <script>
-document.getElementById('avatar')?.addEventListener('change', function(e){
+document.getElementById('foto')?.addEventListener('change', function(e){
     const p = document.getElementById('avatarPreview');
     if(!e.target.files.length) return p.style.display='none';
     p.src = URL.createObjectURL(e.target.files[0]);

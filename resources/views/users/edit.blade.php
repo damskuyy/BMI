@@ -1,4 +1,3 @@
-
 @extends('layout-be.master')
 @section('title', 'Edit User')
 @section('content')
@@ -26,30 +25,34 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Role</label>
-                    <select name="role" class="form-select @error('role') is-invalid @enderror" required>
-                        <option value="user" {{ old('role', $user->role)=='user' ? 'selected' : '' }}>User</option>
-                        <option value="editor" {{ old('role', $user->role)=='editor' ? 'selected' : '' }}>Editor</option>
-                        <option value="admin" {{ old('role', $user->role)=='admin' ? 'selected' : '' }}>Admin</option>
-                    </select>
-                    @error('role')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-
-                <div class="mb-3">
                     <label class="form-label">New Password (leave blank to keep)</label>
                     <input name="password" type="password" class="form-control @error('password') is-invalid @enderror">
                     @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Avatar (leave blank to keep)</label>
-                    <input name="avatar" id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" accept="image/*">
-                    @error('avatar')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                    <label class="form-label">Confirm Password</label>
+                    <input name="password_confirmation" type="password" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Current Avatar</label><br>
-                    <img id="avatarPreview" src="{{ $user->avatar ? Storage::url($user->avatar) : asset('fe/img/default-avatar.png') }}" style="max-width:140px;" class="rounded">
+                    @php $currentPublic = public_path('storage/' . ($user->foto ?? '')); @endphp
+                    <img id="currentAvatar"
+                         src="{{ ($user->foto && file_exists($currentPublic)) ? '/storage/' . $user->foto : asset('fe/img/icon/user.png') }}"
+                         alt="{{ $user->name }}"
+                         class="rounded-circle mb-2"
+                         width="80" height="80">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Change Avatar (leave blank to keep)</label>
+                    <input name="foto" id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" accept="image/*">
+                    @error('foto')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+
+                <div class="mb-3">
+                    <img id="avatarPreview" src="#" style="max-width:140px;display:none;" class="rounded">
                 </div>
 
                 <button class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
@@ -60,10 +63,19 @@
 
 @push('scripts')
 <script>
-document.getElementById('avatar')?.addEventListener('change', function(e){
-    const p = document.getElementById('avatarPreview');
-    if(!e.target.files.length) return;
-    p.src = URL.createObjectURL(e.target.files[0]);
+document.getElementById('foto')?.addEventListener('change', function(e){
+    const preview = document.getElementById('avatarPreview');
+    const current = document.getElementById('currentAvatar');
+    
+    if(!e.target.files.length) {
+        preview.style.display = 'none';
+        current.style.display = 'inline-block';
+        return;
+    }
+    
+    current.style.display = 'none';
+    preview.src = URL.createObjectURL(e.target.files[0]);
+    preview.style.display = 'inline-block';
 });
 </script>
 @endpush

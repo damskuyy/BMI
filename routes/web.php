@@ -31,7 +31,7 @@ Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.
 // Auth Routes
 Route::middleware('guest')->group(function() {
     Route::get('login', [AuthController::class, 'showLogin'])->name('login');
-    Route::post('login', [AuthController::class, 'login']);
+    Route::post('login', [AuthController::class, 'login'])->name('login.post');
 });
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 

@@ -12,6 +12,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        $user = User::all();
         $users = User::latest()->paginate(10);
         return view('users.index', compact('users'));
     }
@@ -24,30 +25,22 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required','string','max:255'],
-            'email' => ['required','email','max:255','unique:users'],
-            'password' => ['required','confirmed', Password::defaults()],
-            'avatar' => ['nullable','image','mimes:jpg,jpeg,png','max:2048'],
-            'role' => ['required','in:admin,editor,user']
+            'foto' => 'nullable|image|max:5120|mimes:jpeg,png,jpg,gif',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|confirmed',
         ]);
 
-        $data = [
+        $fotoPath = $request->file('foto') ? $request->file('foto')->store('user', 'public') : null;
+
+        User::create([
+            'foto' => $fotoPath,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => $request->role
-        ];
+        ]);
 
-        if ($request->hasFile('avatar')) {
-            $file = $request->file('avatar');
-            $name = time() . '.' . $file->extension();
-            $file->storeAs('public/avatars', $name);
-            $data['avatar'] = 'avatars/' . $name;
-        }
-
-        User::create($data);
-
-        return redirect()->route('users.index')->with('success','User created');
+        return redirect()->route('users.index')->with('success', 'User berhasil ditambahkan.');
     }
 
     public function edit(User $user)
@@ -58,50 +51,36 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $request->validate([
-            'name' => ['required','string','max:255'],
-            'email' => ['required','email','max:255','unique:users,email,'.$user->id],
-            'password' => ['nullable','confirmed', Password::defaults()],
-            'avatar' => ['nullable','image','mimes:jpg,jpeg,png','max:2048'],
-            'role' => ['required','in:admin,editor,user']
+            'foto' => 'nullable|image|max:5120|mimes:jpeg,png,jpg,gif',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'password' => 'nullable|string|confirmed',
         ]);
-
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'role' => $request->role
-        ];
-
-        if ($request->filled('password')) {
-            $data['password'] = Hash::make($request->password);
-        }
-
-        if ($request->hasFile('avatar')) {
-            if ($user->avatar) {
-                Storage::delete('public/' . $user->avatar);
+        // Jika ada file foto baru, hapus foto lama dan simpan foto baru
+        if ($request->hasFile('foto')) {
+            if ($user->foto && file_exists(storage_path('app/public/'.$user->foto))) {
+                unlink(storage_path('app/public/'.$user->foto));
             }
-            $file = $request->file('avatar');
-            $name = time() . '.' . $file->extension();
-            $file->storeAs('public/avatars', $name);
-            $data['avatar'] = 'avatars/' . $name;
+            $user->foto = $request->file('foto')->store('user', 'public');
         }
 
-        $user->update($data);
+        $user->name = $request->name;
+        $user->email = $request->email;
 
-        return redirect()->route('users.index')->with('success','User updated');
+        if ($request->password) {
+            $user->password = Hash::make($request->password);
+        }
+
+        $user->save();
+
+        return redirect()->route('users.index')->with('success', 'User berhasil diperbarui.');
     }
+
 
     public function destroy(User $user)
     {
-        if ($user->id === auth()->id()) {
-            return redirect()->route('users.index')->with('error','Cannot delete own account');
-        }
-
-        if ($user->avatar) {
-            Storage::delete('public/' . $user->avatar);
-        }
-
         $user->delete();
 
-        return redirect()->route('users.index')->with('success','User deleted');
+        return redirect()->route('users.index')->with('success', 'User berhasil dihapus.');
     }
 }

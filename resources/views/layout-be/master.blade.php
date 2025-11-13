@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>BMI Admin - @yield('title')</title>
+    <link rel="shortcut icon" type="image/x-icon" href="fe/img/logo/logo-bmi-kotak.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Admin CSS -->
     <link rel="stylesheet" href="{{ asset('be/css/app.css') }}">
+    <!-- Sweet Alert -->
+    <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+    <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css">
 </head>
 <body>
     <div class="wrapper">
@@ -70,8 +74,9 @@
                     </button>
 
                     <div class="ml-auto user-info">
-                        <img src="{{ Auth::user()->avatar ?? asset('fe/img/default-avatar.png') }}" 
-                             alt="User Avatar" 
+                        @php $userAvatarPath = public_path('storage/' . (Auth::user()->foto ?? '')); @endphp
+                        <img src="{{ (Auth::user()->foto && file_exists($userAvatarPath)) ? '/storage/' . Auth::user()->foto : asset('fe/img/icon/user.png') }}"
+                             alt="User Avatar"
                              class="avatar">
                         <span class="username">{{ Auth::user()->name }}</span>
                     </div>
