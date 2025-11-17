@@ -479,6 +479,11 @@
             const bgImage = slider.getAttribute('data-background');
             if(bgImage) {
                 slider.style.backgroundImage = `url(${bgImage})`;
+                // ensure animation runs with background present: remove then re-add class to trigger
+                slider.classList.remove('slide-fade-zoom');
+                // force reflow
+                void slider.offsetWidth;
+                slider.classList.add('slide-fade-zoom');
             }
         });
     });

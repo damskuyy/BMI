@@ -38,10 +38,10 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth')->na
 // Backend Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::resource('product_be', ProductBEController::class);
-    Route::resource('gallery_be', GalleryBEController::class);
+    Route::resource('product_be', ProductBEController::class)->parameters(['product_be' => 'product']);
+    Route::resource('gallery_be', GalleryBEController::class)->parameters(['gallery_be' => 'gallery']);
     Route::resource('blog_be', BlogBEController::class);
-    Route::resource('slider_be', SliderController::class);
-    Route::resource('member_be', MemberBEController::class);
+    Route::resource('slider_be', SliderController::class)->parameters(['slider_be' => 'slider']);
+    Route::resource('member_be', MemberBEController::class)->parameters(['member_be' => 'member']);
     Route::resource('users', UserController::class);
 });

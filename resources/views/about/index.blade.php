@@ -1,25 +1,47 @@
 @extends('layout.master')
 @section('content')
+    @use('Illuminate\Support\Facades\Storage')
+    
+    @php
+        $aboutSlider = \App\Models\Slider::where('section', 'about')->first();
+    @endphp
+    
+    <style>
+        .page-slider-fade-in {
+            animation: pageSliderFadeIn 0.8s ease-in;
+        }
+        @keyframes pageSliderFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
     <!-- slider Area Start-->
-    <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/about.png">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap pt-100">
-                            <h1>About BMI</h1>
-                            <nav aria-label="breadcrumb ">
-                                <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">About</a></li> 
-                                </ol>
-                            </nav>
+    @if($aboutSlider && $aboutSlider->image)
+        <div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" 
+                 style="background-image: url('{{ Storage::url($aboutSlider->image) }}'); background-size: cover; background-position: center;">
+    @else
+        <div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" style="background-image: url('{{ asset('fe/img/hero/about.png') }}'); background-size: cover; background-position: center;">
+    @endif
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h1>About BMI</h1>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">About</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- slider Area End-->
     <!-- About Area Start -->
     <section class="support-company-area fix pt-10" style="margin-top:120px;">

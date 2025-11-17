@@ -2,39 +2,147 @@
 @extends('layout-be.master')
 @section('title', 'Add Member')
 @section('content')
-<div class="container-fluid">
-    <h1 class="h3">Add Member</h1>
-    <form action="{{ route('member_be.store') }}" method="POST">
-        @csrf
-        <div class="mb-3">
-            <label>Nama Anggota</label>
-            <input type="text" name="name" class="form-control" required>
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col-lg-8">
+            <h1 class="h2 fw-bold">Tambah Anggota Baru</h1>
+            <p class="text-muted">Isi form di bawah untuk menambahkan anggota baru</p>
+            <a href="{{ route('member_be.index') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</a>
         </div>
-        <div class="mb-3">
-            <label>Stuktur</label>
-            <input type="text" name="position" class="form-control" required>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Terjadi kesalahan:</strong>
+                            <ul class="mb-0 mt-2">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    @endif
+
+                    <form action="{{ route('member_be.store') }}" method="POST" enctype="multipart/form-data" novalidate>
+                        @csrf
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Anggota <span class="text-danger">*</span></label>
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required>
+                            @error('name')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Struktur/Posisi <span class="text-danger">*</span></label>
+                            <input type="text" name="position" class="form-control @error('position') is-invalid @enderror" value="{{ old('position') }}" required>
+                            @error('position')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Sektor <span class="text-danger">*</span></label>
+                                <select name="sector" class="form-select @error('sector') is-invalid @enderror" required>
+                                    <option value="">Pilih Sektor</option>
+                                    <option value="MFG" {{ old('sector') == 'MFG' ? 'selected' : '' }}>MFG (Manufaktur)</option>
+                                    <option value="KUL" {{ old('sector') == 'KUL' ? 'selected' : '' }}>KUL (Kuliner)</option>
+                                    <option value="KRJ" {{ old('sector') == 'KRJ' ? 'selected' : '' }}>KRJ (Kerajinan)</option>
+                                </select>
+                                @error('sector')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">No HP <span class="text-danger">*</span></label>
+                                <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required>
+                                @error('phone')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Usaha <span class="text-danger">*</span></label>
+                            <input type="text" name="business" class="form-control @error('business') is-invalid @enderror" value="{{ old('business') }}" required>
+                            @error('business')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Produk <span class="text-danger">*</span></label>
+                            <input type="text" name="product" class="form-control @error('product') is-invalid @enderror" value="{{ old('product') }}" required>
+                            @error('product')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Domisili <span class="text-danger">*</span></label>
+                            <input type="text" name="domicile" class="form-control @error('domicile') is-invalid @enderror" value="{{ old('domicile') }}" required>
+                            @error('domicile')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Foto Anggota</label>
+                            <input type="file" name="foto" class="form-control @error('foto') is-invalid @enderror" accept="image/*">
+                            @error('foto')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            <small class="form-text text-muted">Format: JPG, PNG, GIF | Max: 5MB</small>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i> Simpan
+                            </button>
+                            <a href="{{ route('member_be.index') }}" class="btn btn-secondary">Batal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label>Sektor</label>
-            <input type="text" name="sector" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label>Usaha</label>
-            <input type="text" name="business" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label>Produk</label>
-            <input type="text" name="product" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label>Domisili</label>
-            <input type="text" name="domicile" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label>No HP</label>
-            <input type="text" name="phone" class="form-control" required>
-        </div>
-        <button class="btn btn-primary">Save</button>
-    </form>
+    </div>
 </div>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fotoInput = document.getElementById('foto');
+    const fotoPreview = document.getElementById('fotoPreview');
+    const fotoPlaceholder = document.getElementById('fotoPlaceholder');
+    const fotoDropZone = document.getElementById('fotoDropZone');
+
+    // Click to upload
+    fotoDropZone.addEventListener('click', () => fotoInput.click());
+
+    // Handle file selection
+    fotoInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                fotoPreview.src = e.target.result;
+                fotoPreview.style.display = 'block';
+                fotoPlaceholder.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Drag and drop
+    fotoDropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        fotoDropZone.style.backgroundColor = '#f8f9fa';
+    });
+
+    fotoDropZone.addEventListener('dragleave', () => {
+        fotoDropZone.style.backgroundColor = '';
+    });
+
+    fotoDropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fotoDropZone.style.backgroundColor = '';
+        if (e.dataTransfer.files.length) {
+            fotoInput.files = e.dataTransfer.files;
+            const event = new Event('change', { bubbles: true });
+            fotoInput.dispatchEvent(event);
+        }
+    });
+});
+</script>
+@endpush
 @endsection

@@ -25,24 +25,29 @@ class ProductBEController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'category' => 'nullable|string|max:100',
-            'price' => 'nullable|numeric',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:4096'
+            'category' => 'required|in:manufaktur,kuliner,kerajinan',
+            'ordering_method' => 'required|in:marketplace,whatsapp',
+            'shopee_link' => 'nullable|url',
+            'tokopedia_link' => 'nullable|url',
+            'phone' => 'nullable|string|max:20',
+            'use_default_phone' => 'nullable|boolean',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp'
         ]);
 
-        $data = $request->only(['name','description','category','price']);
+        $data = $request->only(['name','description','category','ordering_method','shopee_link','tokopedia_link','phone']);
         $data['slug'] = Str::slug($data['name'] ?? time());
+        $data['use_default_phone'] = $request->boolean('use_default_phone');
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $filename = time() . '_' . Str::random(8) . '.' . $file->extension();
-            $file->storeAs('public/products', $filename);
-            $data['image'] = 'products/' . $filename;
+            $path = $file->storeAs('products', $filename, 'public');
+            $data['image'] = $path;
         }
 
         Product::create($data);
 
-        return redirect()->route('product.index')->with('success', 'Product created successfully.');
+        return redirect()->route('product_be.index')->with('success', 'Product created successfully.');
     }
 
     public function edit(Product $product)
@@ -55,36 +60,41 @@ class ProductBEController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'category' => 'nullable|string|max:100',
-            'price' => 'nullable|numeric',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:4096'
+            'category' => 'required|in:manufaktur,kuliner,kerajinan',
+            'ordering_method' => 'required|in:marketplace,whatsapp',
+            'shopee_link' => 'nullable|url',
+            'tokopedia_link' => 'nullable|url',
+            'phone' => 'nullable|string|max:20',
+            'use_default_phone' => 'nullable|boolean',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp'
         ]);
 
-        $data = $request->only(['name','description','category','price']);
+        $data = $request->only(['name','description','category','ordering_method','shopee_link','tokopedia_link','phone']);
         $data['slug'] = Str::slug($data['name'] ?? $product->name);
+        $data['use_default_phone'] = $request->boolean('use_default_phone');
 
         if ($request->hasFile('image')) {
             if ($product->image) {
-                Storage::delete('public/' . $product->image);
+                Storage::disk('public')->delete($product->image);
             }
             $file = $request->file('image');
             $filename = time() . '_' . Str::random(8) . '.' . $file->extension();
-            $file->storeAs('public/products', $filename);
-            $data['image'] = 'products/' . $filename;
+            $path = $file->storeAs('products', $filename, 'public');
+            $data['image'] = $path;
         }
 
         $product->update($data);
 
-        return redirect()->route('product.index')->with('success', 'Product updated successfully.');
+        return redirect()->route('product_be.index')->with('success', 'Product updated successfully.');
     }
 
     public function destroy(Product $product)
     {
         if ($product->image) {
-            Storage::delete('public/' . $product->image);
+            Storage::disk('public')->delete($product->image);
         }
         $product->delete();
 
-        return redirect()->route('product.index')->with('success', 'Product deleted.');
+        return redirect()->route('product_be.index')->with('success', 'Product deleted.');
     }
 }

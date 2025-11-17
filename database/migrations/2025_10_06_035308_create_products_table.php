@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('desc')->nullable();
-            $table->string('img')->nullable();
-            $table->string('tokopedia_url')->nullable();
-            $table->string('shopee_url')->nullable();
-            $table->string('whatsapp_url')->nullable();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
+            $table->string('category')->nullable(); // manufaktur, kuliner, kerajinan
+            $table->string('ordering_method')->default('whatsapp'); // marketplace or whatsapp
+            $table->string('shopee_link')->nullable();
+            $table->string('tokopedia_link')->nullable();
+            $table->string('phone')->nullable(); // phone number for whatsapp
+            $table->boolean('use_default_phone')->nullable()->default(true);
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

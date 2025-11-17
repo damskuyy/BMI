@@ -1,25 +1,47 @@
 @extends('layout.master')
 @section('content')
+    @use('Illuminate\Support\Facades\Storage')
+    
+    @php
+        $kulinerSlider = \App\Models\Slider::where('section', 'kuliner')->first();
+    @endphp
+    
+    <style>
+        .page-slider-fade-in {
+            animation: pageSliderFadeIn 0.8s ease-in;
+        }
+        @keyframes pageSliderFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
     <!-- slider Area Start-->
-    <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="fe/img/hero/kuliner-bg.png">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap pt-100">
-                            <h2>KULINER - BMI</h2>
-                            <nav aria-label="breadcrumb ">
-                                <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">About</a></li> 
-                                </ol>
-                            </nav>
+    @if($kulinerSlider && $kulinerSlider->image)
+        <div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" 
+                 style="background-image: url('{{ Storage::url($kulinerSlider->image) }}'); background-size: cover; background-position: center;">
+    @else
+        <div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" data-background="fe/img/hero/kuliner-bg.png">
+    @endif
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>KULINER - BMI</h2>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">About</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- slider Area End-->
 
     <!-- UMKM Kuliner Detail Section -->

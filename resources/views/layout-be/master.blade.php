@@ -73,12 +73,27 @@
                         <i class="fas fa-bars"></i>
                     </button>
 
-                    <div class="ml-auto user-info">
+                    <div class="ml-auto user-info dropdown">
                         @php $userAvatarPath = public_path('storage/' . (Auth::user()->foto ?? '')); @endphp
                         <img src="{{ (Auth::user()->foto && file_exists($userAvatarPath)) ? '/storage/' . Auth::user()->foto : asset('fe/img/icon/user.png') }}"
                              alt="User Avatar"
-                             class="avatar">
-                        <span class="username">{{ Auth::user()->name }}</span>
+                             class="avatar"
+                             data-bs-toggle="dropdown"
+                             style="cursor: pointer;">
+                        <span class="username" data-bs-toggle="dropdown" style="cursor: pointer;">{{ 'Howdy, ' . Auth::user()->name }}</span>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{{ route('users.edit', Auth::user()) }}"><i class="fas fa-user-edit"></i> Edit Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item" style="background: none; border: none; text-align: left; width: 100%;">
+                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>

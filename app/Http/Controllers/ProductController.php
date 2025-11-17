@@ -11,8 +11,15 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index() {
-        $products = Product::paginate(9);
-        return view('product.index', compact('products'));
+        $category = request('category');
+        
+        if ($category && in_array($category, ['manufaktur', 'kuliner', 'kerajinan'])) {
+            $products = Product::where('category', $category)->paginate(9);
+        } else {
+            $products = Product::paginate(9);
+        }
+        
+        return view('product.index', compact('products', 'category'));
     }
 
     /**

@@ -8028,3 +8028,21 @@ BLOG Area
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+
+/* Initial slide fade+zoom animation - runs once on first render */
+.slide-fade-zoom{
+  transform-origin: center center;
+  /* run once, preserve final state */
+  animation: slideFadeZoom 900ms cubic-bezier(.22,.8,.27,1) both;
+}
+
+@keyframes slideFadeZoom{
+  0%{
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

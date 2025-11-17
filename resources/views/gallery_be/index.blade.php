@@ -9,52 +9,62 @@
         </a>
     </div>
 
-    @if(session('success'))
+    {{-- @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-    @endif
+    @endif --}}
 
     <div class="row">
         @forelse($galleries as $gallery)
-            <div class="col-md-4 col-lg-3 mb-4">
-                <div class="card h-100">
-                    <img src="{{ Storage::url($gallery->image) }}" 
-                         class="card-img-top" 
-                         alt="{{ $gallery->title }}"
-                         style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $gallery->title }}</h5>
-                        <p class="card-text small text-muted">
-                            Event Date: {{ \Carbon\Carbon::parse($gallery->event_date)->format('d M Y') }}
-                        </p>
-                        @if($gallery->description)
-                            <p class="card-text">{{ Str::limit($gallery->description, 100) }}</p>
-                        @endif
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="{{ route('gallery_be.edit', $gallery) }}" class="btn btn-sm btn-info me-2">
-                            <i class="fas fa-edit"></i> Edit
-                        </a>
-                        <form action="{{ route('gallery_be.destroy', $gallery) }}" 
-                              method="POST" 
-                              class="d-inline">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" 
-                                    class="btn btn-sm btn-danger" 
-                                    onclick="return confirm('Are you sure?')">
-                                <i class="fas fa-trash"></i> Delete
-                            </button>
-                        </form>
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-2">
+                            @php $thumb = $gallery->images->first(); @endphp
+                            @if($thumb)
+                                <img src="{{ asset('storage/' . $thumb->image) }}" class="img-fluid h-100" style="object-fit:cover; width:100%; height:100%; max-height:150px;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
+                            @else
+                                <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height:150px;">No Image</div>
+                            @endif
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $gallery->title }}</h5>
+                                <p class="card-text small text-muted">Event Date: {{ \Carbon\Carbon::parse($gallery->event_date)->format('d M Y') }}</p>
+                                @if($gallery->description)
+                                    <p class="card-text">{{ Str::limit($gallery->description, 150) }}</p>
+                                @endif
+                                <div class="mt-2">
+                                    <span class="badge bg-primary">{{ $gallery->images->count() }} photos</span>
+                                    @if($gallery->images->count())
+                                        <span class="badge bg-info">Modes: {{ $gallery->images->pluck('display_mode')->unique()->implode(', ') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <div>
+                                <a href="{{ route('gallery_be.edit', $gallery) }}" class="btn btn-sm btn-info w-100 mb-2">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <form action="{{ route('gallery_be.destroy', $gallery) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger w-100"  onclick="hapus(event, this)" >
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         @empty
             <div class="col-12">
                 <div class="alert alert-info">
-                    No images in gallery yet.
+                    No gallery items yet.
                 </div>
             </div>
         @endforelse
@@ -64,6 +74,37 @@
         {{ $galleries->links() }}
     </div>
 </div>
+
+<script>
+
+        function hapus(event, el){
+            event.preventDefault()
+            swal({
+                title: "Are you sure?",
+                text: "Your will delete this package permanently!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes, delete it!",
+                closeOnConfirm: false
+                },
+                function(){
+                    el.closest('form').submit()
+                });
+        }
+
+        function tampil_pesan(){
+            const pesan = "{{session('success')}}"
+
+            if(pesan.trim() !== ''){
+                swal('Good Job', pesan, 'success')
+            }
+        }
+
+        window.addEventListener('load', function(){
+            tampil_pesan()
+        })
+    </script>
 
 @push('styles')
 <style>

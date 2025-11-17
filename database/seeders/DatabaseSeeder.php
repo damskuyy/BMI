@@ -21,5 +21,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@bmi.com',
             'password' => Hash::make('admin')
         ]);
+
+        // Seed products
+        $this->call(ProductSeeder::class);
+        $this->call(MemberSeeder::class);
+        $this->call(GallerySeeder::class);
     }
 }

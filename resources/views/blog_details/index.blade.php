@@ -1,8 +1,29 @@
 @extends('layout.master')
 @section('content')
-    <div class="slider-area ">
-        <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
-            data-background="fe/img/hero/about.jpg">
+    @use('Illuminate\Support\Facades\Storage')
+    
+    @php
+        $blogDetailsSlider = \App\Models\Slider::where('section', 'blog_details')->first();
+    @endphp
+    
+    <style>
+        .page-slider-fade-in {
+            animation: pageSliderFadeIn 0.8s ease-in;
+        }
+        @keyframes pageSliderFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <div class="slider-area">
+        @if($blogDetailsSlider && $blogDetailsSlider->image)
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center"
+                style="background-image: url('{{ Storage::url($blogDetailsSlider->image) }}'); background-size: cover; background-position: center;">
+        @else
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center"
+                data-background="fe/img/hero/blog.png">
+        @endif
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -395,7 +416,7 @@
                                 </li>
                             </ul>
                         </aside>
-                        <aside class="single_sidebar_widget instagram_feeds">
+                        {{-- <aside class="single_sidebar_widget instagram_feeds">
                             <h4 class="widget_title">Instagram Feeds</h4>
                             <ul class="instagram_row flex-wrap">
                                 <li>
@@ -440,7 +461,7 @@
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                     type="submit">Subscribe</button>
                             </form>
-                        </aside>
+                        </aside> --}}
                     </div>
                 </div>
             </div>

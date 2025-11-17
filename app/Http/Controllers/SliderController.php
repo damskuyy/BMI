@@ -11,69 +11,78 @@ class SliderController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::latest()->paginate(10);
+        $sliders = Slider::latest()->paginate(15);
         return view('slider_be.index', compact('sliders'));
     }
 
     public function create()
     {
-        return view('slider_be.create');
+        $sections = Slider::$sections;
+        return view('slider_be.create', compact('sections'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'section' => 'required|in:' . implode(',', array_keys(Slider::$sections)),
+            'title' => 'nullable|string|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp',
             'link' => 'nullable|url'
         ]);
 
-        $data = $request->only(['title', 'link']);
+        $data = $request->only(['title', 'link', 'section']);
+        
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $filename = time() . '_' . Str::random(8) . '.' . $file->extension();
-            $file->storeAs('public/sliders', $filename);
-            $data['image'] = 'sliders/' . $filename;
+            $path = $file->storeAs('sliders', $filename, 'public');
+            $data['image'] = $path;
         }
 
         Slider::create($data);
-        return redirect()->route('slider.index')->with('success', 'Slider created successfully.');
+        return redirect()->route('slider_be.index')->with('success', 'Slider created successfully.');
     }
 
     public function edit(Slider $slider)
     {
-        return view('slider_be.edit', compact('slider'));
+        $sections = Slider::$sections;
+        return view('slider_be.edit', compact('slider', 'sections'));
     }
 
     public function update(Request $request, Slider $slider)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'section' => 'required|in:' . implode(',', array_keys(Slider::$sections)),
+            'title' => 'nullable|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp',
             'link' => 'nullable|url'
         ]);
 
-        $data = $request->only(['title', 'link']);
+        $data = $request->only(['title', 'link', 'section']);
+        
         if ($request->hasFile('image')) {
             if ($slider->image) {
-                Storage::delete('public/' . $slider->image);
+                Storage::disk('public')->delete($slider->image);
             }
             $file = $request->file('image');
             $filename = time() . '_' . Str::random(8) . '.' . $file->extension();
-            $file->storeAs('public/sliders', $filename);
-            $data['image'] = 'sliders/' . $filename;
+            $path = $file->storeAs('sliders', $filename, 'public');
+            $data['image'] = $path;
+        } else {
+            // Jika tidak ada foto baru, gunakan foto yang sebelumnya
+            $data['image'] = $slider->image;
         }
 
         $slider->update($data);
-        return redirect()->route('slider.index')->with('success', 'Slider updated successfully.');
+        return redirect()->route('slider_be.index')->with('success', 'Slider updated successfully.');
     }
 
     public function destroy(Slider $slider)
     {
         if ($slider->image) {
-            Storage::delete('public/' . $slider->image);
+            Storage::disk('public')->delete($slider->image);
         }
         $slider->delete();
-        return redirect()->route('slider.index')->with('success', 'Slider deleted successfully.');
+        return redirect()->route('slider_be.index')->with('success', 'Slider deleted successfully.');
     }
 }
