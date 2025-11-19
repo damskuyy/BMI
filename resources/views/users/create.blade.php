@@ -68,4 +68,16 @@ document.getElementById('foto')?.addEventListener('change', function(e){
 });
 </script>
 @endpush
+@push('styles')
+<style>
+    @media (max-width: 768px) {
+        #avatarPreview { display: block !important; max-width: 120px; width: 40%; margin: 8px auto; }
+        input[type="file"] { width: 100%; }
+        .card .card-body { padding: 10px; }
+        .container-fluid .d-flex.justify-content-between { gap: 8px; }
+        .btn.btn-primary { width: 100%; display: block; }
+        .row .col { margin-bottom: 8px; }
+    }
+</style>
+@endpush
 @endsection

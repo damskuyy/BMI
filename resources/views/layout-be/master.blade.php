@@ -23,6 +23,10 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <img src="{{ asset('fe/img/logo/logo-bmi-kotak.png') }}" alt="BMI Logo" class="logo">
+                <!-- Mobile minimize button: hides sidebar on small screens -->
+                <button id="sidebarMinimizeMobile" class="mobile-minimize d-lg-none" aria-label="Minimize sidebar">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
             </div>
 
             <ul class="list-unstyled components">
@@ -123,6 +127,64 @@
                 $('#content').toggleClass('expanded');
                 sidebarCollapsed = !sidebarCollapsed;
             });
+
+            // Mobile minimize button toggles the sidebar as well
+            $('#sidebarMinimizeMobile').on('click', function() {
+                $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('expanded');
+                sidebarCollapsed = !sidebarCollapsed;
+            });
+
+            // Close sidebar when tapping outside on mobile
+            $(document).on('click', function(e) {
+                try {
+                    if ($(window).width() <= 768) {
+                        var $sidebar = $('#sidebar');
+                        // On mobile, sidebar is shown when it has .active (see mobile CSS)
+                        if ($sidebar.hasClass('active')) {
+                            if ($(e.target).closest('#sidebar').length === 0 && $(e.target).closest('#sidebarCollapse').length === 0 && $(e.target).closest('#sidebarMinimizeMobile').length === 0) {
+                                $sidebar.removeClass('active');
+                                $('#content').removeClass('expanded');
+                                sidebarCollapsed = true;
+                            }
+                        }
+                    }
+                } catch(err) {}
+            });
+
+            // Adjust main content padding-top to match navbar height (prevents overlap)
+            function adjustMainPadding() {
+                try {
+                    var $nav = $('#content > nav.navbar');
+                    var $main = $('#content > main');
+                    if ($nav.length && $main.length) {
+                        // measure nav height including borders
+                        var navHeight = Math.ceil($nav.outerHeight());
+                        // set CSS variable on #content so the stylesheet can use it
+                        try {
+                            document.getElementById('content').style.setProperty('--navbar-height', navHeight + 'px');
+                        } catch (ex) {}
+                        // also set body padding as a robust fallback so nothing is overlapped
+                        try {
+                            document.body.style.setProperty('padding-top', navHeight + 'px');
+                        } catch (ex) {}
+                        // also set inline padding as a fallback
+                        $main.css('padding-top', navHeight + 'px');
+                    }
+                } catch(e) {}
+            }
+            // Run on ready, load, resize and after toggles
+            $(window).on('load resize', adjustMainPadding);
+            // Ensure we also run on DOM ready to set padding as soon as possible
+            adjustMainPadding();
+            // run after toggles
+            $('#sidebarCollapse, #sidebarMinimizeMobile').on('click', function(){
+                // small timeout to allow CSS transitions to settle
+                setTimeout(adjustMainPadding, 140);
+            });
+
+            // Also adjust after any bootstrap collapse/expand that might affect navbar height
+            $(document).on('shown.bs.collapse hidden.bs.collapse', adjustMainPadding);
 
             // Toggle dropdown icon rotation
             $('.user-info').on('show.bs.dropdown', function() {

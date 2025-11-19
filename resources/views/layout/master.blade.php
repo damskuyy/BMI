@@ -35,6 +35,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Admin footer link styling: visible but discreet */
+        .admin-link { display: inline-block; margin-left: 10px; color: inherit; text-decoration: none; opacity: 0.50; font-size: 13px; vertical-align: middle; }
+        .admin-link:hover, .admin-link:focus { opacity: 1; text-decoration: underline; }
+    </style>
 </head>
 
 <body>
@@ -240,6 +245,9 @@
                                         <li><a href="https://wa.me/6282189327077">Phone: +62-821-8932-7077</a></li>
                                         {{-- <li><a href="#">Cell: +95 (0) 123 456 789</a></li> --}}
                                     </ul>
+                                    <ul>
+                                        <li><a href="/dashboard">Admin</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -280,6 +288,10 @@
                                     Copyright &copy;
                                     <script>document.write(new Date().getFullYear());</script> Bogor Manufaktur
                                     Indonesia | All rights reserved
+                                    <!-- Subtle admin shortcut placed inline next to copyright -->
+                                    {{-- <a href="/dashboard" class="admin-link" title="Admin area (for site managers)" aria-label="Admin area">
+                                        <small>Admin</small>
+                                    </a> --}}
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>

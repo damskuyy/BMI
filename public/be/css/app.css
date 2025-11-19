@@ -21,6 +21,8 @@
     color: #fff;
     transition: all 0.3s;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     z-index: 999;
 }
@@ -213,6 +215,33 @@
     margin-bottom: 20px;
 }
 
+/* Animated entrance for cards */
+.stats-card { animation: cardEnter 560ms ease both; }
+.stats-card:hover { transform: translateY(-6px); transition: transform 220ms ease; box-shadow: 0 8px 22px rgba(0,0,0,0.12); }
+
+@keyframes cardEnter {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard chart containers */
+.chart-card { padding: 16px; border-radius: 8px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.chart-card .chart-title { font-weight: 700; color: var(--primary-color); margin-bottom: 8px; }
+.chart-container { position: relative; height: 260px; }
+
+/* Table & card header action styles */
+.card .card-header { display: flex; align-items: center; justify-content: space-between; }
+.card .card-actions .btn { font-size: 13px; padding: 6px 10px; }
+.table-hover tbody tr:hover { background: rgba(0,0,0,0.03); }
+.table thead th { background: #f8f9fa; }
+.card .card-body .table { margin-bottom: 0; }
+
+/* Small responsive tweaks for mobile charts */
+@media (max-width: 576px) {
+    .chart-container { height: 220px; }
+    .stats-card { padding: 16px; }
+}
+
 .stats-card h3 {
     margin: 0;
     color: var(--primary-color);
@@ -236,4 +265,89 @@
         width: 100%;
         margin-left: 0;
     }
+}
+
+/* Mobile-only admin tweaks (moved from layout-be/master.blade.php) */
+@media (max-width: 768px) {
+    /* Hide long brand text on mobile to avoid overlap */
+    .navbar-brand-center .brand-text { display: none !important; }
+
+    /* Ensure main content doesn't underlap the fixed navbar. Use CSS var so JS can override it. */
+    #content { --navbar-height: 68px; }
+
+    /* Give stacked buttons some breathing room on small screens */
+    .btn { margin-top: 12px; }
+
+    /* On small screens navbar should be full width at left 0 */
+    nav.navbar { left: 0 !important; width: 100% !important; }
+
+    /* Sidebar header: show small minimize button on mobile */
+    #sidebar .sidebar-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    #sidebar .sidebar-header .logo { max-height: 38px; }
+    #sidebar .sidebar-header .mobile-minimize { display: inline-flex; align-items: center; justify-content: center; border: none; background: transparent; color: #fff; }
+
+    /* Make sidebar overlay on mobile when active/collapsed */
+    .wrapper #sidebar { position: fixed; height: 100vh; left: 0; top: 0; z-index: 1040; }
+    .wrapper #content.expanded { margin-left: 0 !important; }
+
+    /* Make admin cards and forms full width and comfortable spacing */
+    .container-fluid .card { margin-bottom: 12px; }
+    .container-fluid .card .card-body { padding: 12px; }
+    .btn { white-space: nowrap; }
+}
+
+/* Minor improvement: ensure sidebar toggle button is visible and looks like a control */
+#sidebarCollapse.btn { background: transparent; border: none; padding: 6px; }
+
+/* Make navbar fixed at top for desktop and mobile; on desktop offset by sidebar width */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    left: 0;
+    width: 100%;
+    transition: left 0.25s ease, width 0.25s ease;
+}
+
+/* When the content is not expanded (sidebar visible), offset navbar to the right of sidebar */
+#content:not(.expanded) > nav.navbar {
+    left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* When content is expanded (sidebar hidden) navbar should be full width */
+#content.expanded > nav.navbar {
+    left: 0;
+    width: 100%;
+}
+
+/* provide a CSS variable for navbar height (fallback) and use it for main padding
+    JS will update `--navbar-height` at runtime so the content never underlaps the fixed navbar */
+#content { --navbar-height: 68px; }
+#content > main { padding-top: var(--navbar-height); }
+
+/* Consolidated view-specific mobile tweaks (from per-view @push blocks) */
+@media (max-width: 768px) {
+    /* Product / Slider */
+    .form-card { padding: 16px; }
+    .image-preview-box { max-width: 100% !important; min-height: 140px; padding: 12px; }
+    .image-preview-box.has-image img { object-fit: cover; }
+    #imagePreview { max-height: 240px; width: 100%; }
+    .image-preview-box.has-image img { max-height: 200px; width: 100%; }
+
+    /* Forms and buttons */
+    .form-buttons { flex-direction: column-reverse; gap: 8px; }
+    .form-buttons .btn { width: 100%; }
+    .section-grid { grid-template-columns: 1fr; }
+
+    /* Phone / option controls */
+    .phone-button-group { flex-direction: column; }
+    .phone-btn { width: 100%; }
+
+    /* Gallery create specific */
+    #images-container .image-row { flex-direction: column; align-items: stretch; gap: 8px; }
+    #images-container .image-row input[type="file"] { width: 100%; }
+    #images-container .image-row .form-select { width: 100% !important; }
+    #add-image-row { width: 100%; display: block; }
+    .card .card-body { padding: 12px; }
 }
