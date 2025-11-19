@@ -10,6 +10,10 @@ class GalleryImage extends Model
         'gallery_id', 'image', 'display_mode', 'center_image'
     ];
 
+    protected $casts = [
+        'center_image' => 'boolean',
+    ];
+
     public function gallery()
     {
         return $this->belongsTo(Gallery::class);

@@ -14,6 +14,9 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        /* gallery spacing fixes */
+        .gallery-section-title { margin-bottom: 12px; }
+        .gallery-item { padding-top: 22px; }
     </style>
 
     <!-- slider Area Start-->
@@ -65,13 +68,37 @@
                     </div>
                     <div class="row gallery-item">
                         @foreach($gallery->images as $image)
-                            @php 
+                            @php
                                 $col = $image->display_mode === 'col-6' ? 'col-md-6' : 'col-md-4';
                                 $center = $image->center_image ? 'mx-auto' : '';
+                                $imgUrl = asset('be/img/placeholder.png');
+
+                                if (!empty($image->image)) {
+                                    try {
+                                        // Prefer the public storage disk (storage/app/public)
+                                        if (Storage::disk('public')->exists($image->image)) {
+                                            $imgUrl = Storage::url($image->image);
+                                        }
+                                        // If the stored value is a full URL, use it
+                                        elseif (filter_var($image->image, FILTER_VALIDATE_URL)) {
+                                            $imgUrl = $image->image;
+                                        }
+                                        // If the path exists under public folder, use asset()
+                                        elseif (file_exists(public_path($image->image))) {
+                                            $imgUrl = asset($image->image);
+                                        }
+                                        // Otherwise try the common fe gallery folder
+                                        elseif (file_exists(public_path('fe/img/elements/' . $image->image))) {
+                                            $imgUrl = asset('fe/img/elements/' . $image->image);
+                                        }
+                                    } catch (\Exception $e) {
+                                        // Keep placeholder on any error
+                                    }
+                                }
                             @endphp
-                            <div class="{{ $col }} {{ $center }}">
-                                <a href="{{ asset('storage/' . $image->image) }}" class="img-pop-up">
-                                    <div class="single-gallery-image" style="background: url('{{ asset('storage/' . $image->image) }}');"></div>
+                            <div class="{{ $col }} {{ $center }} mb-3">
+                                <a href="{{ $imgUrl }}" class="img-pop-up d-block">
+                                    <img src="{{ $imgUrl }}" alt="{{ $gallery->title }}" class="img-fluid gallery-thumb" style="width:100%; height:250px; object-fit:cover; display:block;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
                                 </a>
                             </div>
                         @endforeach
@@ -88,6 +115,9 @@
     </div>
 @endsection
 
+@section('join')
+    @include('layout.join')
+@endsection
 @section('client')
     @include('layout.client')
 @endsection

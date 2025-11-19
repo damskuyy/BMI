@@ -22,12 +22,25 @@
                 <div class="card">
                     <div class="row g-0">
                         <div class="col-md-2">
-                            @php $thumb = $gallery->images->first(); @endphp
-                            @if($thumb)
-                                <img src="{{ asset('storage/' . $thumb->image) }}" class="img-fluid h-100" style="object-fit:cover; width:100%; height:100%; max-height:150px;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
-                            @else
-                                <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height:150px;">No Image</div>
-                            @endif
+                            @php
+                                $thumb = $gallery->images->first();
+                                $thumbUrl = asset('be/img/placeholder.png');
+                                if ($thumb) {
+                                    // Check public storage (storage/app/public)
+                                    if (\Illuminate\Support\Facades\Storage::disk('public')->exists($thumb->image)) {
+                                        $thumbUrl = asset('storage/' . $thumb->image);
+                                    }
+                                    // Check if stored path already points to a public asset (fe/img/...)
+                                    elseif (file_exists(public_path($thumb->image))) {
+                                        $thumbUrl = asset($thumb->image);
+                                    }
+                                    // Also try common gallery folder
+                                    elseif (file_exists(public_path('fe/img/gallery/' . $thumb->image))) {
+                                        $thumbUrl = asset('fe/img/gallery/' . $thumb->image);
+                                    }
+                                }
+                            @endphp
+                            <img src="{{ $thumbUrl }}" class="img-fluid h-100" style="object-fit:cover; width:100%; height:100%; max-height:150px;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

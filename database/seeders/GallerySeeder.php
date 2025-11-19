@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Gallery;
 use App\Models\GalleryImage;
+use Illuminate\Support\Facades\File;
 
 use function GuzzleHttp\describe_type;
 
@@ -80,9 +81,59 @@ class GallerySeeder extends Seeder
             ]);
 
             foreach ($item['images'] as $img) {
+                // Ensure storage target exists and try to copy example images from public folder
+                $filename = $img['file'];
+                $destDir = storage_path('app/public/gallery');
+                if (!File::exists($destDir)) {
+                    File::makeDirectory($destDir, 0755, true);
+                }
+
+                // Candidate source locations (in order)
+                $candidates = [
+                    public_path('fe/img/elements/' . $filename),
+                    public_path('fe/img/' . $filename),
+                    public_path($filename),
+                ];
+
+                $copied = false;
+                foreach ($candidates as $src) {
+                    if (File::exists($src)) {
+                        $dest = $destDir . DIRECTORY_SEPARATOR . $filename;
+                        // copy only if not already present
+                        if (!File::exists($dest)) {
+                            File::copy($src, $dest);
+                        }
+                        $copied = true;
+                        break;
+                    }
+                }
+
+                // Fallback: if exact filename not found, try to pick any real image inside fe/img/gallery (including subfolders)
+                if (!$copied) {
+                    // File::allFiles returns an array of SplFileInfo for files inside the directory recursively
+                    if (File::isDirectory(public_path('fe/img/elements'))) {
+                        $all = File::allFiles(public_path('fe/img/elements'));
+                        foreach ($all as $f) {
+                            $ext = strtolower(pathinfo($f->getFilename(), PATHINFO_EXTENSION));
+                            if (in_array($ext, ['jpg','jpeg','png','gif','webp'])) {
+                                $src = $f->getPathname();
+                                $dest = $destDir . DIRECTORY_SEPARATOR . $filename;
+                                if (!File::exists($dest)) {
+                                    File::copy($src, $dest);
+                                }
+                                $copied = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                // Store path relative to storage disk (public)
+                $imagePath = 'gallery/' . $filename;
+
                 GalleryImage::create([
                     'gallery_id' => $g->id,
-                    'image' => 'gallery/' . $img['file'],
+                    'image' => $imagePath,
                     'display_mode' => $img['mode'],
                     'center_image' => $img['center'] ?? false,
                 ]);

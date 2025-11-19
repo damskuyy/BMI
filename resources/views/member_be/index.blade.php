@@ -106,9 +106,26 @@
                 <tr>
                     <td>{{ $index + 1 }}</td>
                     <td>
-                        @if($member->foto && file_exists(storage_path('app/public/'.$member->foto)))
-                            <img src="{{ asset('storage/' . $member->foto) }}" alt="{{ $member->name }}" 
-                                 style="width: 50px; height: 50px; border-radius: 0.5rem; object-fit: cover;">
+                        @php
+                            $fotoUrl = null;
+                            if ($member->foto) {
+                                // storage public
+                                if (file_exists(storage_path('app/public/' . $member->foto))) {
+                                    $fotoUrl = asset('storage/' . $member->foto);
+                                }
+                                // already a public path like 'fe/img/...'
+                                elseif (file_exists(public_path($member->foto))) {
+                                    $fotoUrl = asset($member->foto);
+                                }
+                                // try common team folder
+                                elseif (file_exists(public_path('fe/img/team/' . $member->foto))) {
+                                    $fotoUrl = asset('fe/img/team/' . $member->foto);
+                                }
+                            }
+                        @endphp
+
+                        @if($fotoUrl)
+                            <img src="{{ $fotoUrl }}" alt="{{ $member->name }}" style="width:50px; height:50px; border-radius:0.5rem; object-fit:cover;">
                         @else
                             <span class="badge bg-secondary">No Foto</span>
                         @endif

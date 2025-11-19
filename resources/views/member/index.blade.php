@@ -63,7 +63,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/bayu.png" alt="">
+                            <img src="{{ asset('fe/img/team/bayu.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Bayu Agusworo</a></h3>
                                 <!-- Blog Social -->
@@ -77,7 +77,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/juhana.png" alt="">
+                            <img src="{{ asset('fe/img/team/juhana.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Juhana</a></h3>
                                 <div class="team-social mt-10">
@@ -90,7 +90,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/ety.png" alt="">
+                            <img src="{{ asset('fe/img/team/ety.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Ety Rustyah</a></h3>
                                 <div class="team-social mt-10">
@@ -103,7 +103,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/yati.png" alt="">
+                            <img src="{{ asset('fe/img/team/yati.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Karyati</a></h3>
                                 <div class="team-social mt-10">
@@ -116,7 +116,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/fitria.png" alt="">
+                            <img src="{{ asset('fe/img/team/fitria.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Fitria</a></h3>
                                 <div class="team-social mt-10">
@@ -129,7 +129,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/juminah.png" alt="">
+                            <img src="{{ asset('fe/img/team/juminah.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Juminah</a></h3>
                                 <div class="team-social mt-10">
@@ -142,7 +142,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/yatini.png" alt="">
+                            <img src="{{ asset('fe/img/team/yatini.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Yatini</a></h3>
                                 <div class="team-social mt-10">
@@ -155,7 +155,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/maryanti.png" alt="">
+                            <img src="{{ asset('fe/img/team/maryanti.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Maryanti</a></h3>
                                 <div class="team-social mt-10">
@@ -168,7 +168,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="single-team mb-20 text-center" style="max-width: 370px; margin: 0 auto;">
                         <div class="team-img">
-                            <img src="fe/img/team/nani.png" alt="">
+                            <img src="{{ asset('fe/img/team/nani.png') }}" alt="">
                             <div class="team-caption">
                                 <h3><a>Nani</a></h3>
                                 <div class="team-social mt-10">
@@ -206,9 +206,28 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>
-                                @if($member->foto && file_exists(storage_path('app/public/'.$member->foto)))
-                                    <img src="{{ asset('storage/' . $member->foto) }}" alt="{{ $member->name }}"
-                                         style="width: 40px; height: 40px; border-radius: 0.25rem; object-fit: cover;">
+                                @php
+                                    $fotoUrl = null;
+                                    // 1) stored in storage disk (e.g. 'members/foo.png' or 'gallery/...')
+                                    if ($member->foto && Storage::disk('public')->exists($member->foto)) {
+                                        $fotoUrl = asset('storage/' . $member->foto);
+                                    }
+                                    // 2) file path stored as public asset like 'fe/img/team/..'
+                                    elseif ($member->foto && file_exists(public_path($member->foto))) {
+                                        $fotoUrl = asset($member->foto);
+                                    }
+                                    // 3) try common team folder with basename
+                                    else {
+                                        $basename = $member->foto ? basename($member->foto) : null;
+                                        if ($basename && file_exists(public_path('fe/img/team/' . $basename))) {
+                                            $fotoUrl = asset('fe/img/team/' . $basename);
+                                        }
+                                    }
+                                @endphp
+
+                                @if($fotoUrl)
+                                    <img src="{{ $fotoUrl }}" alt="{{ $member->name }}"
+                                         style="width: 40px; height: 40px; border-radius: 0.25rem; object-fit: cover;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'">
                                 @else
                                     <span class="text-muted" style="font-size: 0.85rem;">-</span>
                                 @endif
@@ -227,6 +246,10 @@
         </div>
     </div>
     <!-- Team Tables End -->
+@endsection
+
+@section('join')
+    @include('layout.join')
 @endsection
 @section('client')
     @include('layout.client')

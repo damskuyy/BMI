@@ -486,4 +486,4 @@
         });
     </script>
     <!--================ Blog Area end =================-->
-@endsection
+@endsection 

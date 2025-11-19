@@ -256,3 +256,10 @@
         });
     </script>
 @endsection
+
+@section('join')
+    @include('layout.join')
+@endsection
+@section('client')
+    @include('layout.client')
+@endsection

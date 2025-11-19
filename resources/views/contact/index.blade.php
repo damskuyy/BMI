@@ -258,10 +258,9 @@
     </script>
 @endsection
 
+@section('join')
+    @include('layout.join')
+@endsection
 @section('clients')
     @include('layout.client')
 @endsection
-
-<style>
-
-</style>

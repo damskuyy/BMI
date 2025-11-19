@@ -132,9 +132,13 @@
       </section>
 
 @endsection
-    @section('client')
-      @include('layout.client')
-    @endsection
+
+@section('join')
+    @include('layout.join')
+@endsection
+@section('client')
+  @include('layout.client')
+@endsection
 
     {{-- Animasi kecil untuk reveal on scroll (reuse existing script if present) --}}
     <script>
