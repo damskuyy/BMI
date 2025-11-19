@@ -70,6 +70,11 @@
     transition: all 0.3s;
 }
 
+#content.expanded {
+    width: 100%;
+    margin-left: 0;
+}
+
 /* Navbar */
 .navbar {
     padding: 15px;
@@ -83,10 +88,87 @@
     padding: 10px;
 }
 
+.navbar-brand-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.brand-text {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite, slideInDown 0.8s ease-in-out;
+    text-shadow: 0 2px 4px rgba(0, 35, 91, 0.1);
+    display: inline-block;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: 0% center;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes fadeInBrand {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .user-info {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.user-avatar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.user-avatar-wrapper:hover {
+    background-color: rgba(0, 35, 91, 0.08);
+}
+
+.user-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .avatar {
@@ -94,11 +176,32 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.avatar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+    border-color: var(--secondary-color);
 }
 
 .username {
     font-weight: 500;
     color: var(--text-color);
+    white-space: nowrap;
+}
+
+.user-info.show .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.user-info .fa-chevron-down {
+    transition: transform 0.3s;
+    color: var(--primary-color);
+    font-size: 12px;
 }
 
 /* Dashboard Cards */

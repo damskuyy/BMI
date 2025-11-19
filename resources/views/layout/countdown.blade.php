@@ -44,8 +44,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Mobile: slider -->
-            <div class="countdown-carousel-mobile d-flex d-sm-none">
+            <!-- Mobile: slider (show on mobile but clipped to viewport) -->
+            <div class="countdown-carousel-mobile d-block d-sm-none">
                 <div class="countdown-slide">
                     <div class="count-clients mr-10">
                         <div class="single-counter">    

@@ -14,7 +14,7 @@ class MemberSeeder extends Seeder
     {
         $members = [
             [
-                'foto' => 'members/bayu.png',
+                'foto' => 'fe/img/team/bayu.png',
                 'name' => 'Bayu Agusworo',
                 'position' => 'Ketua BMI',
                 'sector' => 'MFG',
@@ -24,7 +24,7 @@ class MemberSeeder extends Seeder
                 'phone' => '08131196895',
             ],
             [
-                'foto' => 'members/ety.png',
+                'foto' => 'fe/img/team/ety.png',
                 'name' => 'Ety Rustiyah Budi Hastuti',
                 'position' => 'Sekretaris',
                 'sector' => 'MFG',
@@ -34,7 +34,7 @@ class MemberSeeder extends Seeder
                 'phone' => '085643992099',
             ],
             [
-                'foto' => 'members/fitria.png',
+                'foto' => 'fe/img/team/fitria.png',
                 'name' => 'Fitria',
                 'position' => 'Bendahara 2',
                 'sector' => 'KUL',
@@ -44,7 +44,7 @@ class MemberSeeder extends Seeder
                 'phone' => '085156955355',
             ],
             [
-                'foto' => 'members/juhana.png',
+                'foto' => 'fe/img/team/juhana.png',
                 'name' => 'Juhana',
                 'position' => 'Pengawas',
                 'sector' => 'KUL',
@@ -54,7 +54,7 @@ class MemberSeeder extends Seeder
                 'phone' => '081865699225',
             ],
             [
-                'foto' => 'members/yati.png',
+                'foto' => 'fe/img/team/yati.png',
                 'name' => 'Karyati',
                 'position' => 'Bendahara 1',
                 'sector' => 'KUL',
@@ -64,7 +64,7 @@ class MemberSeeder extends Seeder
                 'phone' => '081296549446',
             ],
             [
-                'foto' => 'members/nani.png',
+                'foto' => 'fe/img/team/nani.png',
                 'name' => 'Nani',
                 'position' => 'Anggota',
                 'sector' => 'KUL',
@@ -74,7 +74,7 @@ class MemberSeeder extends Seeder
                 'phone' => '081211564449',
             ],
             [
-                'foto' => 'members/yatini.png',
+                'foto' => 'fe/img/team/yatini.png',
                 'name' => 'Yatini',
                 'position' => 'Anggota',
                 'sector' => 'KUL',
@@ -84,7 +84,7 @@ class MemberSeeder extends Seeder
                 'phone' => '081291473074',
             ],
             [
-                'foto' => 'members/juminah.png',
+                'foto' => 'fe/img/team/juminah.png',
                 'name' => 'Juminah',
                 'position' => 'Anggota',
                 'sector' => 'KUL',
@@ -94,7 +94,7 @@ class MemberSeeder extends Seeder
                 'phone' => '081291473074',
             ],
             [
-                'foto' => 'members/maryanti.png',
+                'foto' => 'fe/img/team/maryanti.png',
                 'name' => 'Maryanti',
                 'position' => 'Anggota',
                 'sector' => 'KUL',

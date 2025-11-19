@@ -50,7 +50,7 @@
         <div class="container">
             <div class="section-tittle section-tittle3 text-center mb-40">
                 <div class="front-text">
-                    <h2>Kerajinan di BMI</h2>
+                    <h2>Sektor Kerajinan</h2>
                 </div>
                 <span class="back-text">Kerajinan</span>
             </div>
@@ -61,10 +61,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Pengertian Kerajinan</h4>
                             <p class="card-text">
-                                Kerajinan adalah aktivitas pembuatan produk oleh tangan atau dengan bantuan alat sederhana
-                                yang mengutamakan keterampilan, nilai estetika, dan fungsi. Di BMI kerajinan meliputi produk
-                                tekstil, anyaman, anyaman bambu, keramik, perhiasan sederhana, dan barang dekoratif yang
-                                dibuat oleh UMKM dan pengrajin lokal.
+                                Kerajinan adalah kegiatan pembuatan produk yang mengutamakan keterampilan tangan, ketelitian, serta nilai estetika. Prosesnya dapat dilakukan secara manual maupun dengan bantuan alat sederhana. Di BMI, sektor kerajinan mencakup beragam produk seperti tekstil, anyaman, kerajinan bambu, keramik, aksesori sederhana, hingga dekorasi rumah yang dikerjakan oleh UMKM dan pengrajin lokal.
                             </p>
                         </div>
                     </div>
@@ -75,10 +72,10 @@
                         <div class="card-body">
                             <h4 class="card-title">Fungsi & Peran Kerajinan</h4>
                             <ul class="card-list">
-                                <li>Melestarikan kearifan lokal dan teknik tradisional.</li>
-                                <li>Menjadi sumber pendapatan dan lapangan kerja skala mikro.</li>
-                                <li>Mendorong kreasi desain dan inovasi produk berbasis lokal.</li>
-                                <li>Memperkuat identitas budaya daerah di pasar lokal dan wisata.</li>
+                                <li>Melestarikan teknik tradisional serta warisan budaya lokal.</li>
+                                <li>Menjadi sumber penghidupan dan membuka peluang usaha bagi pengrajin skala mikro.</li>
+                                <li>Mendorong pengembangan desain dan inovasi produk berbasis material lokal.</li>
+                                <li>Memperkuat identitas budaya daerah, khususnya dalam pasar domestik dan pariwisata.</li>
                             </ul>
                         </div>
                     </div>
@@ -89,22 +86,25 @@
                 <div class="col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Tujuan</h5>
-                        <p>Meningkatkan kesejahteraan pengrajin, memperluas akses pasar produk kerajinan, menjamin kualitas
-                            dan kontinuitas produksi, serta mendorong nilai tambah kreatif.</p>
+                        <p>
+                            Meningkatkan kesejahteraan pengrajin, memperluas cakupan pemasaran produk kerajinan, memastikan kualitas dan kesinambungan produksi, serta menghadirkan nilai tambah melalui kreativitas.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Contoh</h5>
-                        <p>Anyaman bambu & rotan, kerajinan kulit, tenun & batik lokal, ukiran kayu, keramik, aksesori
-                            handmade, dan kemasan kreatif untuk souvenir.</p>
+                        <p>
+                            Anyaman bambu dan rotan, kerajinan kulit, batik dan tenun lokal, ukiran kayu, keramik, aksesori buatan tangan, serta kemasan kreatif untuk keperluan souvenir.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Manfaat</h5>
-                        <p>Nilai ekonomi bagi komunitas lokal, pelestarian budaya, diversifikasi produk UMKM, dan potensi
-                            pariwisata kreatif.</p>
+                        <p>
+                            Memberikan kontribusi ekonomi bagi komunitas lokal, menjaga keberlanjutan budaya, memperluas ragam produk UMKM, serta mendukung tumbuhnya industri pariwisata kreatif.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -115,14 +115,14 @@
                         <div class="card-body">
                             <h5>Rekomendasi Pengembangan & Praktik</h5>
                             <ul>
-                                <li>Pelatihan desain produk, kemasan, dan kontrol kualitas.</li>
-                                <li>Fasilitasi akses bahan baku berkualitas dan hemat biaya.</li>
-                                <li>Dorongan digitalisasi: foto produk, marketplace & pemasaran digital.</li>
-                                <li>Kolaborasi antar pengrajin untuk produksi skala lebih besar dan standarisasi.</li>
+                                <li>Pelatihan pengembangan desain, peningkatan kualitas produk, dan perbaikan kemasan.</li>
+                                <li>Mendukung akses bahan baku yang stabil, berkualitas, dan terjangkau.</li>
+                                <li>Mendorong digitalisasi melalui dokumentasi produk, marketplace, dan pemasaran daring.</li>
+                                <li>Penguatan kolaborasi antar pengrajin untuk produksi berskala lebih besar dan standar mutu yang seragam.</li>
                             </ul>
 
-                            <p class="mt-3"><strong>Inovasi:</strong> kombinasikan motif tradisional dengan material modern,
-                                tawarkan edisi terbatas (limited edition) untuk meningkatkan margin dan daya tarik pasar.
+                            <p class="mt-3">
+                                <strong>Inovasi:</strong> Kombinasi motif tradisional dengan material modern serta penawaran edisi terbatas dapat meningkatkan nilai jual dan daya tarik produk di pasar.
                             </p>
                         </div>
                     </div>

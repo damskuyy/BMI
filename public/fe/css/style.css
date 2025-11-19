@@ -6686,7 +6686,7 @@ Kerajinan About Only
 
 /* accent badge on section title */
 .kerajinan-section .section-tittle .front-text h2::after {
-  content: "";
+  /* content: ""; */
   display: inline-block;
   width: 72px;
   height: 8px;
@@ -8044,5 +8044,86 @@ BLOG Area
   100%{
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Custom mobile fixes: clip countdown overflow and keep back-text visible */
+@media (max-width: 575px) {
+  .count-area {
+    overflow: hidden !important;
+    max-width: 100vw !important;
+  }
+  .countdown-carousel-mobile {
+    display: flex !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    padding-left: 8px !important;
+    overflow: hidden !important;
+  }
+  .countdown-carousel-mobile .count-clients {
+    margin-left: 0 !important;
+  }
+  /* Ensure back-text doesn't get clipped by parent containers */
+  .section-tittle, .section-tittle * {
+    overflow: visible !important;
+  }
+  .section-tittle span.back-text {
+    z-index: 1;
+  }
+}
+
+/* Disable hover/float animations for countdown to avoid clipping during animation */
+.count-area .count-clients .single-counter:hover,
+.countdown-carousel-mobile .count-clients:hover,
+.countdown-carousel-mobile .count-clients .single-counter:hover {
+  animation: none !important;
+  -webkit-animation: none !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+
+/* Append a visual plus sign after sector counters without changing DOM text */
+.count-area .single-counter .count-number .counter::after {
+  content: "+";
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 700;
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+/* Strong mobile sizing tweaks for countdown so labels fit */
+@media (max-width: 575px) {
+  /* Keep carousel sizing default; only adjust typography for mobile readability */
+  .countdown-carousel-mobile .single-counter {
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  .countdown-carousel-mobile .single-counter .count-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+  }
+  .countdown-carousel-mobile .single-counter .count-number .counter {
+    font-size: 34px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+  }
+  .countdown-carousel-mobile .single-counter .count-text p {
+    font-size: 20px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+  .countdown-carousel-mobile .single-counter .count-text h5 {
+    font-size: 22px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+    max-width: none;
   }
 }

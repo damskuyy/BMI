@@ -25,13 +25,13 @@
                                 <div class="row product-row">
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="single-project mb-30">
-                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/kuliner/yogurt.png" data-title="Yogurt drink with jelly" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                <img src="fe/img/gallery/kuliner/yogurt.png" alt="">
+                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kuliner/yogurt.png') }}" data-title="Yogurt drink with jelly" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                <img src="{{ asset('fe/img/gallery/kuliner/yogurt.png') }}" alt="">
                                             </a>
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
                                                     <a href="https://wa.me/6282189327077" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
+                                                        <img src="{{ asset('fe/img/icon/whatsapp-putih.png') }}" alt="WhatsApp" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Yogurt drink with jelly</a></h4>
@@ -42,18 +42,18 @@
                                         <div class="single-project mb-30">
                                             <a class="project-img product-preview"
                                                 href="javascript:void(0);"
-                                                data-img="fe/img/gallery/manufaktur/set-meja-kotak.jpeg"
+                                                data-img="{{ asset('fe/img/gallery/manufaktur/set-meja-kotak.jpeg') }}"
                                                 data-title="Set meja bar kotak panjang (outdoor)"
                                                 data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                <img src="fe/img/gallery/manufaktur/set-meja-kotak.jpeg" alt="">
+                                                <img src="{{ asset('fe/img/gallery/manufaktur/set-meja-kotak.jpeg') }}" alt="">
                                             </a>
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
                                                     <a href="https://www.tokopedia.com/bogormanufakturindonesia/1-set-meja-bar-kotak-panjang-outdoor-1-meja-4-kursi-wallnut-brown-f063f?extParam=src%3Dshop%26whid%3D17953854&aff_unique_id=&channel=others&chain_key=" target="_blank" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/tokopedia-putih.png" alt="Tokopedia" width="38" height="38">
+                                                        <img src="{{ asset('fe/img/icon/tokopedia-putih.png') }}" alt="Tokopedia" width="38" height="38">
                                                     </a>
                                                     <a href="https://shopee.co.id/1-Set-Meja-Bar-Kotak-Panjang-Outdoor-1-Meja-4-Kursi-i.1396487386.26723564178" target="_blank" class="plus-btn shopee-btn">
-                                                        <img src="fe/img/icon/shopee-putih.png" alt="Shopee" width="38" height="38">
+                                                        <img src="{{ asset('fe/img/icon/shopee-putih.png') }}" alt="Shopee" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Set meja bar kotak panjang</a></h4>
@@ -62,13 +62,13 @@
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="single-project mb-30">
-                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="fe/img/gallery/kerajinan/jas-hujan.png" data-title="Produk kerajinan jas hujan" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
-                                                <img src="fe/img/gallery/kerajinan/jas-hujan.png" alt="">
+                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kerajinan/jas-hujan.png') }}" data-title="Produk kerajinan jas hujan" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                <img src="{{ asset('fe/img/gallery/kerajinan/jas-hujan.png') }}" alt="">
                                             </a>
                                             <div class="project-cap">
                                                 <div class="marketplace-row">
                                                     <a href="https://wa.me/6282189327077" class="plus-btn tokopedia-btn">
-                                                        <img src="fe/img/icon/whatsapp-putih.png" alt="WhatsApp" width="38" height="38">
+                                                        <img src="{{ asset('fe/img/icon/whatsapp-putih.png') }}" alt="WhatsApp" width="38" height="38">
                                                     </a>
                                                 </div>
                                                 <h4><a>Produk kerajinan jas hujan</a></h4>

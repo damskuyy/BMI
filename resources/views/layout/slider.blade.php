@@ -5,19 +5,79 @@
 @endphp
 
 <style>
-    /* Fade in animation - only on first render */
+    /* Fade in animation - improved: ensure initial opacity 0 and persist final state */
     .slider-fade-in {
-        animation: sliderFadeIn 0.8s ease-in;
+        opacity: 0;
+        transform: scale(1.06);
+        -webkit-transform: scale(1.06);
+        animation-name: sliderFadeZoom;
+        animation-duration: 900ms;
+        animation-timing-function: cubic-bezier(.22,.8,.27,1);
+        animation-fill-mode: both; /* keep final state */
+        -webkit-animation-name: sliderFadeZoom;
+        -webkit-animation-duration: 900ms;
+        -webkit-animation-timing-function: cubic-bezier(.22,.8,.27,1);
+        -webkit-animation-fill-mode: both;
     }
-    @keyframes sliderFadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    @keyframes sliderFadeZoom {
+        from { opacity: 0; transform: scale(1.06); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+    @-webkit-keyframes sliderFadeZoom {
+        from { opacity: 0; -webkit-transform: scale(1.06); }
+        to   { opacity: 1; -webkit-transform: scale(1); }
     }
 </style>
+
+<!-- Ensure animation runs after carousel initialization. Uses jQuery if available, falls back to plain JS. -->
+<script>
+    (function(){
+        function triggerFade(sliderSelector){
+            var slides = document.querySelectorAll(sliderSelector + ' .single-slider');
+            if(!slides.length) return;
+            // remove then re-add to force animation replay
+            slides.forEach(function(s){ s.classList.remove('slider-fade-in'); });
+            // small timeout to allow reflow
+            setTimeout(function(){
+                slides.forEach(function(s){ s.classList.add('slider-fade-in'); });
+            }, 50);
+        }
+
+        // If jQuery is present, prefer hooking into Slick or Owl carousel events so animation runs after slider init
+        if(window.jQuery){
+            jQuery(function($){
+                // Slick carousel (used by theme main.js)
+                if(typeof $.fn.slick === 'function'){
+                    $('.slider-active').on('init reInit afterChange', function(){ triggerFade('.slider-active'); });
+                    $('.slider-active-mobile').on('init reInit afterChange', function(){ triggerFade('.slider-active-mobile'); });
+                    // trigger once in case init already fired
+                    triggerFade('.slider-active');
+                    triggerFade('.slider-active-mobile');
+                    return;
+                }
+
+                // Owl carousel fallback
+                if(typeof $.fn.owlCarousel === 'function'){
+                    $('.slider-active').on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function(){ triggerFade('.slider-active'); });
+                    $('.slider-active-mobile').on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function(){ triggerFade('.slider-active-mobile'); });
+                    triggerFade('.slider-active');
+                    triggerFade('.slider-active-mobile');
+                    return;
+                }
+
+                // If neither slider lib is available, just run on DOM ready
+                triggerFade('.slider-active');
+                triggerFade('.slider-active-mobile');
+            });
+        } else {
+            // fallback: trigger on DOMContentLoaded
+            document.addEventListener('DOMContentLoaded', function(){
+                triggerFade('.slider-active');
+                triggerFade('.slider-active-mobile');
+            });
+        }
+    })();
+</script>
 
 <div class="slider-area home-slider">
     <div class="slider-active owl-carousel">

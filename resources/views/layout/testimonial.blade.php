@@ -49,7 +49,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
-                                <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar">
+                                {{-- <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar"> --}}
                                 <div class="founder-text">
                                     <span>Amanie</span>
                                     <p>Pempek</p>
@@ -71,7 +71,7 @@
                             </div>
                             <!-- founder -->
                             <div class="testimonial-founder d-flex align-items-center">
-                                <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar">
+                                {{-- <img src="{{ asset('fe/img/clients/king-kiripik.jpg') }}" alt="Karyati" class="testimonial-avatar"> --}}
                                 <div class="founder-text">
                                     <span>Neneng</span>
                                     <p>Catering</p>

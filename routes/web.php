@@ -25,6 +25,8 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/blog', App\Http\Controllers\BlogController::class);
 Route::resource('/blog-details', App\Http\Controllers\BlogDetailController::class);
+Route::get('/blog/show/{slug}', [App\Http\Controllers\BlogDetailController::class, 'show'])->name('blog.details.show');
+Route::post('/blog/show/{slug}/comments', [App\Http\Controllers\CommentController::class, 'store'])->name('blog.comments.store');
 Route::resource('/contact', App\Http\Controllers\ContactController::class);
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
@@ -44,4 +46,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('slider_be', SliderController::class)->parameters(['slider_be' => 'slider']);
     Route::resource('member_be', MemberBEController::class)->parameters(['member_be' => 'member']);
     Route::resource('users', UserController::class);
+    // Allow authenticated users to delete their own comments
+    Route::delete('/blog/comments/{id}', [App\Http\Controllers\CommentController::class, 'destroy'])->name('blog.comments.destroy');
 });

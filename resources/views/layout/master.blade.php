@@ -8,21 +8,21 @@
     <title>Bogor Manufaktur Indonesia</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="fe/img/logo/logo-bmi-kotak.png">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('fe/img/logo/logo-bmi-kotak.png') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="fe/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="fe/css/slicknav.css">
-    <link rel="stylesheet" href="fe/css/animate.min.css">
-    <link rel="stylesheet" href="fe/css/magnific-popup.css">
-    {{-- <link rel="stylesheet" href="fe/css/fontawesome-all.min.css"> --}}
-    <link rel="stylesheet" href="fe/css/themify-icons.css">
-    <link rel="stylesheet" href="fe/css/slick.css">
-    <link rel="stylesheet" href="fe/css/nice-select.css">
-    <link rel="stylesheet" href="fe/css/style.css">
+    <link rel="stylesheet" href="{{ asset('fe/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/magnific-popup.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('fe/css/fontawesome-all.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('fe/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('fe/css/style.css') }}">
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <!-- DataTables Responsive CSS -->
@@ -43,8 +43,8 @@
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="fe/img/logo/logo-bmi-kotak.png" alt="">
+                                    <div class="preloader-img pere-text">
+                    <img src="{{ asset('fe/img/logo/logo-bmi-kotak.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -106,10 +106,10 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="/home" class="big-logo"><img src="fe/img/logo/logo-bmi.png"
+                                        <a href="/home" class="big-logo"><img src="{{ asset('fe/img/logo/logo-bmi.png') }}"
                                             style="width: auto; height: 90px;" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="/home" class="small-logo"><img src="fe/img/logo/logo-bmi.png" style="width: auto; height: 48px;" alt=""></a>
+                                    <a href="/home" class="small-logo"><img src="{{ asset('fe/img/logo/logo-bmi.png') }}" style="width: auto; height: 48px;" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -201,7 +201,7 @@
                                         <!-- Shape pita pendek -->
                                         <path d="M 100,60 L 80,80 L 100,100 L 80,120 L 100,140 L 300,140 L 320,120 L 300,100 L 320,80 L 300,60 Z" fill="white" fill-opacity="0.3" />
                                         <!-- Logo di depan -->
-                                        <image href="fe/img/logo/logo-bmi.png"
+                                        <image href="{{ asset('fe/img/logo/logo-bmi.png') }}"
                                             x="70" y="40" width="250" height="120"
                                             preserveAspectRatio="xMidYMid meet" />
                                     </svg>
@@ -267,7 +267,7 @@
                                 </div>
                                 <!-- Map -->
                                 <div class="map-footer">
-                                    <img src="fe/img/gallery/map-footer.png" alt="">
+                                    <img src="{{ asset('fe/img/gallery/map-footer.png') }}" alt="">
                                 </div>
                             </div>
                         </div> --}}

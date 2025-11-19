@@ -73,14 +73,20 @@
                         <i class="fas fa-bars"></i>
                     </button>
 
+                    <!-- Branding in Center -->
+                    <div class="navbar-brand-center">
+                        <h5 class="brand-text">Bogor Manufaktur Indonesia</h5>
+                    </div>
+
                     <div class="ml-auto user-info dropdown">
                         @php $userAvatarPath = public_path('storage/' . (Auth::user()->foto ?? '')); @endphp
-                        <img src="{{ (Auth::user()->foto && file_exists($userAvatarPath)) ? '/storage/' . Auth::user()->foto : asset('fe/img/icon/user.png') }}"
-                             alt="User Avatar"
-                             class="avatar"
-                             data-bs-toggle="dropdown"
-                             style="cursor: pointer;">
-                        <span class="username" data-bs-toggle="dropdown" style="cursor: pointer;">{{ 'Howdy, ' . Auth::user()->name }}</span>
+                        <div class="user-avatar-wrapper" data-bs-toggle="dropdown" style="cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                            <img src="{{ (Auth::user()->foto && file_exists($userAvatarPath)) ? '/storage/' . Auth::user()->foto : asset('fe/img/icon/user.png') }}" alt="User Avatar" class="avatar">
+                            <div class="user-text-wrapper">
+                                <span class="username">{{ 'Howdy, ' . Auth::user()->name }}</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
                         
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="{{ route('users.edit', Auth::user()) }}"><i class="fas fa-user-edit"></i> Edit Profile</a></li>
@@ -110,8 +116,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+            let sidebarCollapsed = false;
+            
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('expanded');
+                sidebarCollapsed = !sidebarCollapsed;
+            });
+
+            // Toggle dropdown icon rotation
+            $('.user-info').on('show.bs.dropdown', function() {
+                $(this).addClass('show');
+            });
+            
+            $('.user-info').on('hide.bs.dropdown', function() {
+                $(this).removeClass('show');
             });
         });
     </script>

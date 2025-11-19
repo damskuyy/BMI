@@ -61,10 +61,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Pengertian Manufaktur</h4>
                             <p class="card-text">
-                                Manufaktur adalah proses pengolahan bahan baku menjadi produk jadi menggunakan proses
-                                produksi, mesin, tenaga kerja, dan sistem pengendalian untuk menghasilkan barang dengan
-                                nilai tambah. Sektor ini meliputi skala kecil hingga pabrik besar dan menjadi tulang
-                                punggung banyak rantai pasokan.
+                                Manufaktur merupakan proses pengolahan bahan baku menjadi produk jadi melalui tahapan produksi yang terencana. Kegiatan ini melibatkan penggunaan mesin, tenaga kerja terampil, serta sistem kontrol kualitas untuk menghasilkan produk yang bernilai tambah. Sektor manufaktur menjadi bagian penting dalam mendukung kebutuhan industri dan perkembangan ekonomi, baik dalam skala lokal maupun nasional.
                             </p>
                         </div>
                     </div>
@@ -75,10 +72,10 @@
                         <div class="card-body">
                             <h4 class="card-title">Fungsi & Peran</h4>
                             <ul class="card-list">
-                                <li>Mengubah bahan mentah menjadi produk bernilai jual</li>
-                                <li>Menciptakan lapangan pekerjaan dan kapasitas produksi</li>
-                                <li>Mendukung rantai pasok lokal dan ekspor</li>
-                                <li>Mendorong inovasi proses dan efisiensi</li>
+                                <li>Mengubah bahan mentah menjadi produk bernilai guna dan bernilai jual.</li>
+                                <li>Menyediakan lapangan kerja serta meningkatkan kapasitas produksi.</li>
+                                <li>Mendukung penguatan rantai pasok untuk kebutuhan domestik maupun ekspor.</li>
+                                <li>Mendorong penerapan inovasi dan peningkatan efisiensi proses produksi.</li>
                             </ul>
                         </div>
                     </div>
@@ -89,22 +86,25 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Tujuan</h5>
-                        <p>Meningkatkan produktivitas, menurunkan biaya produksi, memenuhi kebutuhan pasar, serta
-                            menghasilkan produk berkualitas dan kompetitif.</p>
+                        <p>
+                            Tujuan utama manufaktur adalah meningkatkan produktivitas, menekan biaya operasional, memenuhi kebutuhan pasar, dan menghasilkan produk berkualitas yang mampu bersaing di tingkat nasional maupun internasional.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Contoh</h5>
-                        <p>Industri pengolahan makanan, tekstil, mebel, otomotif, pengemasan, dan industri alat industri
-                            kecil (bengkel/jasa permesinan).</p>
+                        <p>
+                            Ruang lingkup manufaktur meliputi industri pengolahan makanan, tekstil, furnitur, otomotif, kemasan, serta berbagai industri kecil seperti bengkel teknik dan jasa permesinan.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="card reveal-on-scroll h-100">
                         <h5>Manfaat</h5>
-                        <p>Nilai tambah ekonomis, peningkatan skill tenaga kerja, pemenuhan kebutuhan domestik, pertumbuhan
-                            UMKM pendukung, serta peluang ekspor.</p>
+                        <p>
+                            Sektor manufaktur memberikan kontribusi dalam bentuk peningkatan nilai ekonomi, pengembangan keahlian tenaga kerja, pemenuhan kebutuhan pasar domestik, penguatan UMKM pendukung, serta penciptaan peluang ekspor.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -115,11 +115,7 @@
                         <div class="card-body">
                             <h5>Ringkasan Praktis & Rekomendasi</h5>
                             <p>
-                                Untuk memperkuat sektor manufaktur lokal, penting melakukan investasi pada pelatihan SDM,
-                                adopsi teknologi tepat guna (otomasi dasar, CNC, kontrol kualitas), pengembangan rantai
-                                pasok lokal, dan penerapan praktik produksi bersih. Kolaborasi antar koperasi/UMKM, lembaga
-                                pelatihan, dan pemerintah daerah mempercepat peningkatan kapasitas produksi serta akses
-                                pasar.
+                                Peningkatan daya saing manufaktur memerlukan investasi pada pengembangan sumber daya manusia, penerapan teknologi yang tepat guna seperti otomasi dasar dan sistem kontrol kualitas, serta penguatan rantai pasok lokal. Kolaborasi antara pelaku UMKM, industri, lembaga pelatihan, dan pemerintah daerah menjadi faktor penting dalam memperluas kapasitas produksi serta memperkuat akses pasar.
                             </p>
                         </div>
                     </div>

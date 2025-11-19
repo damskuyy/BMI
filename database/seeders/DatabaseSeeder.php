@@ -17,14 +17,15 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'Admin BMU=I',
             'email' => 'admin@bmi.com',
-            'password' => Hash::make('admin')
+            'password' => Hash::make('bmi2025')
         ]);
 
         // Seed products
         $this->call(ProductSeeder::class);
         $this->call(MemberSeeder::class);
         $this->call(GallerySeeder::class);
+        $this->call(BlogSeeder::class);
     }
 }

@@ -14,6 +14,25 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        /* Ensure product card images are square on small screens */
+        @media (max-width: 575px) {
+            .single-project .project-img {
+                display: block !important;
+                position: relative !important;
+                width: 100% !important;
+                padding-bottom: 100% !important; /* 1:1 aspect ratio */
+                height: 0 !important;
+                overflow: hidden !important;
+            }
+            .single-project .project-img img {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+        }
     </style>
 
     <!-- slider Area Start-->
@@ -167,11 +186,11 @@
                                             @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
-                                                    <a class="project-img product-preview" href="javascript:void(0);" style="display: block; aspect-ratio: 1/1; overflow: hidden;"
+                                                    <a class="project-img product-preview" href="javascript:void(0);" style="display:block; width:100%; padding-bottom:100%; position:relative; overflow:hidden;"
                                                         data-img="{{ $imageUrl }}" 
                                                         data-title="{{ $product->name }}"
                                                         data-desc="{{ $product->description }}">
-                                                        <img src="{{ $imageUrl }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        <img src="{{ $imageUrl }}" alt="{{ $product->name }}" style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important;">
                                                     </a>
                                                     <div class="project-cap">
                                                         <div class="marketplace-row">
