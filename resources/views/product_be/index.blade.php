@@ -88,11 +88,11 @@
                             {{-- Previous Page Link --}}
                             @if ($products->onFirstPage())
                                 <li class="page-item disabled">
-                                    <span class="page-link">← Previous</span>
+                                    <span class="page-link">←</span>
                                 </li>
                             @else
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $products->previousPageUrl() }}">← Previous</a>
+                                    <a class="page-link" href="{{ $products->previousPageUrl() }}">←</a>
                                 </li>
                             @endif
 
@@ -115,11 +115,11 @@
                             {{-- Next Page Link --}}
                             @if ($products->hasMorePages())
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $products->nextPageUrl() }}">Next →</a>
+                                    <a class="page-link" href="{{ $products->nextPageUrl() }}">→</a>
                                 </li>
                             @else
                                 <li class="page-item disabled">
-                                    <span class="page-link">Next →</span>
+                                    <span class="page-link">→</span>
                                 </li>
                             @endif
                         </ul>

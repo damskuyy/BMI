@@ -25,7 +25,7 @@
                                 <div class="row product-row">
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="single-project mb-30">
-                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kuliner/yogurt.png') }}" data-title="Yogurt drink with jelly" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kuliner/yogurt.png') }}" data-title="Yogurt drink with jelly" data-desc="Minuman sehat dengan jelly.">
                                                 <img src="{{ asset('fe/img/gallery/kuliner/yogurt.png') }}" alt="">
                                             </a>
                                             <div class="project-cap">
@@ -44,7 +44,7 @@
                                                 href="javascript:void(0);"
                                                 data-img="{{ asset('fe/img/gallery/manufaktur/set-meja-kotak.jpeg') }}"
                                                 data-title="Set meja bar kotak panjang (outdoor)"
-                                                data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                                data-desc="Set meja bar kotak panjang — meja kuat untuk area bar/café dengan finishing tahan cuaca.">
                                                 <img src="{{ asset('fe/img/gallery/manufaktur/set-meja-kotak.jpeg') }}" alt="">
                                             </a>
                                             <div class="project-cap">
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="single-project mb-30">
-                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kerajinan/jas-hujan.png') }}" data-title="Produk kerajinan jas hujan" data-desc="Produk furniture berkualitas untuk cafe dan rumah.">
+                                            <a class="project-img product-preview" href="javascript:void(0);" data-img="{{ asset('fe/img/gallery/kerajinan/jas-hujan.png') }}" data-title="Produk kerajinan jas hujan" data-desc="Jas hujan kerajinan — jas hujan praktis dengan jahitan rapi, ideal untuk kegiatan di luar ruangan.">
                                                 <img src="{{ asset('fe/img/gallery/kerajinan/jas-hujan.png') }}" alt="">
                                             </a>
                                             <div class="project-cap">

@@ -351,3 +351,59 @@ nav.navbar {
     #add-image-row { width: 100%; display: block; }
     .card .card-body { padding: 12px; }
 }
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    font-size: 14px;
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin-left: -1px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 0 !important;
+    color: #8a8a8a;
+    border: 1px solid #f0e9ff;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #f0e9ff;
+    color: #555;
+}
+
+.pagination .page-link i,
+.pagination .page-link span {
+    font-size: 13px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #fbf9ff;
+    border-color: #f0e9ff;
+    color: #888888;
+}
+
+.pagination .page-item:last-child .page-link {
+    margin-right: 0;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+}

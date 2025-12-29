@@ -95,7 +95,7 @@
                                         aria-controls="nav-profile" aria-selected="false">Manufaktur</a>
                                     <a class="nav-item nav-link {{ $activeTab == 'contact' ? 'active' : '' }}"
                                         id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-                                        aria-controls="nav-contact" aria-selected="false">Kuliner (UMKM)</a>
+                                        aria-controls="nav-contact" aria-selected="false">Kuliner</a>
                                     <a class="nav-item nav-link {{ $activeTab == 'last' ? 'active' : '' }}"
                                         id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab"
                                         aria-controls="nav-last" aria-selected="false">Kerajinan</a>

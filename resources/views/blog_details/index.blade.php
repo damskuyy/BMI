@@ -125,7 +125,7 @@
                     </div>
                     <div class="blog-author">
                         <div class="media align-items-center">
-                            <img src="{{ (optional($blog->author) && $blog->author->foto) ? Storage::url($blog->author->foto) : asset('fe/img/blog/author.png') }}" alt="">
+                            <img src="{{ (optional($blog->author) && $blog->author->foto) ? Storage::url($blog->author->foto) : asset('fe/img/icon/user.png') }}" alt="">
                             <div class="media-body">
                                 <a href="#">
                                     <h4>{{ optional($blog->author)->name ?? $blog->poster_name ?? 'Author' }}</h4>

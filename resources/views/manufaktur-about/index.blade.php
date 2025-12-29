@@ -95,7 +95,7 @@
                     <div class="card reveal-on-scroll h-100">
                         <h5>Contoh</h5>
                         <p>
-                            Ruang lingkup manufaktur meliputi industri pengolahan makanan, tekstil, furnitur, otomotif, kemasan, serta berbagai industri kecil seperti bengkel teknik dan jasa permesinan.
+                            Ruang lingkup manufaktur meliputi industri pengolahan makanan, tekstil, furnitur, otomotif, serta berbagai industri kecil seperti jasa permesinan dan fabrikasi.
                         </p>
                     </div>
                 </div>

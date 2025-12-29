@@ -56,7 +56,7 @@
         <div class="container">
           <div class="section-tittle section-tittle3 text-center">
             <div class="front-text">
-              <h2>Tentang Kuliner UMKM</h2>
+              <h2>Tentang UMKM Kuliner</h2>
             </div>
             <span class="back-text">Kuliner</span>
           </div>
@@ -65,9 +65,9 @@
             <div class="col-lg-6 col-md-4">
               <div class="card reveal-on-scroll h-100">
                 <div class="card-body">
-                  <h4 class="card-title">Pengertian Kuliner UMKM</h4>
+                  <h4 class="card-title">Pengertian UMKM Kuliner</h4>
                   <p class="card-text">
-                    Kuliner UMKM adalah kegiatan usaha mikro, kecil, dan menengah yang bergerak di bidang pengolahan makanan dan minuman. Produk yang dihasilkan biasanya mengangkat cita rasa lokal, diproses dengan keterampilan khas, dan dipasarkan melalui jalur tradisional maupun digital. Sektor ini berperan penting dalam menyediakan pilihan kuliner yang beragam serta mendukung pertumbuhan ekonomi masyarakat.
+                    UMKM Kuliner adalah kegiatan usaha mikro, kecil, dan menengah yang bergerak di bidang pengolahan makanan dan minuman. Produk yang dihasilkan biasanya mengangkat cita rasa lokal, diproses dengan keterampilan khas, dan dipasarkan melalui jalur tradisional maupun digital. Sektor ini berperan penting dalam menyediakan pilihan kuliner yang beragam serta mendukung pertumbuhan ekonomi masyarakat.
                   </p>
                 </div>
               </div>
@@ -79,7 +79,7 @@
                   <h4 class="card-title">Fungsi & Peran</h4>
                   <ul class="card-list">
                     <li>Memenuhi kebutuhan pangan masyarakat dan menghadirkan variasi kuliner lokal.</li>
-                    <li>Membuka peluang kerja bagi komunitas sekitar.</li>
+                    <li>Membuka peluang kerja bagi masyarakat sekitar.</li>
                     <li>Melestarikan resep tradisional dan kekayaan kuliner daerah.</li>
                     <li>Menjadi pintu masuk bagi UMKM menuju rantai pasok modern, mulai dari pembiayaan, distribusi, hingga pemasaran digital.</li>
                   </ul>
@@ -101,7 +101,7 @@
               <div class="card reveal-on-scroll">
                 <h5>Contoh</h5>
                 <p>
-                  Warung makan rumahan, katering skala kecil, produsen kue tradisional, minuman kemasan lokal, hingga pedagang jajanan pasar.
+                  Rumah makan, catering, produsen kue, makanan & minuman kemasan lokal.
                 </p>
               </div>
             </div>
@@ -109,7 +109,7 @@
               <div class="card reveal-on-scroll">
                 <h5>Manfaat</h5>
                 <p>
-                  Mendorong pertumbuhan ekonomi lokal, mengembangkan keterampilan produksi, memperluas potensi ekspor produk khas daerah, serta memperkaya keragaman kuliner Indonesia.
+                  Mendorong pertumbuhan ekonomi lokal, mengembangkan keterampilan produksi, serta memperluas potensi ekspor produk.
                 </p>
               </div>
             </div>

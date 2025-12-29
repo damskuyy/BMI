@@ -111,10 +111,10 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                        <a href="/home" class="big-logo"><img src="{{ asset('fe/img/logo/logo-bmi.png') }}"
+                                        <a href="/home" class="big-logo"><img src="{{ asset('fe/img/logo/bmi-round4.png') }}"
                                             style="width: auto; height: 90px;" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="/home" class="small-logo"><img src="{{ asset('fe/img/logo/logo-bmi.png') }}" style="width: auto; height: 48px;" alt=""></a>
+                                    <a href="/home" class="small-logo"><img src="{{ asset('fe/img/logo/bmi-round4.png') }}" style="width: auto; height: 48px;" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">

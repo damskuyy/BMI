@@ -54,10 +54,10 @@
                                                 $listImg = ($blog->image && strpos($blog->image, 'fe/img') === 0) ? asset($blog->image) : ( $blog->image ? Storage::url($blog->image) : '' );
                                             @endphp
                                             <img class="card-img rounded-0" src="{{ $listImg }}" alt="{{ $blog->title }}" style="height: 350px; object-fit: cover;">
-                                    <a href="#" class="blog_item_date">
+                                    {{-- <a href="#" class="blog_item_date">
                                         <h3>{{ $blog->posted_at ? $blog->posted_at->format('d') : $blog->created_at->format('d') }}</h3>
                                         <p>{{ $blog->posted_at ? $blog->posted_at->format('M') : $blog->created_at->format('M') }}</p>
-                                    </a>
+                                    </a> --}}
                                 </div>
 
                                 <div class="blog_details">
@@ -74,7 +74,7 @@
                         @endforeach
 
                         <nav class="blog-pagination justify-content-center d-flex">
-                            {{ $blogs->links() }}
+                            {{ $blogs->links('vendor.pagination.bootstrap-4') }}
                         </nav>
                     </div>
                 </div>

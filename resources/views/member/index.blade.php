@@ -191,21 +191,21 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Foto</th>
+                        {{-- <th>Foto</th> --}}
                         <th>Nama Anggota</th>
-                        <th>Stuktur</th>
+                        {{-- <th>Struktur</th> --}}
                         <th>Sektor</th>
                         <th>Usaha</th>
                         <th>Produk</th>
-                        <th>Domisili</th>
-                        <th>No HP</th>
+                        {{-- <th>Domisili</th>
+                        <th>No HP</th> --}}
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($members as $index => $member)
                         <tr>
                             <td>{{ $index + 1 }}</td>
-                            <td>
+                            {{-- <td>
                                 @php
                                     $fotoUrl = null;
                                     // 1) stored in storage disk (e.g. 'members/foo.png' or 'gallery/...')
@@ -231,14 +231,14 @@
                                 @else
                                     <span class="text-muted" style="font-size: 0.85rem;">-</span>
                                 @endif
-                            </td>
+                            </td> --}}
                             <td>{{ $member->name }}</td>
-                            <td>{{ $member->position }}</td>
+                            {{-- <td>{{ $member->position }}</td> --}}
                             <td>{{ $member->sector }}</td>
                             <td>{{ $member->business }}</td>
                             <td>{{ $member->product }}</td>
-                            <td>{{ $member->domicile }}</td>
-                            <td>{{ $member->phone }}</td>
+                            {{-- <td>{{ $member->domicile }}</td>
+                            <td>{{ $member->phone }}</td> --}}
                         </tr>
                     @endforeach
                 </tbody>

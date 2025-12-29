@@ -10,8 +10,8 @@
                 <span class="back-text">About us</span>
             </div>
             <div class="support-caption">
-                <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra YDBA, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
-                <p>Diakhir tahun 2023 kami mulai mengembangkan bisniskomunitas kami menjadi koperasi yang sebagian besarnya adalah anggota umkm binaan astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
+                <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra - Yayasan Dharma Bhakti Astra, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
+                <p>Diakhir tahun 2023 kami mulai mengembangkan bisnis komunitas kami menjadi koperasi yang sebagian besarnya adalah anggota UMKM binaan Yayasan Astra - Yayasan Dharma Bhakti Astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
                 <a href="/about" class="btn red-btn2">read more</a>
             </div>
         </div>

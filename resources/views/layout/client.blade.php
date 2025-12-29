@@ -22,7 +22,7 @@
                         <img src="fe/img/clients/candra-putra.jpg" alt="">
                         <img src="fe/img/clients/hidayah-alkes.png" alt="">
                         <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
-                        <img src="fe/img/clients/dewoz-art.jpg" alt="">
+                        <img src="fe/img/clients/dewoz-art.png" alt="">
                         <img src="fe/img/clients/metal-jaya.png" alt="">
                         <!-- Duplicate for seamless scroll -->
                         <img src="fe/img/clients/adiwijaya.png" alt="">
@@ -30,7 +30,7 @@
                         <img src="fe/img/clients/candra-putra.jpg" alt="">
                         <img src="fe/img/clients/hidayah-alkes.png" alt="">
                         <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
-                        <img src="fe/img/clients/dewoz-art.jpg" alt="">
+                        <img src="fe/img/clients/dewoz-art.png" alt="">
                         <img src="fe/img/clients/metal-jaya.png" alt="">
                     </div>
                 </div>

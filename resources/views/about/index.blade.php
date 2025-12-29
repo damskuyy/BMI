@@ -55,9 +55,8 @@
                     <span class="back-text">About us</span>
                 </div>
                 <div class="support-caption">
-                    <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra YDBA, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
-                    <p>Diakhir tahun 2023 kamimulai mengembangkan bisniskomunitas kami menjadi koperasi yang sebagian besarnya adalah anggota umkm binaan astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
-                    {{-- <a href="/about" class="btn red-btn2">read more</a> --}}
+                    <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra - Yayasan Dharma Bhakti Astra, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
+                    <p>Diakhir tahun 2023 kami mulai mengembangkan bisnis komunitas kami menjadi koperasi yang sebagian besarnya adalah anggota UMKM binaan Yayasan Astra - Yayasan Dharma Bhakti Astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
                 </div>
             </div>
             <div class="right-content">
@@ -265,14 +264,14 @@
                             </span>
                             <br>
                             <span style="color:#00235b;font-size:2rem;font-weight:700;">
-                                Koperasi Bogor Manufaktur Indonesia
+                                Bogor Manufaktur Indonesia
                             </span>
                         </h2>
                         <div style="height:4px;width:80px;background:linear-gradient(90deg,#ff0000 60%,#f27420 100%);border-radius:2px;margin:18px auto 0;"></div>
                     </div>
                     <p style="font-size:1.15rem;color:#222;margin-top:18px;max-width:650px;margin-left:auto;margin-right:auto;">
                         <span style="background:rgba(255,0,0,0.07);padding:4px 12px;border-radius:8px;font-weight:500;">
-                            Mengapa KBMI hadir dan menjadi motor penggerak UMKM di Bogor?
+                            Mengapa BMI hadir dan menjadi motor penggerak UMKM di Bogor?
                         </span>
                         <br>
                         <span style="color:#00235b;font-weight:600;">
@@ -302,11 +301,11 @@
                             <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2F360-feedback.gif?alt=media&token=63220144-e26a-4e26-a32d-49434ed8380d" alt="Bogor" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#00235b;font-weight:700;">Potensi & Karakteristik Bogor</h5>
                             <ul class="list-unstyled" style="font-size:15px;">
-                                <li><b>Manufaktur:</b> Komponen & sparepart industri.</li>
-                                <li><b>Kuliner:</b> Olahan talas, asinan, makanan khas.</li>
-                                <li><b>Kerajinan:</b> Eco-print, kayu, batik Bogor.</li>
+                                <li><b>Manufaktur:</b> Komponen industri, furnitur, machine, dan fabrikasi.</li>
+                                <li><b>Kuliner:</b> Olahan pisang, kedelai, snack & catering.</li>
+                                <li><b>Kerajinan:</b> Eco-print, kerajinan kayu, aksesoris.</li>
                             </ul>
-                            <p style="font-size:14px;color:#888;">Bogor: Pusat pertumbuhan ekonomi Jawa Barat, dekat Jakarta, kaya sumber daya & budaya.</p>
+                            {{-- <p style="font-size:14px;color:#888;">Bogor: Pusat pertumbuhan ekonomi Jawa Barat, dekat Jakarta, kaya sumber daya & budaya.</p> --}}
                             <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#00235b;color:#fff;">Kekayaan Lokal</span>
                         </div>
                     </div>
@@ -335,7 +334,7 @@
                             <h5 class="card-title" style="color:#f27420;font-weight:700;">Tujuan & Dampak</h5>
                             <ul class="list-unstyled" style="font-size:15px;">
                                 <li>UMKM <b>naik kelas</b> & mandiri.</li>
-                                <li>Motor ekonomi lokal.</li>
+                                <li>Menjadi motor ekonomi lokal.</li>
                                 <li>Penyerapan tenaga kerja & nilai tambah produk Bogor.</li>
                             </ul>
                             <span class="badge badge-pill badge-danger px-3 py-2 mt-2" style="background:#f27420;color:#fff;">Dampak Nyata</span>

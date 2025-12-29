@@ -64,6 +64,7 @@
                     <div class="row" style="margin-top: 50px">
                         <div class="col-12">
                             <h3 class="gallery-section-title text-center mt-4">{{ $gallery->title }}</h3>
+                            {{-- <p class="text-center">{{ date('d F Y', strtotime($gallery->event_date)) }}</p> --}}
                         </div>
                     </div>
                     <div class="row gallery-item">
