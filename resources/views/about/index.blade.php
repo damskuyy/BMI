@@ -62,7 +62,7 @@
             <div class="right-content">
                 <!-- img -->
                 <div class="right-img">
-                    <img src="fe/img/elements/gallery19.jpg" alt="">
+                    <img src="fe/img/elements/gathering2023-3.jpg" alt="">
                 </div>
                 <div class="support-img-cap text-center">
                     <span class="since-year">2021</span>
