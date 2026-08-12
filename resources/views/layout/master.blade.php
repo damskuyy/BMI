@@ -34,12 +34,6 @@
     <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        /* Admin footer link styling: visible but discreet */
-        .admin-link { display: inline-block; margin-left: 10px; color: inherit; text-decoration: none; opacity: 0.50; font-size: 13px; vertical-align: middle; }
-        .admin-link:hover, .admin-link:focus { opacity: 1; text-decoration: underline; }
-    </style>
 </head>
 
 <body>
@@ -79,7 +73,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://tk.tokopedia.com/ZSSQYCVWX/" target="_blank">
+                                            <a href="https://www.tokopedia.com/bogor-manufaktur-indonesia/" target="_blank">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M27.043 12.942c-3.43-2.897-16.85-2.247-16.85-2.247l-.473 32.65s17.855.134 23.353 0s9.341-4.508 9.4-7.878s0-24.18 0-24.18c-6.858-.829-11.942-.178-15.43 1.655" stroke-width="2"/><circle cx="19.531" cy="24.172" r="6.976" fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M32.043 29.33a6.272 6.272 0 1 0-2.3-1.786m-19.55-16.849l-4.494 3.252L5.5 39.369l4.22 3.977m23.975-32.251a7.796 7.796 0 0 0-15.318-.299" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M34.396 19.662a2.36 2.36 0 0 1-3.878 2.59a4.194 4.194 0 1 0 3.878-2.59m-13.872.345a2.424 2.424 0 0 1-4.251 2.211a4.31 4.31 0 1 0 4.25-2.21m3.838 11.41c0-2.817 2.031-3.962 4.721-3.962c2.395 0 3.755 3.252 3.755 3.252a18.2 18.2 0 0 1-7.45 1.449a9.9 9.9 0 0 0 5.321 2.542s-.827.62-3.665.62c-2.306.001-2.682-2.453-2.682-3.902" stroke-width="2"/><path fill="currentColor"stroke="#222" stroke-linecap="round" stroke-linejoin="round" d="M30.317 31.569a10.4 10.4 0 0 1-.258 3.008" stroke-width="2"/></svg>
                                             </a>
                                         </li>
@@ -88,13 +82,13 @@
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
                                         </li>
-                                        <li> 
+                                        <li>
                                             <a href="https://www.instagram.com/bogor_manufaktur_indonesia?igsh=YTdmM3d5dThmMmFp" target="_blank">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li> 
-                                            <a href="https://www.tiktok.com/@bogormanufakturindonesia?_t=ZS-8ye4QERTz6O&_r=1" target="_blank">
+                                        <li>
+                                            <a href="https://www.tiktok.com/@bmi_business" target="_blank">
                                                 <i class="fab fa-tiktok"></i>
                                             </a>
                                         </li>
@@ -122,11 +116,11 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li>
+                                            {{-- <li>
                                                 <a href="/home" class="{{ Request::is('home') ? 'active' : '' }}">Home</a>
-                                            </li>
+                                            </li> --}}
                                             <li>
-                                                <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">About</a>
+                                                <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">Tentang</a>
                                                 <ul class="submenu">
                                                     <li class="d-block d-lg-none">
                                                         <a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">BMI</a>
@@ -143,19 +137,19 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/members" class="{{ Request::is('members') ? 'active' : '' }}">Members</a>
+                                                <a href="/members" class="{{ Request::is('members') ? 'active' : '' }}">Anggota</a>
                                             </li>
                                             <li>
-                                                <a href="/product" class="{{ Request::is('product') ? 'active' : '' }}">Product</a>
+                                                <a href="/product" class="{{ Request::is('product') ? 'active' : '' }}">Produk</a>
                                             </li>
                                             <li>
-                                                <a href="/gallery" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
+                                                <a href="/gallery" class="{{ Request::is('gallery') ? 'active' : '' }}">Galeri</a>
                                             </li>
                                             <li>
-                                                <a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Blog</a>
+                                                <a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Berita</a>
                                             </li>
                                             <li class="d-block d-lg-none">
-                                                <a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Contact</a>
+                                                <a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Kontak</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -163,7 +157,7 @@
                             </div>
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="/contact" class="btn">Contact Now</a>
+                                    <a href="/contact" class="btn">Hubungi Kami</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -190,7 +184,7 @@
         @yield('client')
         @yield('testimonial')
     </main>
-    
+
     <footer>
         <!-- Footer Start-->
         <div class="footer-main">
@@ -221,15 +215,15 @@
                         <div class="col-lg-2 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Quick Links</h4>
+                                    <h4>Link Cepat</h4>
                                     <ul>
-                                        <li><a href="/home">Home</a></li>
-                                        <li><a href="/about">About</a></li>
-                                        <li><a href="/members">Members</a></li>
-                                        <li><a href="/product">Product</a></li>
-                                        <li><a href="/gallery">Gallery</a></li>
-                                        <li><a href="/blog">Blog</a></li>
-                                        <li><a href="/contact">Contact Us</a></li>
+                                        <li><a href="/home">Beranda</a></li>
+                                        <li><a href="/about">Tentang Kami</a></li>
+                                        <li><a href="/members">Anggota</a></li>
+                                        <li><a href="/product">Produk</a></li>
+                                        <li><a href="/gallery">Galeri</a></li>
+                                        <li><a href="/blog">Berita</a></li>
+                                        <li><a href="/contact">Hubungi Kami</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -237,7 +231,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-7">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Contact</h4>
+                                    <h4>Kontak</h4>
                                     <div class="footer-pera">
                                         <p class="info1">Jl. Industri Kp. Sireum Kilang No. 15 Kab Bogor, 16810</p>
                                     </div>
@@ -302,14 +296,19 @@
         </div>
         <!-- Footer End-->
     </footer>
-    
+
+    <div class="tiktok-live-cta">
+        <a href="https://www.tiktok.com/@bmi_business" target="_blank" rel="noopener noreferrer">
+            <img src="{{ asset('fe/img/icon/live-tiktok.png') }}" alt="Live TikTok">
+        </a>
+    </div>
+
     <!-- JS here -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- All JS Custom Plugins Link Here here -->
     <script src="/fe/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="/fe/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="/fe/js/popper.min.js"></script>
     <script src="/fe/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
@@ -503,3 +502,4 @@
 
 </body>
 </html>
+

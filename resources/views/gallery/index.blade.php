@@ -1,11 +1,11 @@
 @extends('layout.master')
 @section('content')
     @use('Illuminate\Support\Facades\Storage')
-    
+
     @php
         $gallerySlider = \App\Models\Slider::where('section', 'gallery')->first();
     @endphp
-    
+
     <style>
         .page-slider-fade-in {
             animation: pageSliderFadeIn 0.8s ease-in;
@@ -21,9 +21,32 @@
 
     <!-- slider Area Start-->
     @if($gallerySlider && $gallerySlider->image)
+        @php
+            $sliderImage = null;
+            $sliderFilename = basename($gallerySlider->image);
+            $sliderName = pathinfo($sliderFilename, PATHINFO_FILENAME);
+            $sliderExt = strtolower(pathinfo($sliderFilename, PATHINFO_EXTENSION));
+
+            if (file_exists(public_path('fe/img/elements/' . $sliderFilename))) {
+                $sliderImage = asset('fe/img/elements/' . $sliderFilename);
+            } elseif (in_array($sliderExt, ['jpg', 'jpeg', 'png'], true)) {
+                foreach (['webp', 'jpg', 'jpeg', 'png'] as $alt) {
+                    if ($alt === $sliderExt) {
+                        continue;
+                    }
+                    if (file_exists(public_path('fe/img/elements/' . $sliderName . '.' . $alt))) {
+                        $sliderImage = asset('fe/img/elements/' . $sliderName . '.' . $alt);
+                        break;
+                    }
+                }
+            }
+            if (!$sliderImage && file_exists(storage_path('app/public/' . $gallerySlider->image))) {
+                $sliderImage = asset('storage/' . $gallerySlider->image);
+            }
+        @endphp
         <div class="slider-area">
-            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center mb-200" 
-                 style="background-image: url('{{ Storage::url($gallerySlider->image) }}'); background-size: cover; background-position: center;">
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center mb-200"
+                 style="background-image: url('{{ $sliderImage ?? asset('fe/img/hero/gallery.png') }}'); background-size: cover; background-position: center;">
     @else
         <div class="slider-area">
             <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center mb-200" style="background-image: url('{{ asset('fe/img/hero/gallery.png') }}'); background-size: cover; background-position: center;">
@@ -36,7 +59,7 @@
                                 <nav aria-label="breadcrumb ">
                                     <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Gallery</a></li> 
+                                    <li class="breadcrumb-item"><a href="#">Gallery</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -61,6 +84,9 @@
                 @endphp
 
                 @forelse($galleries as $gallery)
+                    @if($loop->first)
+                        {{-- first gallery shown normally --}}
+                    @endif
                     <div class="row" style="margin-top: 50px">
                         <div class="col-12">
                             <h3 class="gallery-section-title text-center mt-4">{{ $gallery->title }}</h3>
@@ -75,31 +101,44 @@
                                 $imgUrl = asset('be/img/placeholder.png');
 
                                 if (!empty($image->image)) {
-                                    try {
-                                        // Prefer the public storage disk (storage/app/public)
-                                        if (Storage::disk('public')->exists($image->image)) {
-                                            $imgUrl = Storage::url($image->image);
+                                    // Use basename for fallback checks because DB stores paths like "gallery/filename.ext"
+                                    $filename = basename($image->image);
+                                    $filenameNoExt = pathinfo($filename, PATHINFO_FILENAME);
+                                    $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+                                    // Prefer directly accessible public image path first
+                                    if (file_exists(public_path('fe/img/elements/' . $filename))) {
+                                        $imgUrl = asset('fe/img/elements/' . $filename);
+                                    } elseif (file_exists(public_path('fe/img/' . $filename))) {
+                                        $imgUrl = asset('fe/img/' . $filename);
+                                    } elseif (file_exists(public_path($filename))) {
+                                        $imgUrl = asset($filename);
+                                    } elseif (in_array($ext, ['jpg', 'jpeg', 'png'], true)) {
+                                        foreach (['webp', 'jpg', 'jpeg', 'png'] as $altExt) {
+                                            if ($altExt === $ext) {
+                                                continue;
+                                            }
+                                            if (file_exists(public_path('fe/img/elements/' . $filenameNoExt . '.' . $altExt))) {
+                                                $imgUrl = asset('fe/img/elements/' . $filenameNoExt . '.' . $altExt);
+                                                break;
+                                            }
                                         }
-                                        // If the stored value is a full URL, use it
-                                        elseif (filter_var($image->image, FILTER_VALIDATE_URL)) {
-                                            $imgUrl = $image->image;
-                                        }
-                                        // If the path exists under public folder, use asset()
-                                        elseif (file_exists(public_path($image->image))) {
-                                            $imgUrl = asset($image->image);
-                                        }
-                                        // Otherwise try the common fe gallery folder
-                                        elseif (file_exists(public_path('fe/img/elements/' . $image->image))) {
-                                            $imgUrl = asset('fe/img/elements/' . $image->image);
-                                        }
-                                    } catch (\Exception $e) {
-                                        // Keep placeholder on any error
+                                    }
+
+                                    // If no public file available, fall back to storage link
+                                    if ($imgUrl === asset('be/img/placeholder.png') && file_exists(storage_path('app/public/' . $image->image))) {
+                                        $imgUrl = asset('storage/' . $image->image);
+                                    }
+
+                                    // Finally, allow full URLs stored in DB
+                                    if ($imgUrl === asset('be/img/placeholder.png') && filter_var($image->image, FILTER_VALIDATE_URL)) {
+                                        $imgUrl = $image->image;
                                     }
                                 }
                             @endphp
                             <div class="{{ $col }} {{ $center }} mb-3">
                                 <a href="{{ $imgUrl }}" class="img-pop-up d-block">
-                                    <img src="{{ $imgUrl }}" alt="{{ $gallery->title }}" class="img-fluid gallery-thumb" style="width:100%; height:250px; object-fit:cover; display:block;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
+                                    <img src="{{ $imgUrl }}" alt="{{ $gallery->title }}" class="img-fluid gallery-thumb" style="width:100%; height:250px; object-fit:cover; display:block;" onerror="this.onerror=null; this.src='{{ asset('be/img/placeholder.png') }}'" />
                                 </a>
                             </div>
                         @endforeach

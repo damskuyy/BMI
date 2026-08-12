@@ -5,24 +5,24 @@
             <!-- section tittle -->
             <div class="section-tittle section-tittle2 mb-55">
                 <div class="front-text">
-                    <h3 class="">Who we are</h3>
+                    <h3 class="">Siapa Kami?</h3>
                 </div>
-                <span class="back-text">About us</span>
+                <span class="back-text">Tentang</span>
             </div>
             <div class="support-caption">
-                <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra - Yayasan Dharma Bhakti Astra, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
-                <p>Diakhir tahun 2023 kami mulai mengembangkan bisnis komunitas kami menjadi koperasi yang sebagian besarnya adalah anggota UMKM binaan Yayasan Astra - Yayasan Dharma Bhakti Astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
-                <a href="/about" class="btn red-btn2">read more</a>
+                <p class="pera-top">BMI adalah komunitas UMKM Bogor binaan Yayasan Astra–Yayasan Dharma Bhakti Astra (YDBA) yang berdiri sejak tahun 2021. Komunitas ini mewadahi pelaku UMKM di bidang manufaktur, kuliner, dan kerajinan untuk berkembang melalui pembinaan, kolaborasi, dan peningkatan kapasitas usaha.</p>
+                <p>Selain itu, BMI menyediakan layanan Trading, Consumable, dan Consulting sebagai solusi untuk mendukung kebutuhan operasional usaha dan mendorong pertumbuhan UMKM.</p>
+                <a href="/about" class="btn red-btn2">Selengkapnya</a>
             </div>
         </div>
         <div class="right-content">
             <!-- img -->
             <div class="right-img">
-                <img src="fe/img/elements/gallery19.jpg" alt="">
+                <img src="fe/img/elements/gathering2023-3.webp" alt="">
             </div>
             <div class="support-img-cap text-center">
                 <span class="since-year">2021</span>
-                <p class="since-label">Since</p>
+                <p class="since-label">Sejak</p>
                 <span class="since-ring" aria-hidden="true"></span>
             </div>
         </div>

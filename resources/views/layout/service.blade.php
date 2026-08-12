@@ -6,9 +6,9 @@
             <div class="col-lg-12">
                 <div class="section-tittle mb-55">
                     <div class="front-text">
-                        <h2 class="">Our Services</h2>
+                        <h2 class="">Pelayanan Kami</h2>
                     </div>
-                    <span class="back-text">Features</span>
+                    <span class="back-text">Fitur</span>
                 </div>
             </div>
         </div>

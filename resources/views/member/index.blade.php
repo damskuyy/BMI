@@ -1,11 +1,11 @@
 @extends('layout.master')
 @section('content')
     @use('Illuminate\Support\Facades\Storage')
-    
+
     @php
         $memberSlider = \App\Models\Slider::where('section', 'member')->first();
     @endphp
-    
+
     <style>
         .page-slider-fade-in {
             animation: pageSliderFadeIn 0.8s ease-in;
@@ -19,7 +19,7 @@
     <!-- slider Area Start-->
     @if($memberSlider && $memberSlider->image)
         <div class="slider-area">
-            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" 
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center"
                  style="background-image: url('{{ Storage::url($memberSlider->image) }}'); background-size: cover; background-position: center;">
     @else
         <div class="slider-area">
@@ -33,7 +33,7 @@
                                 <nav aria-label="breadcrumb ">
                                     <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Member</a></li> 
+                                    <li class="breadcrumb-item"><a href="#">Member</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
     <!-- slider Area End-->
-    
+
     <!--Team Area Start -->
     <div class="team-area section-padding30">
         <div class="container">
@@ -92,7 +92,7 @@
                         <div class="team-img">
                             <img src="{{ asset('fe/img/team/ety.png') }}" alt="">
                             <div class="team-caption">
-                                <h3><a>Ety Rustyah</a></h3>
+                                <h3><a>Ety Rustiyah</a></h3>
                                 <div class="team-social mt-10">
                                     <p>Sekretaris</p>
                                 </div>
@@ -182,7 +182,7 @@
         </div>
     </div>
     <!-- Team Area End -->
-    
+
     <!-- Team Tables Start -->
     <div class="member-table-wrapper mb-5 mt-30">
         <h3 class="table-title mb-3">KEANGGOTAAN BMI</h3>
@@ -227,7 +227,7 @@
 
                                 @if($fotoUrl)
                                     <img src="{{ $fotoUrl }}" alt="{{ $member->name }}"
-                                         style="width: 40px; height: 40px; border-radius: 0.25rem; object-fit: cover;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'">
+                                         style="width: 40px; height: 40px; border-radius: 0.25rem; object-fit: cover;" onerror="this.onerror=null; this.src='{{ asset('be/img/placeholder.png') }}'">
                                 @else
                                     <span class="text-muted" style="font-size: 0.85rem;">-</span>
                                 @endif

@@ -6,9 +6,9 @@
                     <!-- Section Tittle -->
                     <div class="section-tittle section-tittle3">
                         <div class="front-text">
-                            <h2 class="">Our Client</h2>
+                            <h2 class="">Mitra Kami</h2>
                         </div>
-                        <span class="back-text">Partners</span>
+                        <span class="back-text">Partner</span>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,10 @@
                         <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
                         <img src="fe/img/clients/dewoz-art.png" alt="">
                         <img src="fe/img/clients/metal-jaya.png" alt="">
+                        <img src="fe/img/clients/syafakualam.jpeg" alt="">
+                        <img src="fe/img/clients/aq-collection.jpg" alt="">
+                        <img src="fe/img/clients/klambine.jpg" alt="">
+                        <img src="fe/img/clients/trilili.jpg" alt="">
                         <!-- Duplicate for seamless scroll -->
                         <img src="fe/img/clients/adiwijaya.png" alt="">
                         <img src="fe/img/clients/aneka-loyang.png" alt="">
@@ -32,6 +36,10 @@
                         <img src="fe/img/clients/karunia-mandiri.jpg" alt="">
                         <img src="fe/img/clients/dewoz-art.png" alt="">
                         <img src="fe/img/clients/metal-jaya.png" alt="">
+                        <img src="fe/img/clients/syafakualam.jpeg" alt="">
+                        <img src="fe/img/clients/aq-collection.jpg" alt="">
+                        <img src="fe/img/clients/klambine.jpg" alt="">
+                        <img src="fe/img/clients/trilili.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -48,6 +56,15 @@
                         <img src="fe/img/clients/cebina.png" alt="">
                         <img src="fe/img/clients/hanara-bakery.jpg" alt="">
                         <img src="fe/img/clients/edw-konveksi.jpg" alt="">
+                        <img src="fe/img/clients/maira-dimsum.jpg" alt="">
+                        <img src="fe/img/clients/kedai-pempek.jpg" alt="">
+                        <img src="fe/img/clients/ariby-bakery.png" alt="">
+                        <img src="fe/img/clients/pawone-bu-widia.png" alt="">
+                        <img src="fe/img/clients/aziza-snack.png" alt="">
+                        <img src="fe/img/clients/nurhayati-kuliner.png" alt="">
+                        <img src="fe/img/clients/pawon-jiwandono.png" alt="">
+                        <img src="fe/img/clients/dawiya-snack.jpg" alt="">
+                        <img src="fe/img/clients/teras-jajanan.jpg" alt="">
                         <!-- Duplicate for seamless scroll -->
                         <img src="fe/img/clients/king-kiripik.jpg" alt="">
                         <img src="fe/img/clients/naninu-kitchen.jpg" alt="">
@@ -59,6 +76,15 @@
                         <img src="fe/img/clients/cebina.png" alt="">
                         <img src="fe/img/clients/hanara-bakery.jpg" alt="">
                         <img src="fe/img/clients/edw-konveksi.jpg" alt="">
+                        <img src="fe/img/clients/maira-dimsum.jpg" alt="">
+                        <img src="fe/img/clients/kedai-pempek.jpg" alt="">
+                        <img src="fe/img/clients/ariby-bakery.png" alt="">
+                        <img src="fe/img/clients/pawone-bu-widia.png" alt="">
+                        <img src="fe/img/clients/aziza-snack.png" alt="">
+                        <img src="fe/img/clients/nurhayati-kuliner.png" alt="">
+                        <img src="fe/img/clients/pawon-jiwandono.png" alt="">
+                        <img src="fe/img/clients/dawiya-snack.jpg" alt="">
+                        <img src="fe/img/clients/teras-jajanan.jpg" alt="">
                     </div>
                 </div>
             </div>

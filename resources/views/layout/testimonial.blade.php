@@ -8,7 +8,7 @@
                     <div class="front-text">
                         <h2 class="">Testimonial</h2>
                     </div>
-                    <span class="back-text">Feedback</span>
+                    {{-- <span class="back-text">Feedback</span> --}}
                 </div>
             </div>
         </div>

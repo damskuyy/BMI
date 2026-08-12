@@ -1,11 +1,11 @@
 @extends('layout.master')
 @section('content')
     @use('Illuminate\Support\Facades\Storage')
-    
+
     @php
         $aboutSlider = \App\Models\Slider::where('section', 'about')->first();
     @endphp
-    
+
     <style>
         .page-slider-fade-in {
             animation: pageSliderFadeIn 0.8s ease-in;
@@ -19,7 +19,7 @@
     <!-- slider Area Start-->
     @if($aboutSlider && $aboutSlider->image)
         <div class="slider-area">
-            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center" 
+            <div class="single-slider hero-overly slider-height2 page-slider-fade-in d-flex align-items-center"
                  style="background-image: url('{{ Storage::url($aboutSlider->image) }}'); background-size: cover; background-position: center;">
     @else
         <div class="slider-area">
@@ -33,7 +33,7 @@
                                 <nav aria-label="breadcrumb ">
                                     <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">About</a></li> 
+                                    <li class="breadcrumb-item"><a href="#">About</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -55,14 +55,14 @@
                     <span class="back-text">About us</span>
                 </div>
                 <div class="support-caption">
-                    <p class="pera-top">Kami adalah UMKM Binaan dari Yayasan Astra - Yayasan Dharma Bhakti Astra, dan kami mulai berkomitmen membangun komunitas tahun 2021.</p>
-                    <p>Diakhir tahun 2023 kami mulai mengembangkan bisnis komunitas kami menjadi koperasi yang sebagian besarnya adalah anggota UMKM binaan Yayasan Astra - Yayasan Dharma Bhakti Astra di bidang Manufaktur, Kuliner, & Kerajinan.</p>
+                    <p class="pera-top">BMI adalah komunitas UMKM Bogor binaan Yayasan Astra–Yayasan Dharma Bhakti Astra (YDBA) yang berdiri sejak tahun 2021. Komunitas ini mewadahi pelaku UMKM di bidang manufaktur, kuliner, dan kerajinan untuk berkembang melalui pembinaan, kolaborasi, dan peningkatan kapasitas usaha.</p>
+                    <p>Selain itu, BMI menyediakan layanan Trading, Consumable, dan Consulting sebagai solusi untuk mendukung kebutuhan operasional usaha dan mendorong pertumbuhan UMKM.</p>
                 </div>
             </div>
             <div class="right-content">
                 <!-- img -->
                 <div class="right-img">
-                    <img src="fe/img/elements/gallery19.jpg" alt="">
+                    <img src="fe/img/elements/gathering2023-3.webp" alt="">
                 </div>
                 <div class="support-img-cap text-center">
                     <span class="since-year">2021</span>
@@ -285,7 +285,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#eaf6ff 100%);border-radius:18px;">
                         <div class="card-body text-center">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fsearch-book-unscreen.gif?alt=media&token=72708d0c-ac38-4eea-98e3-94d05d263010" alt="YDBA" style="width:48px;height:48px;margin-bottom:12px;">
+                            <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973211/services-unscreen_feh74t.gif" alt="YDBA" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#ff0000;font-weight:700;">Visi & Misi YDBA</h5>
                             <p class="card-text" style="font-size:15px;">
                                 <span style="color:#ff0000;font-weight:600;">"Berikan Kail Bukan Ikan"</span> &nbsp Filosofi Yayasan Astra membina UMKM agar mandiri dan berdaya saing, bukan sekadar bantuan sesaat. KBMI adalah hasil pembinaan intensif, berstandar tinggi, dan terkurasi.
@@ -298,7 +298,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#ffeaea 100%);border-radius:18px;">
                         <div class="card-body text-center">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2F360-feedback.gif?alt=media&token=63220144-e26a-4e26-a32d-49434ed8380d" alt="Bogor" style="width:48px;height:48px;margin-bottom:12px;">
+                            <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973104/trading-unscreen_h320j6.gif" alt="Bogor" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#00235b;font-weight:700;">Potensi & Karakteristik Bogor</h5>
                             <ul class="list-unstyled" style="font-size:15px;">
                                 <li><b>Manufaktur:</b> Komponen industri, furnitur, machine, dan fabrikasi.</li>
@@ -314,7 +314,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#eafbe7 100%);border-radius:18px;">
                         <div class="card-body text-center">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Fmanagement-consulting.gif?alt=media&token=db2d8a1b-46ff-4e95-b8ff-478beddbfeba" alt="Sinergi" style="width:48px;height:48px;margin-bottom:12px;">
+                            <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973102/hand-holding-rocks-unscreen_lc5ggk.gif" alt="Sinergi" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#009e3c;font-weight:700;">Sinergi Tiga Sektor</h5>
                             <p class="card-text" style="font-size:15px;">
                                 <b>Koperasi Multisektor:</b> Manufaktur, Kuliner, Kerajinan saling mendukung. Sinergi produk, kolaborasi pemasaran, efisiensi operasional, dan skala ekonomi tercipta untuk seluruh anggota.
@@ -330,7 +330,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card hover-animate h-100 shadow-sm border-0" style="background:linear-gradient(135deg,#fff 80%,#ffeaea 100%);border-radius:18px;">
                         <div class="card-body text-center">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/explorefireb4se.appspot.com/o/Icons%2Ftrophy-unscreen.gif?alt=media&token=006d9110-a018-4cc1-a730-785acfa81bc7" alt="Dampak" style="width:48px;height:48px;margin-bottom:12px;">
+                            <img src="https://res.cloudinary.com/dqzc35nrh/image/upload/v1760973137/management-consulting-unscreen_tkm3ji.gif" alt="Dampak" style="width:48px;height:48px;margin-bottom:12px;">
                             <h5 class="card-title" style="color:#f27420;font-weight:700;">Tujuan & Dampak</h5>
                             <ul class="list-unstyled" style="font-size:15px;">
                                 <li>UMKM <b>naik kelas</b> & mandiri.</li>

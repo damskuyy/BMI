@@ -11,6 +11,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\MemberBEController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\JoinUsController;
 
 // Frontend Routes
 Route::resource('/', App\Http\Controllers\HomeController::class);
@@ -23,6 +24,8 @@ Route::resource('/members', App\Http\Controllers\MemberController::class);
 Route::resource('/product', App\Http\Controllers\ProductController::class);
 Route::get('/product', [ProductController::class, 'index']);
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
+// Join Us page (show requirements before redirecting to Google Form)
+Route::get('/join-us', [JoinUsController::class, 'index']);
 Route::resource('/blog', App\Http\Controllers\BlogController::class);
 Route::resource('/blog-details', App\Http\Controllers\BlogDetailController::class);
 Route::get('/blog/show/{slug}', [App\Http\Controllers\BlogDetailController::class, 'show'])->name('blog.details.show');

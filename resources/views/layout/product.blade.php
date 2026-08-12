@@ -7,9 +7,9 @@
                     <!-- Section Tittle -->
                     <div class="section-tittle section-tittle3">
                         <div class="front-text">
-                            <h2 class="">Our Product</h2>
+                            <h2 class="">Produk Kami</h2>
                         </div>
-                        <span class="back-text">Crafts</span>
+                        <span class="back-text"></span>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 <div class="product-img-bg mb-30">
                     <div class="tab-content active" id="nav-tabContent">
                         <!-- card ALL -->
-                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
+                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="project-caption">
                                 <div class="row product-row">
                                     <div class="col-lg-4 col-md-4 col-sm-4">
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/product" class="btn red-btn2 mt-20" style="">view more</a>
+                        <a href="/product" class="btn red-btn2 mt-20" style="">Lebih Banyak</a>
                     </div>
                 </div>
                 <!-- End Nav Card -->

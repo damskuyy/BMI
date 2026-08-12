@@ -27,12 +27,12 @@ class GalleryBEController extends Controller
         Log::info('Gallery store request received');
         Log::info('Has images: ' . ($request->hasFile('images') ? 'YES' : 'NO'));
         Log::info('File count: ' . count($request->file('images') ?? []));
-        
+
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'nullable',
             'event_date' => 'required|date',
-            'images.*' => 'required|image|mimes:jpeg,png,jpg'
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,webp'
         ]);
 
         $gallery = Gallery::create([
@@ -49,14 +49,14 @@ class GalleryBEController extends Controller
                 try {
                     $imageName = uniqid() . '_' . $index . '.' . $img->extension();
                     Log::info('Attempting to store image: ' . $imageName . ' to disk public');
-                    
+
                     $path = $img->storeAs('gallery', $imageName, 'public');
-                    
+
                     if ($path === false) {
                         Log::error('Failed to store image: ' . $imageName . ' - storeAs returned false');
                         continue;
                     }
-                    
+
                     Log::info('Image stored successfully: ' . $path);
 
                     // get display mode for this index if provided
@@ -102,7 +102,7 @@ class GalleryBEController extends Controller
             'title' => 'required|max:255',
             'description' => 'nullable',
             'event_date' => 'required|date',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg'
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,webp'
         ]);
 
         $gallery->update([
@@ -159,14 +159,14 @@ class GalleryBEController extends Controller
                 try {
                     $imageName = uniqid() . '_u' . $index . '.' . $imgFile->extension();
                     Log::info('Attempting to store updated image: ' . $imageName . ' to disk public');
-                    
+
                     $path = $imgFile->storeAs('gallery', $imageName, 'public');
-                    
+
                     if ($path === false) {
                         Log::error('Failed to store updated image: ' . $imageName . ' - storeAs returned false');
                         continue;
                     }
-                    
+
                     Log::info('Image updated/added: ' . $path);
 
                     $mode = 'col-4';

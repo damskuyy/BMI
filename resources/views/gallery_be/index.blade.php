@@ -22,12 +22,12 @@
                 <div class="card">
                     <div class="row g-0">
                         <div class="col-md-2">
-                            @php
+                                @php
                                 $thumb = $gallery->images->first();
                                 $thumbUrl = asset('be/img/placeholder.png');
                                 if ($thumb) {
-                                    // Check public storage (storage/app/public)
-                                    if (\Illuminate\Support\Facades\Storage::disk('public')->exists($thumb->image)) {
+                                    // Prefer checking storage files directly
+                                    if (file_exists(storage_path('app/public/' . $thumb->image))) {
                                         $thumbUrl = asset('storage/' . $thumb->image);
                                     }
                                     // Check if stored path already points to a public asset (fe/img/...)
@@ -39,14 +39,15 @@
                                         $thumbUrl = asset('fe/img/gallery/' . $thumb->image);
                                     }
                                 }
-                            @endphp
-                            <img src="{{ $thumbUrl }}" class="img-fluid h-100" style="object-fit:cover; width:100%; height:100%; max-height:150px;" onerror="this.src='{{ asset('be/img/placeholder.png') }}'" />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $gallery->title }}</h5>
-                                <p class="card-text small text-muted">Event Date: {{ \Carbon\Carbon::parse($gallery->event_date)->format('d M Y') }}</p>
-                                @if($gallery->description)
+                                @php
+                                $thumb = $gallery->images->first();
+                                $thumbUrl = asset('be/img/placeholder.png');
+                                if ($thumb) {
+                                    if (file_exists(storage_path('app/public/' . $thumb->image))) {
+                                        $thumbUrl = asset('storage/' . $thumb->image);
+                                    } elseif (file_exists(public_path($thumb->image))) {
+                                        $thumbUrl = asset($thumb->image);
+                                    }
                                     <p class="card-text">{{ Str::limit($gallery->description, 150) }}</p>
                                 @endif
                                 <div class="mt-2">

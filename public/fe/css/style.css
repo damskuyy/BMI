@@ -2127,6 +2127,74 @@ hr {
   color: #ff0000;
 }
 
+/* Admin footer link styling */
+.admin-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.50;
+    font-size: 13px;
+    vertical-align: middle;
+}
+.admin-link:hover,
+.admin-link:focus {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Live TikTok CTA */
+.tiktok-live-cta {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 9999;
+}
+.tiktok-live-cta a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  text-decoration: none;
+}
+.tiktok-live-cta img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  display: block !important;
+  transition: transform .25s ease, filter .25s ease;
+  animation: tiktok-zoom 2.4s ease-in-out infinite;
+}
+.tiktok-live-cta a:hover img,
+.tiktok-live-cta a:focus img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.22));
+}
+@keyframes tiktok-zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+@media (max-width: 768px) {
+    .tiktok-live-cta {
+      left: 16px;
+      bottom: 16px;
+    }
+    .tiktok-live-cta a {
+      width: 150px;
+      height: 150px;
+    }
+}
+
 /*-----------------------
   Header Carousel
 -------------------------*/
@@ -2405,7 +2473,7 @@ hr {
 .header-area .header-top .header-info-left ul li a {
   color: #fff !important;
   position: relative;
-  transition: 
+  transition:
     color 0.3s,
     transform 0.3s cubic-bezier(.4,2,.6,1),
     text-shadow 0.3s;
@@ -2601,7 +2669,7 @@ hr {
 
 /*-----------------------
   Slider Carousel
------------------------*/  
+-----------------------*/
 .slider-area {
   margin-top: -1px;
   display: block;
@@ -3677,7 +3745,7 @@ hr {
     box-shadow: 0 2px 12px rgba(255,0,0,0.08);
     padding: 18px 16px 14px 16px;
     font-size: 15px;
-    transition: 
+    transition:
         box-shadow 0.3s,
         transform 0.3s cubic-bezier(.4,2,.6,1),
         border-color 0.3s,
@@ -3919,7 +3987,7 @@ hr {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: 
+    transition:
       box-shadow 0.3s cubic-bezier(.4,2,.6,1),
       transform 0.3s cubic-bezier(.4,2,.6,1),
       background 0.3s;
@@ -4951,7 +5019,7 @@ hr {
         line-height: 1.3;
         margin: 0;
     }
-} 
+}
 @media (max-width: 767px) {
   /* Atur row agar flex dan wrap */
   .project-area .project-caption .row {
@@ -5050,14 +5118,118 @@ hr {
 }
 
 /*--------------------------------------------------------------
-# Join Us Section Only
+# Membership Requirements Block
 --------------------------------------------------------------*/
-.join-us-section {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+.requirements-content {
+    padding: 0;
+    background: transparent;
 }
-.join-us-section .contact-us-caption p {
-    color: #fff !important;
+.requirements-content p,
+.requirements-content li {
+    color: #16161a;
+}
+.requirements-intro {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+.requirements-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 28px;
+}
+.requirements-list li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.requirements-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d80000;
+}
+.requirements-note {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+    color: #1d1d24;
+    max-width: 780px;
+}
+.requirements-panel {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    padding: 28px 32px;
+    min-height: 100%;
+}
+.requirements-panel-alt {
+    background: #f8f8fa;
+}
+.requirements-panel h3 {
+    font-size: 22px;
+    margin-bottom: 22px;
+    color: #16161a;
+}
+.requirements-panel-subtext {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #4a4a55;
+}
+.requirements-pdf {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+.requirements-pdf a {
+    color: #d80000;
+    text-decoration: underline;
+}
+.requirements-pdf a:hover {
+    text-decoration: none;
+}
+.requirements-actions {
+    gap: 16px;
+}
+.requirements-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 18px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    text-decoration: none;
+}
+.requirements-btn-primary {
+    background: #d80000;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+.requirements-btn-primary:hover,
+.requirements-btn-primary:focus {
+    background: #a60000;
+    color: #ffffff;
+}
+.requirements-btn-secondary {
+    background: transparent;
+    color: #16161a;
+    border: 1px solid #16161a;
+}
+.requirements-btn-secondary:hover,
+.requirements-btn-secondary:focus {
+    background: #16161a;
+    color: #ffffff;
 }
 .tab-pane {
   -webkit-transition: all 0.6s ease-out 0s;
@@ -5761,7 +5933,7 @@ hr {
     .contact-card {
         margin-bottom: 30px;
     }
-    
+
     .section-title h2 {
         font-size: 2rem;
     }
@@ -6769,11 +6941,11 @@ Kerajinan About Only
 
 /* Slider tampilan mobile */
 .slider-area.slider-mobile {
-  display: none; 
+  display: none;
 }
 @media (min-width: 576px) {
-  .slider-area.slider-mobile { 
-    display: none !important; 
+  .slider-area.slider-mobile {
+    display: none !important;
   }
   .slider-area.home-slider {
     display: block !important;
@@ -6810,11 +6982,11 @@ Kerajinan About Only
     font-size: 18px;
     line-height: 1.2;
   }
-  .slider-height-mobile { 
-    min-height: 320px; 
+  .slider-height-mobile {
+    min-height: 320px;
   }
-  .slider-height2 { 
-    min-height: 240px; 
+  .slider-height2 {
+    min-height: 240px;
   }
   .slider-area.slider-mobile .hero__caption h1 {
         font-size: 35px;
@@ -6990,7 +7162,7 @@ Kerajinan About Only
     }
 }
 
-/*-------------------------------------------------------------- 
+/*--------------------------------------------------------------
 BLOG Area
 --------------------------------------------------------------*/
 .blog-area .single-blog {

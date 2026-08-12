@@ -6,9 +6,9 @@
             <div class="row justify-content-center d-none d-sm-flex mb-100">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="count-clients">
-                        <div class="single-counter">    
+                        <div class="single-counter">
                             <div class="count-number">
-                                <span class="counter">8</span>
+                                <span class="counter">11</span>
                             </div>
                             <div class="count-text">
                                 <p>UMKM</p>
@@ -21,7 +21,7 @@
                     <div class="count-clients">
                         <div class="single-counter">
                             <div class="count-number">
-                                <span class="counter">10</span>
+                                <span class="counter">17</span>
                             </div>
                             <div class="count-text">
                                 <p>UMKM</p>
@@ -48,7 +48,7 @@
             <div class="countdown-carousel-mobile d-block d-sm-none">
                 <div class="countdown-slide">
                     <div class="count-clients mr-10">
-                        <div class="single-counter">    
+                        <div class="single-counter">
                             <div class="count-number">
                                 <span class="counter">8</span>
                             </div>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         {{-- batas --}}
-                        <div class="single-counter">    
+                        <div class="single-counter">
                             <div class="count-number">
                                 <span class="counter">8</span>
                             </div>

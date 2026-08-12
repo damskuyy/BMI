@@ -8,12 +8,12 @@
                         <!-- Section Tittle -->
                         <div class="section-tittle section-tittle4">
                             <div class="front-text">
-                                <h2 class="">Wanna Join us?</h2>
+                                <h2 class="">Ayo Bergabung Dengan Kami!</h2>
                             </div>
-                            <span class="back-text">Join Us</span>
+                            {{-- <span class="back-text">Join Us</span> --}}
                         </div>
-                        <p>Jadi bagian dari jaringan Manufaktur Bogor yang solid dan progresif. Bersama, kita wujudkan pertumbuhan industri berkelanjutan.</p>
-                        <a href="https://forms.gle/ucsGLPz6P7BPnis97" target="_blank" class="btn">click here</a>
+                        <p style="color: white;">Jadi bagian dari jaringan Manufaktur Bogor yang solid dan progresif. Bersama, kita wujudkan pertumbuhan industri berkelanjutan.</p>
+                        <a href="/join-us" class="btn mt-10">Klik di sini</a>
                     </div>
                 </div>
             </div>
