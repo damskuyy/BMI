@@ -35,52 +35,38 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        /* Place CTA to the left of the #scrollUp button, no border, larger size */
+        /* Clean circular CTA in bottom-left with inline SVG (no image borders) */
         .tiktok-live-cta{
             position: fixed !important;
-            /* place in bottom-left corner */
             bottom: 24px !important;
             left: 24px !important;
             right: auto !important;
             z-index: 99999 !important;
             display: block !important;
-            border: none !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            outline: none !important;
+            pointer-events: auto;
         }
-        /* Make the <a> act as a circular mask so we only show the left "broadcast" icon
-           inside the rectangular image. Adjust translation if needed to center the icon. */
         .tiktok-live-cta a{
             display:block;
-            width: 140px !important;
-            height: 140px !important;
-            overflow: hidden !important;
+            width: 120px !important;
+            height: 120px !important;
+            overflow: visible !important;
             border-radius: 50% !important;
             padding: 0 !important;
             margin: 0 !important;
             background: transparent !important;
             box-shadow: none !important;
             border: none !important;
+            outline: none !important;
         }
-        .tiktok-live-cta img{
-            /* enlarge and shift so only the left broadcast part is visible inside the circle */
-            height: 160% !important;
-            width: auto !important;
-            max-width: none !important;
-            transform: translateX(-25%) !important;
-            -webkit-transform: translateX(-25%) !important;
+        .tiktok-live-cta svg{
+            width: 100% !important;
+            height: 100% !important;
             display: block !important;
-            box-shadow: none !important;
-            border: none !important;
-            background: transparent !important;
-            object-fit: cover !important;
         }
-        /* Responsive: when scrollUp moves (right:16px) on small screens, adjust CTA accordingly */
+        /* smaller on mobile */
         @media (max-width: 575px) {
-            .tiktok-live-cta{ bottom: 16px !important; left: 16px !important; right: auto !important; }
-            .tiktok-live-cta a{ width: 110px !important; height: 110px !important; }
-            .tiktok-live-cta img{ height: 150% !important; transform: translateX(-25%) !important; }
+            .tiktok-live-cta{ bottom: 16px !important; left: 16px !important; }
+            .tiktok-live-cta a{ width: 88px !important; height: 88px !important; }
         }
     </style>
 </head>
@@ -346,9 +332,30 @@
         <!-- Footer End-->
     </footer>
 
-    <div class="tiktok-live-cta">
-        <a href="https://www.tiktok.com/@bmi_business" target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('/fe/img/icon/live-tiktok.png') }}" alt="Live TikTok">
+    <div class="tiktok-live-cta" aria-hidden="false">
+        <a href="https://www.tiktok.com/@bmi_business" target="_blank" rel="noopener noreferrer" aria-label="Tiktok Live">
+            <!-- Inline SVG: circular badge with broadcast waves and LIVE text; transparent background -->
+            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
+                <defs>
+                    <linearGradient id="g1" x1="0" x2="1">
+                        <stop offset="0%" stop-color="#00f0ff" />
+                        <stop offset="100%" stop-color="#ff2fa6" />
+                    </linearGradient>
+                </defs>
+                <!-- outer circle (transparent fill) -->
+                <circle cx="80" cy="80" r="78" fill="transparent" />
+                <!-- small rounded rectangle badge background (transparent center, subtle stroke) -->
+                <rect x="8" y="44" width="96" height="72" rx="12" ry="12" fill="#000000" fill-opacity="0.85" stroke="url(#g1)" stroke-width="3" />
+                <!-- broadcast waves (left) -->
+                <g transform="translate(18,78) scale(0.9)">
+                    <path d="M6 0 C6 0 6 0 6 0" fill="none"/>
+                    <path d="M0 -6 C6 -12 18 -12 24 -6" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M6 -12 C12 -18 30 -18 36 -12" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85"/>
+                    <circle cx="6" cy="-6" r="4" fill="#ffffff" />
+                </g>
+                <!-- LIVE text -->
+                <text x="60" y="90" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#ffffff" font-weight="700">LIVE</text>
+            </svg>
         </a>
     </div>
 
