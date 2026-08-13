@@ -38,29 +38,48 @@
         /* Place CTA to the left of the #scrollUp button, no border, larger size */
         .tiktok-live-cta{
             position: fixed !important;
-            /* match scrollUp bottom and offset to the left of it */
-            bottom: 40px !important;
-            right: calc(31px + 50px + 12px) !important; /* scrollUp right (31px) + its width (50px) + 12px gap */
+            /* place in bottom-left corner */
+            bottom: 24px !important;
+            left: 24px !important;
+            right: auto !important;
             z-index: 99999 !important;
             display: block !important;
             border: none !important;
             background: transparent !important;
+            box-shadow: none !important;
+            outline: none !important;
         }
-        .tiktok-live-cta a{display:block}
-        .tiktok-live-cta img{
+        /* Make the <a> act as a circular mask so we only show the left "broadcast" icon
+           inside the rectangular image. Adjust translation if needed to center the icon. */
+        .tiktok-live-cta a{
+            display:block;
             width: 80px !important;
             height: 80px !important;
-            max-width: 80px !important;
-            max-height: 80px !important;
+            overflow: hidden !important;
             border-radius: 50% !important;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.28) !important;
-            display: block !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
             border: none !important;
+        }
+        .tiktok-live-cta img{
+            /* make image slightly larger and shift left so only the left icon is visible inside the circle */
+            height: 120% !important;
+            width: auto !important;
+            max-width: none !important;
+            transform: translateX(-18%) !important;
+            -webkit-transform: translateX(-18%) !important;
+            display: block !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: transparent !important;
         }
         /* Responsive: when scrollUp moves (right:16px) on small screens, adjust CTA accordingly */
         @media (max-width: 575px) {
-            .tiktok-live-cta{ bottom: 40px !important; right: calc(16px + 50px + 12px) !important; }
-            .tiktok-live-cta img{ width: 72px !important; height: 72px !important; }
+            .tiktok-live-cta{ bottom: 16px !important; left: 16px !important; right: auto !important; }
+            .tiktok-live-cta a{ width: 72px !important; height: 72px !important; }
+            .tiktok-live-cta img{ height: 115% !important; transform: translateX(-18%) !important; }
         }
     </style>
 </head>
