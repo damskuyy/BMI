@@ -35,26 +35,32 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        /* Place CTA to the left of the #scrollUp button, no border, larger size */
         .tiktok-live-cta{
             position: fixed !important;
-            bottom: 24px !important;
-            right: 24px !important;
+            /* match scrollUp bottom and offset to the left of it */
+            bottom: 40px !important;
+            right: calc(31px + 50px + 12px) !important; /* scrollUp right (31px) + its width (50px) + 12px gap */
             z-index: 99999 !important;
             display: block !important;
+            border: none !important;
+            background: transparent !important;
         }
         .tiktok-live-cta a{display:block}
         .tiktok-live-cta img{
-            width: 64px;
-            height: 64px;
-            max-width: 64px;
-            max-height: 64px;
-            border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-            display: block;
+            width: 80px !important;
+            height: 80px !important;
+            max-width: 80px !important;
+            max-height: 80px !important;
+            border-radius: 50% !important;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.28) !important;
+            display: block !important;
+            border: none !important;
         }
-        @media (max-width: 768px) {
-            .tiktok-live-cta{ bottom: 16px !important; right: 16px !important; }
-            .tiktok-live-cta img{ width: 56px; height: 56px; }
+        /* Responsive: when scrollUp moves (right:16px) on small screens, adjust CTA accordingly */
+        @media (max-width: 575px) {
+            .tiktok-live-cta{ bottom: 40px !important; right: calc(16px + 50px + 12px) !important; }
+            .tiktok-live-cta img{ width: 72px !important; height: 72px !important; }
         }
     </style>
 </head>
