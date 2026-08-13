@@ -53,8 +53,8 @@
            inside the rectangular image. Adjust translation if needed to center the icon. */
         .tiktok-live-cta a{
             display:block;
-            width: 80px !important;
-            height: 80px !important;
+            width: 140px !important;
+            height: 140px !important;
             overflow: hidden !important;
             border-radius: 50% !important;
             padding: 0 !important;
@@ -64,22 +64,23 @@
             border: none !important;
         }
         .tiktok-live-cta img{
-            /* make image slightly larger and shift left so only the left icon is visible inside the circle */
-            height: 120% !important;
+            /* enlarge and shift so only the left broadcast part is visible inside the circle */
+            height: 160% !important;
             width: auto !important;
             max-width: none !important;
-            transform: translateX(-18%) !important;
-            -webkit-transform: translateX(-18%) !important;
+            transform: translateX(-25%) !important;
+            -webkit-transform: translateX(-25%) !important;
             display: block !important;
             box-shadow: none !important;
             border: none !important;
             background: transparent !important;
+            object-fit: cover !important;
         }
         /* Responsive: when scrollUp moves (right:16px) on small screens, adjust CTA accordingly */
         @media (max-width: 575px) {
             .tiktok-live-cta{ bottom: 16px !important; left: 16px !important; right: auto !important; }
-            .tiktok-live-cta a{ width: 72px !important; height: 72px !important; }
-            .tiktok-live-cta img{ height: 115% !important; transform: translateX(-18%) !important; }
+            .tiktok-live-cta a{ width: 110px !important; height: 110px !important; }
+            .tiktok-live-cta img{ height: 150% !important; transform: translateX(-25%) !important; }
         }
     </style>
 </head>
