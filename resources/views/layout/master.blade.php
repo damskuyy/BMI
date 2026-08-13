@@ -47,8 +47,8 @@
         }
         .tiktok-live-cta a{
             display:block;
-            width: 120px !important;
-            height: 120px !important;
+            width: 110px !important;
+            height: 110px !important;
             overflow: hidden !important;
             border-radius: 50% !important;
             padding: 0 !important;
@@ -62,10 +62,10 @@
             /* keep only the icon visible inside the circular mask */
             display: block !important;
             width: auto !important;
-            height: 160% !important; /* enlarge so the left part fills the circle */
+            height: 120% !important; /* reduce scale to avoid clipping */
             object-fit: cover !important;
-            transform: translateX(-18%) translateY(-8%) !important; /* adjust to show the left icon */
-            -webkit-transform: translateX(-18%) translateY(-8%) !important;
+            transform: translateX(-12%) translateY(-6%) !important; /* adjust to show the left icon */
+            -webkit-transform: translateX(-12%) translateY(-6%) !important;
             border: none !important;
             box-shadow: none !important;
             background: transparent !important;
@@ -73,8 +73,8 @@
         /* smaller on mobile */
         @media (max-width: 575px) {
             .tiktok-live-cta{ bottom: 16px !important; left: 16px !important; }
-            .tiktok-live-cta a{ width: 88px !important; height: 88px !important; }
-            .tiktok-live-cta img{ height: 150% !important; transform: translateX(-18%) translateY(-6%) !important; }
+            .tiktok-live-cta a{ width: 82px !important; height: 82px !important; }
+            .tiktok-live-cta img{ height: 115% !important; transform: translateX(-12%) translateY(-6%) !important; }
         }
     </style>
 </head>
