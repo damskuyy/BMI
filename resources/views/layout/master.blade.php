@@ -299,7 +299,7 @@
 
     <div class="tiktok-live-cta">
         <a href="https://www.tiktok.com/@bmi_business" target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('fe/img/icon/live-tiktok.png') }}" alt="Live TikTok">
+            <img src="{{ asset('/fe/img/icon/live-tiktok.png') }}" alt="Live TikTok">
         </a>
     </div>
 
