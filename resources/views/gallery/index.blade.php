@@ -27,12 +27,20 @@
             $sliderName = pathinfo($sliderFilename, PATHINFO_FILENAME);
             $sliderExt = strtolower(pathinfo($sliderFilename, PATHINFO_EXTENSION));
 
-            if (file_exists(public_path('fe/img/elements/' . $sliderFilename))) {
+            if (file_exists(base_path('fe/img/elements/' . $sliderFilename))) {
+                $sliderImage = url('fe-img/elements/' . $sliderFilename);
+            } elseif (file_exists(base_path('fe/img/' . $sliderFilename))) {
+                $sliderImage = url('fe-img/' . $sliderFilename);
+            } elseif (file_exists(public_path('fe/img/elements/' . $sliderFilename))) {
                 $sliderImage = asset('fe/img/elements/' . $sliderFilename);
             } elseif (in_array($sliderExt, ['jpg', 'jpeg', 'png'], true)) {
                 foreach (['webp', 'jpg', 'jpeg', 'png'] as $alt) {
                     if ($alt === $sliderExt) {
                         continue;
+                    }
+                    if (file_exists(base_path('fe/img/elements/' . $sliderName . '.' . $alt))) {
+                        $sliderImage = url('fe-img/elements/' . $sliderName . '.' . $alt);
+                        break;
                     }
                     if (file_exists(public_path('fe/img/elements/' . $sliderName . '.' . $alt))) {
                         $sliderImage = asset('fe/img/elements/' . $sliderName . '.' . $alt);
@@ -107,7 +115,11 @@
                                     $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
                                     // Prefer directly accessible public image path first
-                                    if (file_exists(public_path('fe/img/elements/' . $filename))) {
+                                    if (file_exists(base_path('fe/img/elements/' . $filename))) {
+                                        $imgUrl = url('fe-img/elements/' . $filename);
+                                    } elseif (file_exists(base_path('fe/img/' . $filename))) {
+                                        $imgUrl = url('fe-img/' . $filename);
+                                    } elseif (file_exists(public_path('fe/img/elements/' . $filename))) {
                                         $imgUrl = asset('fe/img/elements/' . $filename);
                                     } elseif (file_exists(public_path('fe/img/' . $filename))) {
                                         $imgUrl = asset('fe/img/' . $filename);
@@ -117,6 +129,10 @@
                                         foreach (['webp', 'jpg', 'jpeg', 'png'] as $altExt) {
                                             if ($altExt === $ext) {
                                                 continue;
+                                            }
+                                            if (file_exists(base_path('fe/img/elements/' . $filenameNoExt . '.' . $altExt))) {
+                                                $imgUrl = url('fe-img/elements/' . $filenameNoExt . '.' . $altExt);
+                                                break;
                                             }
                                             if (file_exists(public_path('fe/img/elements/' . $filenameNoExt . '.' . $altExt))) {
                                                 $imgUrl = asset('fe/img/elements/' . $filenameNoExt . '.' . $altExt);

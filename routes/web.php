@@ -12,6 +12,8 @@ use App\Http\Controllers\MemberBEController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\JoinUsController;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 
 // Frontend Routes
 Route::resource('/', App\Http\Controllers\HomeController::class);
@@ -52,3 +54,14 @@ Route::middleware(['auth'])->group(function () {
     // Allow authenticated users to delete their own comments
     Route::delete('/blog/comments/{id}', [App\Http\Controllers\CommentController::class, 'destroy'])->name('blog.comments.destroy');
 });
+
+// Serve files directly from `fe/img` without requiring them to be under `public`.
+// Example URL: /fe-img/icon/live-tiktok.png will serve file at <project_root>/fe/img/icon/live-tiktok.png
+Route::get('/fe-img/{path}', function ($path) {
+    $file = base_path('fe/img/' . $path);
+    if (!File::exists($file)) {
+        abort(404);
+    }
+    $mime = File::mimeType($file) ?? 'application/octet-stream';
+    return Response::file($file, ['Content-Type' => $mime]);
+})->where('path', '.*');
