@@ -34,6 +34,29 @@
     <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .tiktok-live-cta{
+            position: fixed !important;
+            bottom: 24px !important;
+            right: 24px !important;
+            z-index: 99999 !important;
+            display: block !important;
+        }
+        .tiktok-live-cta a{display:block}
+        .tiktok-live-cta img{
+            width: 64px;
+            height: 64px;
+            max-width: 64px;
+            max-height: 64px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .tiktok-live-cta{ bottom: 16px !important; right: 16px !important; }
+            .tiktok-live-cta img{ width: 56px; height: 56px; }
+        }
+    </style>
 </head>
 
 <body>
